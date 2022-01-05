@@ -1,0 +1,27 @@
+---
+date: "2021-10-15T00:00:00+01:00"
+draft: false
+menu:
+  log_adm:
+    parent: Encontros
+    weight: 50
+title: Encontro Síncrono 1
+weight: 50
+editor_options: 
+  markdown: 
+    wrap: 72
+output: 
+  blogdown::html_page:
+    toc: true
+    css: "/assets/css/custom.css"
+type: docs
+---
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_url('https://logADM2021.github.io/class01/', height = "500px")
+```
+
+[LINK](https://logADM2021.github.io/class01/)
+
+<iframe width="1730" height="692" src="https://www.youtube.com/embed/LC6U9Sv-ou8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

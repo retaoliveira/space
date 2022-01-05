@@ -1,0 +1,55 @@
+---
+date: "2021-10-15T00:00:00+01:00"
+draft: false
+menu:
+  intror_master:
+    parent: Unidade 4
+    weight: 12
+title: Atividade 4
+toc: true
+type: docs
+weight: 12
+---
+
+<script src="/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<div id="introdução-ao-r---processamento-com-matrizes" class="section level1">
+<h1>Introdução ao R - Processamento com Matrizes</h1>
+<p>Lucélia Vaz</p>
+<div id="retrospecto-e-agenda" class="section level2">
+<h2>Retrospecto e agenda</h2>
+<p>1 - O que é o ambiente R e para que serve?</p>
+<p>2 - Tipos básicos de dados no R.</p>
+<p>3 - Criando e nomeando vetores no R.</p>
+<p>4 - Subconjuntos de vetores no R.</p>
+<p>5 - Como criar e nomear matrizes no R.</p>
+<p>6 - Operações aritméticas com matrizes.</p>
+</div>
+<div id="recursos" class="section level2">
+<h2>Recursos</h2>
+<p><a href="https://youtu.be/SWxoJqTqo08">Vídeos DataCamp</a></p>
+<p><a href="https://cefetmgbr-my.sharepoint.com/:x:/g/personal/renataoliveira_cefetmg_br/EXg-lGMviChHstCtTLP8d9AB62Z00cdNFQTrbsFJPDMAlA?e=JZ0gIm">Dados</a></p>
+</div>
+<div id="exercício" class="section level2">
+<h2>Exercício</h2>
+<p>Os dados abaixo correspondem às observações sobre Despesa de Consumo Pessoal e Produto Interno Bruto em bilhões de dólares de 2000, para os Estados Unidos. Os dados foram obtidos no livro do Gujarati, intitulado Econometria básica. Existe uma teoria que estabelece uma relação entre o consumo e a renda de um país (medida em termos do Produto Interno Bruto). Partindo do pressuposto que, esta é uma relação linear, temos que o a Despesa de consumo pessoal (Y) guarda a seguinte relação com o Produto Interno Bruto (X).</p>
+<p>Y= β<sub>0</sub> + β<sub>1</sub>X</p>
+<p>Com base no exposto acima, siga as orientações abaixo para obter os valores de β0 e β1 e, assim, determinar a equação da reta.</p>
+</div>
+<div id="base-de-dados" class="section level2">
+<h2>Base de dados</h2>
+<pre class="r"><code>as.matrix(RendaConsumo)</code></pre>
+</div>
+<div id="atividade" class="section level2">
+<h2>Atividade</h2>
+<p>a - Crie um vetor de uns que tenha um número de entradas igual ao número de linhas da matriz acima. Pode denominá-lo “uns”.</p>
+<p>b - Crie uma matriz juntando o vetor de “uns” e a terceira coluna da matriz acima. Pode denominá-la X.</p>
+<p>c - Crie um vetor a partir da segunda coluna da matriz acima. Pode denominá-lo Y.</p>
+<p>d - Realize o seguinte cálculo: (X<sup>T</sup>X)<sup>−1</sup> X<sup>T</sup>Y.</p>
+<p>e - Identifique o β<sub>0</sub> e o β<sub>1</sub>.</p>
+</div>
+</div>

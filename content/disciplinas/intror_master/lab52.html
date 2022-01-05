@@ -1,0 +1,150 @@
+---
+title: "Lab 5.2"
+draft: false
+date: '2021-10-15T00:00:00+01:00'
+menu:
+  intror_master:
+    parent: Unidade 5
+    weight: 25
+toc: yes
+type: docs
+weight: 25
+---
+
+<script src="/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<div id="scrape-em-tabelas" class="section level1">
+<h1>Scrape em tabelas</h1>
+<div id="exercícios" class="section level2">
+<h2>Exercícios</h2>
+<div id="diretrizes-gerais" class="section level3">
+<h3><strong>Diretrizes gerais:</strong></h3>
+<ol style="list-style-type: decimal">
+<li>Instale o pacote <code>tabulizer</code></li>
+</ol>
+<pre class="r"><code>devtools::install_github(c(&quot;ropensci/tabulizerjars&quot;, &quot;ropensci/tabulizer&quot;))</code></pre>
+<pre><code>## Using github PAT from envvar GITHUB_PAT</code></pre>
+<pre><code>## Skipping install of &#39;tabulizerjars&#39; from a github remote, the SHA1 (d1924e01) has not changed since last install.
+##   Use `force = TRUE` to force installation</code></pre>
+<pre><code>## Downloading GitHub repo ropensci/tabulizer@HEAD</code></pre>
+<pre><code>## 
+##   
+  
+  
+   checking for file &#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&#39; ...
+  
+v  checking for file &#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&#39; (565ms)
+## 
+  
+  
+  
+-  preparing &#39;tabulizer&#39;:
+##    checking DESCRIPTION meta-information ...
+  
+   checking DESCRIPTION meta-information ... 
+  
+v  checking DESCRIPTION meta-information
+## 
+  
+  
+  
+-  checking for LF line-endings in source and make files and shell scripts
+## 
+  
+  
+  
+-  checking for empty or unneeded directories
+## 
+  
+Removed empty directory 
+  
+   Removed empty directory &#39;tabulizer/docs&#39;
+## 
+  
+  
+  
+-  building &#39;tabulizer_0.2.2.tar.gz&#39;
+## 
+  
+   
+## </code></pre>
+<pre><code>## Installing package into &#39;C:/Users/user/Documents/R/win-library/4.1&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Baixe o arquivo .Rmd e o folder com os arquivos em .pdf e abra no RStudio.</li>
+</ol>
+<p><a href="https://www.dropbox.com/s/3eryvmh6fx7hszg/tabulizer.Rmd?dl=0">Arquivo .Rmd</a></p>
+<p><a href="https://www.dropbox.com/sh/06oe1s96w2d4qhp/AABretq0u92RGeuPmekbbWXva?dl=0">Arquivos .pdf</a></p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Siga as diretrizes da atividade.</p></li>
+<li><p>Rode o arquivo .Rmd por meio do ícone <code>knitr</code></p></li>
+<li><p>Salve o .Rmd e <strong>submeta-o por meio do email <a href="mailto:renataoliveira@gmail.com" class="email">renataoliveira@gmail.com</a></strong>.</p></li>
+</ol>
+<hr>
+</hr>
+<pre class="r"><code>library(hrbrthemes)
+library(ggplot2)
+library(Cairo)
+library(extrafont)
+library(rJava)      # Needed for tabulizer
+library(tabulizer)  # Handy tool for PDF Scraping
+library(tidyverse)  # Core data manipulation and visualization libraries
+library(janitor)
+
+extrafont::loadfonts()</code></pre>
+<p>Este chunk serve para fazer a leitura dos arquivos</p>
+<pre class="r"><code># PDF Scrape Tables
+
+#Store folder of pdf to be loaded
+folder &lt;- &quot;pdf/&quot;
+
+# Number of files in folder
+num_files &lt;- length(dir(folder, pattern=&quot;*.pdf&quot;))
+
+# Generate file list of shapefiles
+files &lt;- as.data.frame(dir(folder, pattern=&quot;*.pdf&quot;))
+names(files) &lt;- &quot;data&quot;
+
+## Generate static maps 
+
+tmp &lt;- data.frame(bairro = NA , sg = NA, srag = NA, obitos = NA, data = NA)
+
+for (i in 1:num_files) {
+   file_name &lt;- files[i,1]
+   data &lt;- print(str_sub(files[i,1], -14, -7))
+   scrape &lt;- tabulizer::extract_tables(file = paste0(&quot;pdf/&quot;, files[i,1]), output = &quot;data.frame&quot;, page = 2, guess = TRUE, method = &quot;stream&quot;)
+   scrape1 &lt;- as.data.frame(scrape[[1]])
+   scrape1 &lt;- scrape1 %&gt;% 
+      separate(col = &#39;Síndrome.Respiratória.Aguda.Grave&#39;, into = c(&quot;total de casos&quot;, &quot;óbitos&quot;), sep = &#39; &#39;) %&gt;% 
+      slice(-1)
+   scrape1 &lt;- scrape1[,c(1,3,5,6)] 
+   names(scrape1) &lt;- c(&quot;bairro&quot;, &quot;sg&quot;, &quot;srag&quot;, &quot;obitos&quot;)
+   if (length(scrape) != 1) {
+      scrape2 &lt;- as.data.frame(scrape[[2]])
+      scrape2[5,] &lt;- colnames(scrape2)
+      names(scrape2) &lt;- c(&quot;bairro&quot;, &quot;sg&quot;, &quot;srag&quot;, &quot;obitos&quot;)
+      scrape2 &lt;- scrape2 %&gt;% 
+         filter(bairro != &quot;TOTAL&quot;) 
+      scrape2 &lt;- scrape2 %&gt;% 
+         mutate(bairro = str_replace_all(bairro, &quot;\\.&quot;, &quot; &quot;), sg = str_replace(sg, &quot;X&quot;, &quot;&quot;), srag = str_replace(srag, &quot;X&quot;, &quot;&quot;), obitos = str_replace(obitos, &quot;X&quot;, &quot;&quot;))
+      tmp_dia &lt;- rbind(scrape1, scrape2)
+      tmp_dia[,5] &lt;- data
+      names(tmp_dia) &lt;- c(&quot;bairro&quot;, &quot;sg&quot;, &quot;srag&quot;, &quot;obitos&quot;, &quot;data&quot;)
+   } else {
+      tmp_dia &lt;- scrape1
+      tmp_dia[,5] &lt;- data
+      names(tmp_dia) &lt;- c(&quot;bairro&quot;, &quot;sg&quot;, &quot;srag&quot;, &quot;obitos&quot;, &quot;data&quot;)
+   }   
+   
+   tmp &lt;- tmp %&gt;% 
+      bind_rows(tmp, tmp_dia) %&gt;% 
+      filter(!is.na(sg))
+   
+}</code></pre>
+</div>
+</div>
+</div>

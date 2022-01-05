@@ -1,0 +1,89 @@
+---
+title: "Lab 4.1"
+draft: no
+date: '2021-10-15T00:00:00+01:00'
+menu:
+  intror_master:
+    parent: Unidade 4
+    weight: 16
+toc: yes
+type: docs
+weight: 16
+---
+
+<script src="/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<div id="juntando-dados" class="section level1">
+<h1>Juntando dados</h1>
+<p>Nessa atividade você aprenderá a fazer a união e a junção (cruzamento) de dois dataframes usando o <code>tidyverse</code>.</p>
+<p>A <strong>união de dados</strong> é mais intuitiva. Basta ter a mesma quantidade de campos e que estes estejam “alinhados”. A função mais usada para isso é o famoso <code>rbind()</code> (Row Bind). Caso os campos tenham exatamente os mesmos nomes e tipo, o <code>rbind()</code> consegue fazer a união perfeitamente.</p>
+<p>O <strong>cruzamento de dados (junção)</strong> é um pouco mais complexo, mas nem por isso chega a ser algo difícil.</p>
+<p>Para entender-se como fazer “joins” (cruzamentos), é preciso compreender-se o conceito de chave. Entenda chave como uma coluna que está presente da mesma forma em dois conjuntos de dados distintos. O conceito completo de chave é bem mais complexo que isto, mas, para começarmos a entender e usar os joins, basta usar essa intuição.</p>
+<p>Tendo esse conceito simplificado de chave em mente, a primeira coisa que se deve fazer quando for preciso cruzar dois conjuntos de dados é tentar identificar quais os campos chaves, ou seja, quais campos estão presentes nos dois grupos.</p>
+<p>O que acontece quando nem todos os códigos de um grupo estão no outro? E quando um grupo tem códigos repetidos em várias linhas? Para responder a essas e outras perguntas precisamos conhecer os diferentes tipos de joins. Existe pelo menos uma dezena de tipos de <em>joins</em>, mas 90% das vezes você precisará apenas dos tipos básicos que explicaremos a seguir. Usaremos o pacote dplyr para aplicar os <em>joins.</em> O R base possui a função <code>merge()</code> para <em>joins</em>, se tiver curiosidade procure mais sobre ela depois.</p>
+<div id="inner-join-ou-apenas-join" class="section level2">
+<h2>Inner Join (ou apenas Join)</h2>
+<p>Trata-se do <em>join</em> mais simples, mais básico e mais usado dentre todos os outros tipos. O seu comportamento mantém no resultado apenas as linhas presentes nos dois conjuntos de dados que estão sendo cruzados. O inner join funciona da seguinte forma:</p>
+<p>A tabela final, após o cruzamento, conterá as linhas com as chaves que estiverem em AMBOS os conjuntos de dados. As linhas com chaves que não estão em ambos serão descartadas. Esta característica torna o <em>inner join</em> muito útil para fazer-se filtros.</p>
+</div>
+<div id="left-outer-join" class="section level2">
+<h2>Left Outer Join</h2>
+<p>Chama-se <em>left outer join</em> pois todos os registros do “conjunto à esquerda” estarão presentes no resultado final, além dos registros à direita que coincidirem na chave.</p>
+</div>
+<div id="right-outer-join" class="section level2">
+<h2>Right Outer Join</h2>
+<p>O princípio é EXATAMENTE o mesmo do left join. A única diferença é a permanência dos registros do conjunto à direita. Podemos chegar ao mesmo resultado anterior apenas mudando os data frames de posição na manipulação.</p>
+</div>
+<div id="full-outer-join" class="section level2">
+<h2>Full Outer Join</h2>
+<p>Existem, ainda, as situações em que é necessário preservar todos os registros de ambos os conjuntos de dados. O full join tem essa característica. Nenhum dos conjuntos de dados perderá registros no resultado final, isto é, quando as chaves forem iguais, todos os campos estarão preenchidos. Quando não houver ocorrência das chaves em ambos os lados, será informado <code>NA</code> em qualquer um deles.</p>
+</div>
+<div id="exercícios" class="section level2">
+<h2>Exercícios</h2>
+<div id="diretrizes-gerais" class="section level3">
+<h3><strong>Diretrizes gerais:</strong></h3>
+<ol style="list-style-type: decimal">
+<li>Baixe o arquivo .Rmd e abra no RStudio.</li>
+</ol>
+<p><a href="https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EZ_UXta-KEZJhsy-TOyqJmMBBh3IW0DHw11PffzU4s9N5Q?e=C04dsD">Arquivo .Rmd</a></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Siga as diretrizes da atividade.</p></li>
+<li><p>Rode o arquivo .Rmd por meio do ícone <code>knitr</code></p></li>
+<li><p>Salve o .Rmd e <strong>submeta-o por meio do email <a href="mailto:renataoliveira@gmail.com" class="email">renataoliveira@gmail.com</a></strong>.</p></li>
+</ol>
+<hr>
+</hr>
+</div>
+<div id="exercício-1." class="section level3">
+<h3>Exercício 1.</h3>
+<p>Utilizando os dataframes abaixo, gere:</p>
+<ol style="list-style-type: lower-alpha">
+<li><p>um dataframe com os participantes</p></li>
+<li><p>um dataframe com os aprovados</p></li>
+<li><p>um dataframe com os eliminados</p></li>
+</ol>
+<p>Faça a junção de todos os tres dataframes em um único objeto.</p>
+<pre class="r"><code>participantes &lt;- data.frame(
+  Nome = c(&#39;Carlos&#39;, &#39;Maurício&#39;, &#39;Ana Maria&#39;, &#39;Rebeca&#39;, &#39;Patrícia&#39;),
+  Estado = c(&#39;Brasília&#39;, &#39;Minas Gerais&#39;, &#39;Goiás&#39;, &#39;São Paulo&#39;, &#39;Ceará&#39;),
+  Idade = c(23, 24, 22, 29, 28)
+)
+
+aprovados &lt;- data.frame(
+  Nome = c(&#39;Carlos&#39;, &#39;Patrícia&#39;),
+  Pontuacao = c(61, 62)
+)
+
+eliminados &lt;- data.frame(
+  Nome = c(&#39;Maurício&#39;, &#39;Ana Maria&#39;, &#39;Rebeca&#39;),
+  Pontuacao = c(49, 48, 48)
+)</code></pre>
+<p>Créditos da atividade:
+<a href="https://cdr.ibpad.com.br/juntando-dados.html">Ciência de Dados com R - Introdução. Autores: Saulo Guerra, Paulo Felipe de Oliveira, Robert McDonnell e Sillas Gonzaga</a></p>
+</div>
+</div>
+</div>

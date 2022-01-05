@@ -58,7 +58,7 @@ Por meio desta disciplina, os alunos desenvolverão competências para:
 
 ## Planejamento de encontros síncronos
 
-Os encontros síncronos acontecerão nas **segundas-feiras**, de **20:40 às 22:30**. Os encontros síncronos acontecerão na plataforma `Teams`. Vocês poderão acessar o servidor da disciplina pelo [link](https://teams.microsoft.com/l/team/19%3aiWJRMuk-g676YbdL85v7jm_Up-mNfI8vxF3ymvO2uRE1%40thread.tacv2/conversations?groupId=13230d26-a870-45e8-86c8-ad9f6b0fd90b&tenantId=ef9d67f2-bd3f-4e0c-84ba-3ffc81ab1c83).
+Os encontros síncronos acontecerão nas **segundas-feiras**, de **20:50 às 22:10**. Os encontros síncronos acontecerão na plataforma `Teams`. Vocês poderão acessar o servidor da disciplina pelo [link](https://teams.microsoft.com/l/team/19%3aiWJRMuk-g676YbdL85v7jm_Up-mNfI8vxF3ymvO2uRE1%40thread.tacv2/conversations?groupId=13230d26-a870-45e8-86c8-ad9f6b0fd90b&tenantId=ef9d67f2-bd3f-4e0c-84ba-3ffc81ab1c83).
 
 | **Data**           | **CH** | **Assunto** |
 |--------------------|--------|-------------|
@@ -66,19 +66,17 @@ Os encontros síncronos acontecerão nas **segundas-feiras**, de **20:40 às 22:
 | 25/10              |2h|Planejamento e gestão da cadeia de suprimentos.
 | 03/11              |2h|KPIs em gestão de processos de produção e suprimento   
 | 10/11              |2h|Nível de serviço logístico
-| 22/11              |2h|Logística urbana.
-| 29/11              |2h|Logística urbana.
-| 06/12              |2h|Integração logística e sistemas de informação (ICT)
-| 15/12              |2h|Transportes e distribuição física.   
+| 22/11              |2h|Nível de serviço logístico, desempenho e ICT.
+| 06/12              |2h|Logística urbana.
+| 13/12              |2h|Logística urbana.  
+| 20/12              |2h|Transportes e distribuição física.   
 | 05/01              |2h|Transportes e distribuição física.   
 | 10/01              |2h|Gestão de estoques e armazenagem.
 | 17/01              |2h|Gestão de estoques e armazenagem.
 | 24/01              |2h|Localizações logísticas
 | 31/01              |2h|Localizações logísticas
 | 07/02              |2h|Custos logísticos.
-| 14/02              |2h|Custos logísticos.
-| 21/02              |2h|Logística reversa, verde e sustentável.
-| 28/02              | |Exame especial. 
+| 14/02              |2h|Logística reversa, verde e sustentável.
 | **Total de Horas** |        |34 horas             |
 
 ## Proposta de avaliação da aprendizagem
@@ -92,21 +90,23 @@ Pontos|	Entrega|	Atividade
 10| 22/12 | Estudos Autônomos 4 - Gestão de Transportes
 10| 19/01 | Estudos Autônomos 5 - Gestão de estoques e armazenagem
 10| 16/02 | Estudos Autônomos 6 - Redes Logísticas e Custos
-10| 23/02 | Estudos Autônomos 7 - Multivarejo e Omnichannel
+10| 14/02 | Estudos Autônomos 7 - Multivarejo e Omnichannel
 20|	01/12	| Projeto incremental 1
-20|	23/02 |	Projeto incremental 2
+20|	14/02 |	Projeto incremental 2
 TOTAL:| |	100 pontos
 
 ## Recursos necessários
 
 Computador com Sistema Operacional à escolha do estudante, conexão à internet, câmera e microfone.
 
-Os softwares a serem instalados são: 
 Será necessário o uso de planilha eletrônica (o aplicativo pode ser de escolha do aluno) e ao longo da disciplina serão indicados aplicativos FOSS para outras análises.
 
 Os alunos deverão ter uma conta gratuita na plataforma `Teams`.
 
 Turma Virtual do SIGAA para postagens de conteúdos e outras comunicações.
+
+Acesso ao Moodle/AVA institucional.
+
 
 ## Bibliografia recomendada
 
@@ -134,9 +134,13 @@ Turma Virtual do SIGAA para postagens de conteúdos e outras comunicações.
 22.	Taylor, D. A. Logística na Cadeia de Suprimentos. Pearson. Addison Wesley. 2005.
 23.	Wanke, P. F. Introdução ao Planejamento de Redes Logísticas. Editora Atlas. 2009
 
-## Grupos de trabalho
+## Organização das atividades em grupos
 
-Os grupos de trabalho deverão ser os mesmos ao longo de todas as atividades e deverão ser compostos por **3 estudantes**.
+1. **Composição dos grupos de trabalho:** Cada grupo será composto por **três a quatro alunos**. Esse grupo deve se manter para realização de todos os projetos. 
+
+2. **Planejamento da execução dos trabalhos:** Definir um cronograma a priori, contemplando entregas parciais alinhadas com os projetos e acompanhar as etapas de execução. 
+
+3. As atividades devem, necessariamente, acontecer de **forma colaborativa**. Para tanto, será criada uma **wiki** para cada grupo/atividade no **Moodle/AVA** institucional. Assim, será possível acompanhar a contribuição de cada estudante no desenvolvimento de cada trabalho. 
 
 ## Comunicação
 

@@ -1,0 +1,93 @@
+---
+title: "Lab 4.1"
+draft: no
+date: '2021-10-15T00:00:00+01:00'
+menu:
+  intror_master:
+    parent: Unidade 4
+    weight: 16
+toc: yes
+type: docs
+weight: 16
+---
+
+# Juntando dados
+
+Nessa atividade você aprenderá a fazer a união e a junção (cruzamento) de dois dataframes usando o `tidyverse`.
+
+A **união de dados** é mais intuitiva. Basta ter a mesma quantidade de campos e que estes estejam “alinhados”. A função mais usada para isso é o famoso `rbind()` (Row Bind). Caso os campos tenham exatamente os mesmos nomes e tipo, o `rbind()` consegue fazer a união perfeitamente.
+
+O **cruzamento de dados (junção)** é um pouco mais complexo, mas nem por isso chega a ser algo difícil.
+
+Para entender-se como fazer “joins” (cruzamentos), é preciso compreender-se o conceito de chave. Entenda chave como uma coluna que está presente da mesma forma em dois conjuntos de dados distintos. O conceito completo de chave é bem mais complexo que isto, mas, para começarmos a entender e usar os joins, basta usar essa intuição.
+
+Tendo esse conceito simplificado de chave em mente, a primeira coisa que se deve fazer quando for preciso cruzar dois conjuntos de dados é tentar identificar quais os campos chaves, ou seja, quais campos estão presentes nos dois grupos.
+
+O que acontece quando nem todos os códigos de um grupo estão no outro? E quando um grupo tem códigos repetidos em várias linhas? Para responder a essas e outras perguntas precisamos conhecer os diferentes tipos de joins. Existe pelo menos uma dezena de tipos de _joins_, mas 90% das vezes você precisará apenas dos tipos básicos que explicaremos a seguir. Usaremos o pacote dplyr para aplicar os _joins._ O R base possui a função `merge()` para _joins_, se tiver curiosidade procure mais sobre ela depois.
+
+## Inner Join (ou apenas Join)
+Trata-se do _join_ mais simples, mais básico e mais usado dentre todos os outros tipos. O seu comportamento mantém no resultado apenas as linhas presentes nos dois conjuntos de dados que estão sendo cruzados. O inner join funciona da seguinte forma:
+
+A tabela final, após o cruzamento, conterá as linhas com as chaves que estiverem em AMBOS os conjuntos de dados. As linhas com chaves que não estão em ambos serão descartadas. Esta característica torna o _inner join_ muito útil para fazer-se filtros.
+
+## Left Outer Join
+Chama-se _left outer join_ pois todos os registros do “conjunto à esquerda” estarão presentes no resultado final, além dos registros à direita que coincidirem na chave. 
+
+## Right Outer Join
+O princípio é EXATAMENTE o mesmo do left join. A única diferença é a permanência dos registros do conjunto à direita. Podemos chegar ao mesmo resultado anterior apenas mudando os data frames de posição na manipulação.
+
+## Full Outer Join
+Existem, ainda, as situações em que é necessário preservar todos os registros de ambos os conjuntos de dados. O full join tem essa característica. Nenhum dos conjuntos de dados perderá registros no resultado final, isto é, quando as chaves forem iguais, todos os campos estarão preenchidos. Quando não houver ocorrência das chaves em ambos os lados, será informado `NA` em qualquer um deles.
+
+## Exercícios
+
+### **Diretrizes gerais:**
+
+1. Baixe o arquivo .Rmd e abra no RStudio. 
+
+[Arquivo .Rmd](https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EZ_UXta-KEZJhsy-TOyqJmMBBh3IW0DHw11PffzU4s9N5Q?e=C04dsD)
+
+
+2. Siga as diretrizes da atividade. 
+
+3. Rode o arquivo .Rmd por meio do ícone `knitr` 
+
+4. Salve o .Rmd e **submeta-o por meio do email renataoliveira@gmail.com**. 
+
+<hr></hr>
+
+
+### Exercício 1.
+
+Utilizando os dataframes abaixo, gere:
+
+a) um dataframe com os participantes
+
+b) um dataframe com os aprovados
+
+c) um dataframe com os eliminados
+
+Faça a junção de todos os tres dataframes em um único objeto. 
+
+```{r}
+participantes <- data.frame(
+  Nome = c('Carlos', 'Maurício', 'Ana Maria', 'Rebeca', 'Patrícia'),
+  Estado = c('Brasília', 'Minas Gerais', 'Goiás', 'São Paulo', 'Ceará'),
+  Idade = c(23, 24, 22, 29, 28)
+)
+
+aprovados <- data.frame(
+  Nome = c('Carlos', 'Patrícia'),
+  Pontuacao = c(61, 62)
+)
+
+eliminados <- data.frame(
+  Nome = c('Maurício', 'Ana Maria', 'Rebeca'),
+  Pontuacao = c(49, 48, 48)
+)
+
+```
+
+
+Créditos da atividade: 
+[Ciência de Dados com R - Introdução. Autores: Saulo Guerra, Paulo Felipe de Oliveira, Robert McDonnell e Sillas Gonzaga](https://cdr.ibpad.com.br/juntando-dados.html)

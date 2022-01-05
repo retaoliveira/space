@@ -1,0 +1,159 @@
+---
+date: "2021-12-05T00:00:00+01:00"
+draft: false
+menu:
+  sdss:
+    parent: Encontros
+    weight: 9
+title: Encontro 2 - representação e manipulação de dados espaciais
+toc: false
+type: docs
+weight: 9
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="principal-referência" class="section level1">
+<h1>Principal referência</h1>
+<p><a href="https://geocompr.robinlovelace.net/index.html">Geocomputation with R</a></p>
+</div>
+<div id="pacotes-referências" class="section level1">
+<h1>Pacotes referências</h1>
+<p><a href="https://r-spatial.github.io/sf/">Simple Features</a></p>
+<p><a href="https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html">tmap</a></p>
+</div>
+<div id="outras-informações" class="section level1">
+<h1>Outras informações</h1>
+<p><a href="https://concla.ibge.gov.br/busca-online-cnae.html?subclasse=5612100&amp;tipo=cnae&amp;versao=8&amp;view=subclasse">CNAE</a></p>
+</div>
+<div id="código-para-implementação-de-funções-de-representação-e-manipulação-de-dados-espaciais" class="section level1">
+<h1>Código para implementação de funções de representação e manipulação de dados espaciais</h1>
+<pre class="r"><code>vignette(package = &quot;sf&quot;)</code></pre>
+<pre class="r"><code>library(sf)</code></pre>
+<pre><code>## Linking to GEOS 3.9.1, GDAL 3.2.1, PROJ 7.2.1</code></pre>
+<pre class="r"><code>library(terra)</code></pre>
+<pre><code>## terra version 1.4.22</code></pre>
+<pre class="r"><code>library(spData)
+library(tmap)
+library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
+<pre><code>## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.6     v dplyr   1.0.7
+## v tidyr   1.1.4     v stringr 1.4.0
+## v readr   2.1.1     v forcats 0.5.1</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x tidyr::extract()  masks terra::extract()
+## x dplyr::filter()   masks stats::filter()
+## x dplyr::lag()      masks stats::lag()
+## x purrr::simplify() masks terra::simplify()
+## x dplyr::src()      masks terra::src()</code></pre>
+<pre class="r"><code>class(world)</code></pre>
+<pre><code>## [1] &quot;sf&quot;         &quot;tbl_df&quot;     &quot;tbl&quot;        &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>names(world)</code></pre>
+<pre><code>##  [1] &quot;iso_a2&quot;    &quot;name_long&quot; &quot;continent&quot; &quot;region_un&quot; &quot;subregion&quot; &quot;type&quot;     
+##  [7] &quot;area_km2&quot;  &quot;pop&quot;       &quot;lifeExp&quot;   &quot;gdpPercap&quot; &quot;geom&quot;</code></pre>
+<pre class="r"><code>plot(world)</code></pre>
+<pre><code>## Warning: plotting the first 9 out of 10 attributes; use max.plot = 10 to plot
+## all</code></pre>
+<p><img src="/disciplinas/sdss/encontro2_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<pre class="r"><code>plot(world[&quot;continent&quot;], reset = FALSE)
+cex = sqrt(world$pop) / 10000
+world_cents = st_centroid(world, of_largest = TRUE)</code></pre>
+<pre><code>## Warning in st_centroid.sf(world, of_largest = TRUE): st_centroid assumes
+## attributes are constant over geometries of x</code></pre>
+<pre class="r"><code>plot(st_geometry(world_cents), add = TRUE, cex = cex)</code></pre>
+<p><img src="/disciplinas/sdss/encontro2_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<pre class="r"><code>autonomos &lt;- st_read(&quot;shapefile/autonomos.shp&quot;)
+autonomos &lt;- st_transform(autonomos, &quot;EPSG:4326&quot;)
+st_crs(autonomos)
+st_bbox(autonomos)
+economica &lt;- st_read(&quot;shapefile/economica.shp&quot;)
+economica_auto &lt;- st_transform(autonomos)
+st_crs(economica_auto)</code></pre>
+<pre class="r"><code>st_crs(autonomos)
+new_shape &lt;- st_transform(autonomos, &quot;EPSG:4326&quot;) # set CRS
+st_crs(new_shape)
+st_bbox(autonomos)
+st_bbox(new_shape)</code></pre>
+</div>
+<div id="representação" class="section level1">
+<h1>Representação</h1>
+<pre class="r"><code>autonomos &lt;- st_read(&quot;shapefile/autonomos.shp&quot;)
+economica &lt;- st_read(&quot;shapefile/economica.shp&quot;)
+regional &lt;- st_read(&quot;shapefile/regional.shp&quot;)
+
+tm_shape(regional) +
+   tm_polygons(&quot;NOME&quot;,palette = &quot;RdYlBu&quot;)
+
+tm_shape(regional) +
+   tm_borders() +
+tm_shape(autonomos) +
+   tm_dots(col = &quot;red&quot;) +
+   tm_scale_bar()</code></pre>
+</div>
+<div id="manipulação-de-dados-espaciais" class="section level1">
+<h1>Manipulação de dados espaciais</h1>
+<pre class="r"><code>farmacias &lt;- economica %&gt;% 
+   filter(CNAE_PRINC == &#39;4771701&#39; | CNAE_PRINC == &#39;4771702&#39;)
+
+tm_shape(regional) +
+   tm_borders() +
+tm_shape(farmacias) +
+   tm_dots()</code></pre>
+<pre class="r"><code>world </code></pre>
+<pre><code>## Simple feature collection with 177 features and 10 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -180 ymin: -89.9 xmax: 180 ymax: 83.64513
+## Geodetic CRS:  WGS 84
+## # A tibble: 177 x 11
+##    iso_a2 name_long continent region_un subregion type  area_km2     pop lifeExp
+##  * &lt;chr&gt;  &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+##  1 FJ     Fiji      Oceania   Oceania   Melanesia Sove~   1.93e4  8.86e5    70.0
+##  2 TZ     Tanzania  Africa    Africa    Eastern ~ Sove~   9.33e5  5.22e7    64.2
+##  3 EH     Western ~ Africa    Africa    Northern~ Inde~   9.63e4 NA         NA  
+##  4 CA     Canada    North Am~ Americas  Northern~ Sove~   1.00e7  3.55e7    82.0
+##  5 US     United S~ North Am~ Americas  Northern~ Coun~   9.51e6  3.19e8    78.8
+##  6 KZ     Kazakhst~ Asia      Asia      Central ~ Sove~   2.73e6  1.73e7    71.6
+##  7 UZ     Uzbekist~ Asia      Asia      Central ~ Sove~   4.61e5  3.08e7    71.0
+##  8 PG     Papua Ne~ Oceania   Oceania   Melanesia Sove~   4.65e5  7.76e6    65.2
+##  9 ID     Indonesia Asia      Asia      South-Ea~ Sove~   1.82e6  2.55e8    68.9
+## 10 AR     Argentina South Am~ Americas  South Am~ Sove~   2.78e6  4.30e7    76.3
+## # ... with 167 more rows, and 2 more variables: gdpPercap &lt;dbl&gt;,
+## #   geom &lt;MULTIPOLYGON [°]&gt;</code></pre>
+<pre class="r"><code>world_agg1 &lt;- world %&gt;%
+  group_by(continent) %&gt;%
+  summarize(pop = sum(pop, na.rm = TRUE))
+
+tm_shape(world) +
+   tm_polygons(&quot;pop&quot;, style = &quot;jenks&quot; )</code></pre>
+<p><img src="/disciplinas/sdss/encontro2_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<pre class="r"><code>world_agg2  &lt;- world %&gt;% 
+  group_by(continent) %&gt;%
+  summarize(pop = sum(pop, na.rm = TRUE), `area (sqkm)` = sum(area_km2), n = n())</code></pre>
+</div>
+<div id="junção-não-espacial---relaciona-dados-por-meio-de-uma-chave" class="section level1">
+<h1>Junção não espacial - relaciona dados por meio de uma chave</h1>
+<pre class="r"><code>coffee_data</code></pre>
+<pre><code>## # A tibble: 47 x 3
+##    name_long                coffee_production_2016 coffee_production_2017
+##    &lt;chr&gt;                                     &lt;int&gt;                  &lt;int&gt;
+##  1 Angola                                       NA                     NA
+##  2 Bolivia                                       3                      4
+##  3 Brazil                                     3277                   2786
+##  4 Burundi                                      37                     38
+##  5 Cameroon                                      8                      6
+##  6 Central African Republic                     NA                     NA
+##  7 Congo, Dem. Rep. of                           4                     12
+##  8 Colombia                                   1330                   1169
+##  9 Costa Rica                                   28                     32
+## 10 Côte d&#39;Ivoire                               114                    130
+## # ... with 37 more rows</code></pre>
+<pre class="r"><code>juntos &lt;- world %&gt;% 
+   left_join(coffee_data)</code></pre>
+<pre><code>## Joining, by = &quot;name_long&quot;</code></pre>
+<pre class="r"><code>tm_shape(juntos) +
+   tm_polygons(&#39;coffee_production_2017&#39;, style = &quot;jenks&quot;)</code></pre>
+<p><img src="/disciplinas/sdss/encontro2_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+</div>

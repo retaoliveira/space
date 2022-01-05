@@ -1,0 +1,274 @@
+---
+title: "Lab 4.3"
+draft: no
+date: '2021-10-15T00:00:00+01:00'
+menu:
+  intror_master:
+    parent: Unidade 4
+    weight: 20
+toc: yes
+type: docs
+weight: 20
+---
+```{r load-pkg, message = FALSE}
+library(tidyverse)
+```
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+
+
+    #---
+    # +++ Matrix Basics ----
+    #
+  
+        matrix( data= 1:20, nrow= 4)
+        matrix( data= 1:20, nrow= 5)
+        matrix( data= 1:20, 4)
+        matrix( data= 1:20, ncol= 4)
+        matrix( data= 1:20, , 4)
+  
+      #---
+      # OBS IMPORTANTE: ordem DEFAULT de preenchimento: por coluna 
+      #---
+  
+        mA= matrix( data= 1:20, nrow= 4, byrow= T)
+          mA
+  
+      #---
+      # Transposi��o
+      #---
+  
+        t(mA)
+  
+      #---
+      # Matrizes de caracteres  ... 
+      #---
+      
+        mChar= matrix( data= month.abb, nrow= 4)
+      
+      #---
+      # ... ou de logicos 
+      #---
+      
+        vTemp= ((1:12)%%4) == 1
+          mLog= matrix( vTemp, nrow= 4)
+          mLog
+      
+          #---
+          # + direto: 
+          #---
+          
+            matrix( ((1:12)%%4) == 1,  4)
+  
+      #---
+      #
+      #   OBS Elementos de uma matriz sempre têm mesmo tipo. 
+      #       Se não for assim são modificados! 
+      #       Na marra e na surdina.
+      #
+      #---
+  
+        matrix( c(1:10,T,T),  4)
+        matrix( c(1:10,"T",T),  4)
+  
+    #
+    # +++ END Basics ----
+    #---
+  
+    #---
+    # +++ BEG Operações elementares I: Matrizes e Escalares ----
+    #
+  
+        mA
+        2*mA
+        sqrt(mA)
+        mA^(1/3)
+        2^mA
+        mA>5
+        paste(mA, "1")
+        c(mA, "1")
+        c(mA, 1)
+  
+    #
+    # +++ END Operações elementares I: Matrizes e Escalares ----
+    #---
+        
+    #---
+    # +++ BEG Operações elementares II: Matrizes e Vetores ----
+    #
+    
+        mA= t(mA)
+        mA
+                    #---
+        mA + 1:20   # Business as usual
+                    #---
+  
+                    #---
+        mA + 1:10   # 2 {length(mA) / length(1:10) } Ciclos
+                    #---
+  
+                    #---
+        mA + 1:16   # Numero não inteiro de ciclos
+                    #---
+          1:20+1:16
+          matrix( 1:20+1:16, 5 )
+  
+      #---
+      # outro exemplo de ciclo
+      #---
+        mB= matrix( 1:12, 4 )
+        (1:3)^mB
+    
+    #
+    # +++ END Operações elementares II: Matrizes e Vetores ----
+    #---
+  
+    #---
+    # +++ BEG Operações elementares III: Matrizes e Matrizes ----
+    #
+        mB
+        mA
+        mA + mB
+    
+        mA= matrix(1:16, 4)
+        mC= matrix(1:8, 4)
+          mA+mC
+  
+      #---
+      # Produto matricial
+      #---
+    
+        dim(mA)
+        dim(mB)
+          mA%*%mB
+  
+      #---
+      # Inversa
+      #---
+  
+        solve(mA)
+        set.seed(1)
+          mD= matrix(runif(16), 4)
+          solve(mD)
+        mD %*% solve(mD)
+        round(mD %*% solve(mD), digits=6)
+  
+    #
+    # +++ END Operações elementares III: Matrizes e Matrizes ----
+    #---
+  
+  
+    #---
+    # +++ BEG Submatrizes , etc ----
+    #
+  
+        mA
+            mA[1,3]         # elemento [1,3]
+            mA[2,]          # segunda linha
+            mA[1:2,]        # primeira e segunda linhas
+            mA[,c(1,3)]     # primeira e terceira colunas
+            mA[1:2,c(1,3)]  # Uma SubMatriz
+  
+      #---
+      # Lembrando subvetores
+      #---
+        y= 10*(1:11)
+          length(y)
+          y
+          ehPar= c(F, T, F, T, F, T, F, T, F, T, F)
+          y[ehPar]
+          ehPar= ((1:length(y))%%2 == 0)
+  
+      #---
+      # Análogo pra formação de submatrizes
+      #---
+        mD= round(100*mD, 0)
+            row(mD)
+            col(mD)
+          LinMaiorQCol= row(mD)>col(mD)
+        mD[LinMaiorQCol]
+        mD
+        mD[row(mD)==col(mD)]
+  
+    #
+    # +++ END Submatrizes , etc ----
+    #---
+  
+    #---
+    # +++ BEG documentando vetores ----
+    #
+    
+        y=1:12
+        names(y)= month.abb
+        y
+        y[c(2,4)]
+        y[c("Jan", "Feb", "Jul")]
+    
+    #
+    # +++ END documentando vetores ----
+    #---
+
+    #---
+    # +++ BEG documentando matrizes ----
+    #---
+        
+        mA= matrix(1:20, 5)
+        dimnames(mA)= list(letters[1:5],month.abb[1:4])
+        mA
+        
+        summary(matrix(1:20, 5))
+        summary(mA)
+        
+    #---
+    # +++ END documentando matrizes ----
+    #---
+        
+#---
+#   END matrizes: vetores especiais ----
+#---
+
+#---
+#   BEG listas: uma estrutura mais geral ----
+#---
+
+  dadosDeGB= 
+    list( nome="Giordanno Bruno",
+          idade= 48,
+          ehCasado= F,
+          numerosPreferidos= c(pi, log(10)))
+
+    #---
+    # Obs:  Ao contrário de vetores e matrizes, 
+    #       NÃO é necessário que todas as componentes 
+    #       sejam de mesmo tipo
+    #---
+
+  #---
+  # recuperando componentes
+  #---
+
+    dadosDeGB[[2]] 
+    dadosDeGB$nome 
+    dadosDeGB["nome"] 
+    dadosDeGB[c("nome","idade")] 
+
+                      #---
+    dadosDeGB[[1:2]]  # <=== Isso não dá pra fazer
+                      #---
+
+  #---
+  # incorporando componentes
+  #---
+    names(dadosDeGB)
+    dadosDeGB$anosDeEstudo= 40
+    names(dadosDeGB)
+
+
+  
+#
+#   END listas: uma estrutura mais geral ----
+#---
+
+
+```
+

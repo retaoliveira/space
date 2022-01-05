@@ -1,0 +1,106 @@
+---
+title: "Lab 5.2"
+draft: false
+date: '2021-10-15T00:00:00+01:00'
+menu:
+  intror_master:
+    parent: Unidade 5
+    weight: 25
+toc: yes
+type: docs
+weight: 25
+---
+
+# Scrape em tabelas
+
+## Exercícios
+
+### **Diretrizes gerais:**
+
+1. Instale o pacote `tabulizer`
+
+```{r}
+devtools::install_github(c("ropensci/tabulizerjars", "ropensci/tabulizer"))
+```
+
+
+2. Baixe o arquivo .Rmd e o folder com os arquivos em .pdf e abra no RStudio. 
+
+[Arquivo .Rmd](https://www.dropbox.com/s/3eryvmh6fx7hszg/tabulizer.Rmd?dl=0)
+
+[Arquivos .pdf](https://www.dropbox.com/sh/06oe1s96w2d4qhp/AABretq0u92RGeuPmekbbWXva?dl=0)
+
+3. Siga as diretrizes da atividade. 
+
+4. Rode o arquivo .Rmd por meio do ícone `knitr` 
+
+5. Salve o .Rmd e **submeta-o por meio do email renataoliveira@gmail.com**. 
+
+<hr></hr>
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+library(hrbrthemes)
+library(ggplot2)
+library(Cairo)
+library(extrafont)
+library(rJava)      # Needed for tabulizer
+library(tabulizer)  # Handy tool for PDF Scraping
+library(tidyverse)  # Core data manipulation and visualization libraries
+library(janitor)
+
+extrafont::loadfonts()
+```
+
+Este chunk serve para fazer a leitura dos arquivos
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+# PDF Scrape Tables
+
+#Store folder of pdf to be loaded
+folder <- "pdf/"
+
+# Number of files in folder
+num_files <- length(dir(folder, pattern="*.pdf"))
+
+# Generate file list of shapefiles
+files <- as.data.frame(dir(folder, pattern="*.pdf"))
+names(files) <- "data"
+
+## Generate static maps 
+
+tmp <- data.frame(bairro = NA , sg = NA, srag = NA, obitos = NA, data = NA)
+
+for (i in 1:num_files) {
+   file_name <- files[i,1]
+   data <- print(str_sub(files[i,1], -14, -7))
+   scrape <- tabulizer::extract_tables(file = paste0("pdf/", files[i,1]), output = "data.frame", page = 2, guess = TRUE, method = "stream")
+   scrape1 <- as.data.frame(scrape[[1]])
+   scrape1 <- scrape1 %>% 
+      separate(col = 'Síndrome.Respiratória.Aguda.Grave', into = c("total de casos", "óbitos"), sep = ' ') %>% 
+      slice(-1)
+   scrape1 <- scrape1[,c(1,3,5,6)] 
+   names(scrape1) <- c("bairro", "sg", "srag", "obitos")
+   if (length(scrape) != 1) {
+      scrape2 <- as.data.frame(scrape[[2]])
+      scrape2[5,] <- colnames(scrape2)
+      names(scrape2) <- c("bairro", "sg", "srag", "obitos")
+      scrape2 <- scrape2 %>% 
+         filter(bairro != "TOTAL") 
+      scrape2 <- scrape2 %>% 
+         mutate(bairro = str_replace_all(bairro, "\\.", " "), sg = str_replace(sg, "X", ""), srag = str_replace(srag, "X", ""), obitos = str_replace(obitos, "X", ""))
+      tmp_dia <- rbind(scrape1, scrape2)
+      tmp_dia[,5] <- data
+      names(tmp_dia) <- c("bairro", "sg", "srag", "obitos", "data")
+   } else {
+      tmp_dia <- scrape1
+      tmp_dia[,5] <- data
+      names(tmp_dia) <- c("bairro", "sg", "srag", "obitos", "data")
+   }   
+   
+   tmp <- tmp %>% 
+      bind_rows(tmp, tmp_dia) %>% 
+      filter(!is.na(sg))
+   
+}
+
+```

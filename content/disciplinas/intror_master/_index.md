@@ -1,63 +1,49 @@
 ---
-date: "2020-23-12T00:00:00Z"
-draft: false
-lastmod: "2021-05-15T00:00:00Z"
+title: "Introdução ao R"
+draft: no
+date: '2021-05-15T00:00:00Z'
 menu:
-  sdss:
+  intror_master:
     name: Organização do curso
     weight: 10
-title: Análise de dados para gestão organizacional
-toc: true
+lastmod: '2021-10-15T00:00:00Z'
+toc: yes
 type: docs
 weight: 10
 ---
 
 ## Proposta pedagógica
 
-A intenção aqui é fazer com que o aprendizado seja mais dinâmico e ocorra de forma simultânea, fazendo com que o aluno tenha as bases teóricas e teste-as ao mesmo tempo.
+A intenção desta disciplina é fazer com que o aprendizado seja mais dinâmico e ocorra de forma simultânea, fazendo com que o aluno tenha as bases teóricas e teste-as ao mesmo tempo.
 
-A proposta pedagógica para desenvolvimento deste curso fundamenta-se no conceito de `Aprendizagem Baseada em Projetos`. São propostos `projetos incrementais` para apreensão do conhecimento e um `projeto integrador` para consolidação e perspectiva integrada da disciplina.
+A proposta pedagógica para desenvolvimento deste curso fundamenta-se no conceito de `Aprendizagem Baseada em Projetos`. São propostos `projetos incrementais` para apreensão do conhecimento.
 
 ## Ementa da disciplina
 
--   Comunicação e reprodutibilidade de dados, relatórios, apresentações e produções científicas em Rmarkdown.
--   Tipos de dados, Importação de base de dados, criação de objeto, operadores aritméticos, de comparação e lógicos no R.
--   Funções para manipulação e tratamento de dados.
--   Estatística descritiva e mineração de dados.
--   Visualização e comunicação de informações gerenciais e científicas para identificação e caracterização de problemas e proposição de soluções no R.
+- Importação de base de dados
+- Criação de objeto (vetores, matrizes, data frames)
+- Operações com matrizes (transposição, inversão, multiplicação)
+- Funções básicas do R (for, if, else, união, intercessão, True, False).
 
 ## Objetivos de aprendizagem
 
 Por meio desta disciplina, os alunos desenvolverão competências para:
 
-1.  implementar comunicação e reprodutibilidade de instrumentos gerenciais e científicos por meio de linguagem RMarkdown e Git.
-2.  Desenvolver competências para busca, manipulação e tratamento de dados utilizando R e RStudio.
-3.  Implementar métodos de estatística descritiva exploratória e mineração de dados para gestão organizacional.
-4.  Construir instrumentos para visualização e comunicação para suporte à gestão e à tomada de decisão.
+1. Entender a linguagem básica de programação no R. 
+2. Conhecer as funções básicas para manipular bases de dados.
 
 ## Planejamento de encontros síncronos
 
-Os encontros síncronos acontecerão nas **sextas-feiras**, de **19:00 às 20:30h**. Acontecerão na plataforma `Teams`. Vocês poderão acessar o servidor da disciplina pelo [link](https://teams.microsoft.com/l/team/19%3alRN7K9Lhp38HbOpGhz-eO6-B7WaV5o6u-f2W3ET-yIs1%40thread.tacv2/conversations?groupId=5c5852cc-ef5c-403d-83c0-3fe8a3ebe922&tenantId=ef9d67f2-bd3f-4e0c-84ba-3ffc81ab1c83).
+Os encontros síncronos acontecerão nas **terças-feiras**, de **08:00 às 12:00h**. Acontecerão na plataforma `Teams`. Vocês poderão acessar o servidor da disciplina pelo [link](https://teams.microsoft.com/l/team/19%3aMP6yYq2Q8ZbGcsY-Daeh0wNcbWQ0WgNMjxk98MTFJ081%40thread.tacv2/conversations?groupId=b1d6c669-b6bb-4279-a2d4-80d00ed05efd&tenantId=ef9d67f2-bd3f-4e0c-84ba-3ffc81ab1c83).
 
-| **Data**           | **Descrição da Atividade**                                                                                                                                                 | **Síncrona** | **Assíncrona** |
-|--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------|----------------|
-| 25/05| Ambientação no R, RStudio, Git-Github e Rpubs. | X |                |
-| 28/05| RMarkdown como instrumento para produção de documentos estáticos e interativos, produção de websites, produção de dashboards, apresentações, livros e artigos científicos. | X |                |
-| 04/06| Estrutura de dados no R: tipos de dados, importação de base de dados, criação de objeto (vetores, matrizes, data frames), operadores aritméticos, de comparação e lógicos. | X |                |
-| 11/06| Estrutura de dados no R: tipos de dados, importação de base de dados, criação de objeto (vetores, matrizes, data frames), operadores aritméticos, de comparação e lógicos. | X |                |
-| 18/06| Estrutura de dados no R: tipos de dados, importação de base de dados, criação de objeto (vetores, matrizes, data frames), operadores aritméticos, de comparação e lógicos. | X |                |
-| 25/06| Visualização e comunicação de informações gerenciais e científicas. | X  |                |
-| 02/07| Visualização e comunicação de informações gerenciais e científicas. | X  |                |
-| 09/07| Funções para manipulação e tratamento de dados. Estatística descritiva e mineração de dados.| X |           |
-| 16/07| Funções para manipulação e tratamento de dados. Estatística descritiva e mineração de dados.| X |           |
-| 23/07| Funções para manipulação e tratamento de dados. Estatística descritiva e mineração de dados.| X |           |
-| 06/08| Funções para manipulação e tratamento de dados. Estatística descritiva e mineração de dados.| X |           |
-| 13/08| Segmentação de mercado            | X            |                |
-| 27/08| Implementação de R e RStudio para identificação, caracterização e diagnóstico de problemas e proposição de soluções em processos organizacionais e científicos.| X|                |
-| 03/09| Implementação de R e RStudio para identificação, caracterização e diagnóstico de problemas e proposição de soluções em processos organizacionais e científicos.| X|                |
-| 10/09| Seminário final com apresentação dos trabalhos. | X|                |
-| 17/09| Exame especial|              |                |
-| **Total de Horas** | | 30 horas     |                |
+| **Data**           | **Descrição da Atividade**   
+---------------------|---------------------------
+| 19/10| Unidade 1: Comunicação por meio do R: ambientação no R, RStudio, Git-Github e Rpubs; Hello R; RMarkdown.|
+| 26/10| Unidade 2: Visualização de dados no R; estrutura de dados no R; tipos de dados, importação de base de dados, criação de objeto (vetores, matrizes, data frames), operadores aritméticos, de comparação e lógicos; visualização de informações gerenciais e científicas. |
+| 09/11| Unidade 3: Manipulação e transformação de dados no R: funções para manipulação e tratamento de dados. Estatística descritiva e mineração de dados| 
+| 16/11| Unidade 3: Manipulação e transformação de dados no R: funções para manipulação e tratamento de dados. Estatística descritiva e mineração de dados|
+| 23/11| Unidade 4: Argumentos lógicos; ifelse, which, igual, maior, menor que, join; subconjuntos com argumentos lógicos| 
+| **Total de Horas** | 30 horas    |
 
 ## Proposta de avaliação da aprendizagem
 
@@ -65,19 +51,15 @@ A aprendizagem na disciplina será avaliada por meio da consolidação de ativid
 
 | Pontos | Entrega | Atividade                                                                                                                                                                                                                                                    |
 |--------|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5 | 17/06 | Lab 1 – Introdução do R e IDE RStudio. RMarkdown. |
-| 5 | 24/06 | Lab 2 – Tipos de dados e objetos no R|
-| 5 | 01/07 | Lab 3 – Visualização de dados – base ggplot2|
-| 5 | 15/07 | Lab 4 – Importação e introdução ao tratamento de dados no R.|
-| 5 | 22/07 | Lab 5 – Tratamento de dados - dplyr|
-| 5 | 05/08 | Lab 6 – Junção de múltiplos dataframes|	
-| 5 | 26/08 | Lab 7 – Segmentação de mercado – análise de cluster|
-| 10 | 01/07 | Projeto integrador - Entrega parcial|
-| 20 | 09/09 | Projeto integrador - Entrega final|
-| 15 | 10/09 | Projeto integrador - Apresentação|
-| 15 | 10/09 | Projeto integrador - Avaliação pelos pares|
-| 5 |       | Engajamento|
-| TOTAL: |         | 100 pontos                                                                                                                                                                                                                                                   |
+| 20 | 19/10 | Lab 1 – Introdução do R e IDE RStudio. RMarkdown. 
+| 20 | 26/10 | Lab 2 – Tipos de dados e objetos no R. Visualização de dados – base ggplot2
+| 20 | 09/11 | Lab 3 – Importação e introdução ao tratamento de dados no R. Tratamento de dados - dplyr. Junção de múltiplos dataframes
+| 20 | 23/11 | Lab 4 – Argumentos lógicos - ifelse, which, igual, maior, menor que, join; subconjuntos com argumentos lógicos
+| 5 | 19/10 | Atividade 1 
+| 5 | 26/10 | Atividade 2 
+| 5 | 09/11 | Atividade 3 
+| 5 | 23/11 | Atividade 4 
+| TOTAL: |         | 100 pontos
 
 ## Requisitos básicos e expectativas iniciais
 
@@ -97,7 +79,7 @@ Computador com Sistema Operacional à escolha do estudante, conexão à internet
 
 Os alunos deverão ter uma conta gratuita na plataforma `github.com`. Recomendamos também que se cadastrem no [RPubs](https://rpubs.com/)
 
-Turma Virtual do SIGAA para postagens de conteúdos e outras comunicações.
+A turma virtual do SIGAA será utilizada para postagens de conteúdos e outras comunicações.
 
 ## Bibliografia recomendada sobre análise de dados aplicada a processos decisórios
 
@@ -105,6 +87,12 @@ Turma Virtual do SIGAA para postagens de conteúdos e outras comunicações.
 -   RAGSDALE, Cliff T. Modelagem de planilha e análise de decisão: uma introdução prática a business analytics. Revisão de João Luiz Becker. São Paulo: Saraiva, c2015. xi, 594 p., il. Inclui referências e índice. ISBN 9788522117741.
 -   SHARDA, Ramesh. Business intelligence and analytics: systems for decision support. 10. ed. Boston: Pearson, c2015. xxx, 656 p., il. Inclui referências, glossário e índice. ISBN 9780133050905.
 -   NISHISATO, S. Analysis of Categorical Data: Dual Scaling and Its Applications. Toronto: University of Toronto Press, Scholarly Publishing Division, 2018. ISBN 9781487578909. Disponível em: <http://search.ebscohost.com/login.aspx?direct=true&db=nlebk&AN=2027628&lang=pt-br&site=ehost-live>. Acesso em: 22 out. 2020.
+- TSAY, Ruey S. Multivariate time series analysis: with R and financial applications. New Jersey: John Wiley & Sons, 2014.
+- TROSSET, Michael W. An introduction to statistical inference and its applications with R. Boca Raton: Chapman and Hall/CRC, 2009.
+- PARADIS, Emanuel. R for Beginners. Monpellier: Institut des Sciences de l’Evolution, 2005. Disponível em: https://cran.r-project.org/doc/contrib/Paradis-rdebuts_en.pdf. Acesso em: 12 nov. 2019.  
+- TEETOR, Paul. R cookbook: Proven recipes for data analysis, statistics, and graphics. Sebastopol: O'Reilly Media, Inc., 2011.
+- Zen do R - https://curso-r.github.io/zen-do-r/index.html
+
 
 ## Material adicional
 
@@ -113,7 +101,7 @@ Turma Virtual do SIGAA para postagens de conteúdos e outras comunicações.
 
 ## Comunicação
 
-Toda comunicação individual com a docente deverá acontecer por meio do email institucional do docente, deve conter no campo "assunto" o texto `<Dados-adm>` e deve ser assinada com seu nome completo. Por favor, utilize o email institucional para comunicação com o docente: [renataoliveira\@cefetmg.br](mailto:renataoliveira@cefetmg.br)
+Toda comunicação individual com a docente deverá acontecer por meio do email institucional do docente, deve conter no campo "assunto" o texto `<R-PPGA>` e deve ser assinada com seu nome completo. Por favor, utilize o email institucional para comunicação com o docente: [renataoliveira@cefetmg.br](mailto:renataoliveira@cefetmg.br)
 
 Se o seu email não contempla alguma questão pessoal/individual, mas sim questionamentos e dúvidas sobre as atividades deste curso, por favor:
 
@@ -124,7 +112,7 @@ Se o seu email não contempla alguma questão pessoal/individual, mas sim questi
 
 ## Políticas institucionais e da disciplina
 
-O comparecimento aos encontros síncronos é desejável. A participação nesses encontros faz com que os estudantes tenham melhor desempenho. Entretanto, considerando todos os desafios proporcionados pelo ensino remoto, todo o conteúdo do curso será disponibilizado nas plataformas adotadas para condução das atividades. Você poderá participar das atividades remotamente usando o canal `discussão` no `Teams`. Sua participação no Fórum será considerada para a avaliação desse curso no atributo `Engajamento`.
+O comparecimento aos encontros síncronos é desejável. A participação nesses encontros faz com que os estudantes tenham melhor desempenho. Entretanto, considerando todos os desafios proporcionados pelo ensino remoto, todo o conteúdo do curso será disponibilizado nas plataformas adotadas para condução das atividades. Você poderá participar das atividades remotamente usando o canal `discussão` no `Teams`. 
 
 1.  Resposta a perguntas postadas pelos estudantes no canal `discussão` no `Teams`.
 2.  Participação em discussões e trabalhos em grupo na sala de aula.

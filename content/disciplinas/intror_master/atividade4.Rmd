@@ -1,0 +1,63 @@
+---
+date: "2021-10-15T00:00:00+01:00"
+draft: false
+menu:
+  intror_master:
+    parent: Unidade 4
+    weight: 12
+title: Atividade 4
+toc: true
+type: docs
+weight: 12
+---
+
+# Introdução ao R - Processamento com Matrizes
+
+Lucélia Vaz
+
+## Retrospecto e agenda
+
+1 - O que é o ambiente R e para que serve?
+
+2 - Tipos básicos de dados no R.
+
+3 - Criando e nomeando vetores no R.
+
+4 - Subconjuntos de vetores no R.
+
+5 - Como criar e nomear matrizes no R.
+
+6 - Operações aritméticas com matrizes.
+
+## Recursos
+
+[Vídeos DataCamp](https://youtu.be/SWxoJqTqo08)
+
+[Dados](https://cefetmgbr-my.sharepoint.com/:x:/g/personal/renataoliveira_cefetmg_br/EXg-lGMviChHstCtTLP8d9AB62Z00cdNFQTrbsFJPDMAlA?e=JZ0gIm)
+
+
+## Exercício
+
+Os dados abaixo correspondem às observações sobre Despesa de Consumo Pessoal e Produto Interno Bruto em bilhões de dólares de 2000, para os Estados Unidos. Os dados foram obtidos no livro do Gujarati, intitulado Econometria básica. Existe uma teoria que estabelece uma relação entre o consumo e a renda de um país (medida em termos do Produto Interno Bruto). Partindo do pressuposto que, esta é uma relação linear, temos que o a Despesa de consumo pessoal (Y) guarda a seguinte relação com o Produto Interno Bruto (X).
+
+Y= β~0~ + β~1~X
+
+Com base no exposto acima, siga as orientações abaixo para obter os valores de β0 e β1 e, assim, determinar a equação da reta.
+
+## Base de dados
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+as.matrix(RendaConsumo)
+```
+
+## Atividade
+
+a - Crie um vetor de uns que tenha um número de entradas igual ao número de linhas da matriz acima. Pode denominá-lo "uns".
+
+b - Crie uma matriz juntando o vetor de "uns" e a terceira coluna da matriz acima. Pode denominá-la X.
+
+c - Crie um vetor a partir da segunda coluna da matriz acima. Pode denominá-lo Y.
+
+d - Realize o seguinte cálculo: (X^T^X)^−1^ X^T^Y.
+
+e - Identifique o β~0~ e o β~1~.

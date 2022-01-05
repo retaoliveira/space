@@ -1,0 +1,26 @@
+---
+date: "2021-10-25T00:00:00+01:00"
+draft: false
+menu:
+  intror_master:
+    parent: Encontros
+    weight: 70
+title: Encontro Síncrono 3
+weight: 70
+editor_options: 
+  markdown: 
+    wrap: 72
+output: 
+  blogdown::html_page:
+    toc: true
+    css: "/assets/css/custom.css"
+type: docs
+---
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_url('https://intror2021.github.io/class03/', height = "500px")
+```
+
+[LINK](https://intror2021.github.io/class03/)
+

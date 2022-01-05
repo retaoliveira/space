@@ -1,20 +1,29 @@
 <footer class="site-footer">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6 mb-4 mb-md-0">
+    <div class="row">
+      <div class="col-md-6">
         {{ with site.GetPage "privacy.md" }}
         <p class="powered-by">
           {{ printf "<a href=\"%s\">%s</a>" .RelPermalink .Title | safeHTML }}
         </p>
         {{ end }}
-        <p class="mb-0">
+        <p>
           {{ with site.Copyright }}{{ replace . "{year}" now.Year | markdownify}} &middot; {{ end }}
-          Powered by
-          <a href="https://gethugothemes.com" target="_blank" rel="noopener">Gethugothemes</a>
+          Build with 
+          <a href="https://retaoliveira.space" target="_blank" rel="noopener"><i class="far fa-heart"></i>
+          ,
+          <a href="https://github.com/retaoliveira" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
+          , the
+          <a href="https://cran.r-project.org/" target="_blank" rel="noopener"><i class="fab fa-r-project"></i> </a>
+          <a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener">blogdown</a>
+          package, and 
+          <a href="https://themes.gohugo.io/academia-hugo/" target="_blank" rel="noopener">Academia Hugo</a>
+          for
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
         </p>
       </div>
       <div class="col-md-6">
-        <ul class="list-inline network-icon text-right mb-0">
+        <ul class="list-inline network-icon text-right">
           {{/* Contact links. */}}
           {{ range site.Params.contact_links }}
           {{ $pack := or .icon_pack "fas" }}

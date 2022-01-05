@@ -1,0 +1,27 @@
+---
+date: "2021-10-15T00:00:00+01:00"
+draft: false
+menu:
+  log_adm:
+    parent: Encontros
+    weight: 60
+title: Encontro Síncrono 3
+weight: 60
+editor_options: 
+  markdown: 
+    wrap: 72
+output: 
+  blogdown::html_page:
+    toc: true
+    css: "/assets/css/custom.css"
+type: docs
+---
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+knitr::include_url('https://logADM2021.github.io/class03/', height = "500px")
+```
+
+[LINK](https://logADM2021.github.io/class03/)
+
+
+<iframe width="1540" height="675" src="https://www.youtube.com/embed/amM-7ST5Yn4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

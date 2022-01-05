@@ -1,0 +1,136 @@
+---
+title: "Lab 4.2"
+draft: no
+date: '2021-10-15T00:00:00+01:00'
+menu:
+  intror_master:
+    parent: Unidade 4
+    weight: 19
+toc: yes
+type: docs
+weight: 19
+---
+
+<script src="/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<div id="dados-wide-x-long" class="section level1">
+<h1>Dados <em>wide</em> x <em>long</em></h1>
+<div id="exercícios" class="section level2">
+<h2>Exercícios</h2>
+<div id="diretrizes-gerais" class="section level3">
+<h3><strong>Diretrizes gerais:</strong></h3>
+<ol style="list-style-type: decimal">
+<li>Baixe o arquivo .Rmd e o .csvb e abra no RStudio.</li>
+</ol>
+<p><a href="https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EYmurCXsRpdFukK0xyqRN_kBbANT34n3CeMjjoUxNvhUTQ?e=5o9BbT">Arquivo .Rmd</a></p>
+<p><a href="https://cefetmgbr-my.sharepoint.com/:x:/g/personal/renataoliveira_cefetmg_br/Ednh1eJllo9DjZR5u6J6Q1YBMDz7KXzoF1XtdYdrZpo8MA?e=6NEs85">Arquivo .csv</a></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>Siga as diretrizes da atividade.</p></li>
+<li><p>Rode o arquivo .Rmd por meio do ícone <code>knitr</code></p></li>
+<li><p>Salve o .Rmd e <strong>submeta-o por meio do email <a href="mailto:renataoliveira@gmail.com" class="email">renataoliveira@gmail.com</a></strong>.</p></li>
+</ol>
+<hr>
+</hr>
+</div>
+<div id="exercício-1." class="section level3">
+<h3>Exercício 1.</h3>
+<p>Rode o código para gerar o histograma a seguir:</p>
+<pre class="r"><code># library
+library(tidyverse)</code></pre>
+<pre><code>## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --</code></pre>
+<pre><code>## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.6     v dplyr   1.0.7
+## v tidyr   1.1.4     v stringr 1.4.0
+## v readr   2.1.1     v forcats 0.5.1</code></pre>
+<pre><code>## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()</code></pre>
+<pre class="r"><code># Build dataset with different distributions
+data &lt;- data.frame(
+  type = c(rep(&quot;variable 1&quot;, 1000), rep(&quot;variable 2&quot;, 1000)),
+  value = c(rnorm(1000), rnorm(1000, mean = 0, sd = 5))
+)
+
+# Represent it
+p &lt;- data %&gt;%
+  ggplot(aes(x=value, fill=type)) +
+    geom_histogram( color=&quot;#e9ecef&quot;, alpha=0.6, position = &#39;identity&#39;) +
+    scale_fill_manual(values=c(&quot;#69b3a2&quot;, &quot;#404080&quot;)) +
+    theme_minimal() +
+    labs(fill=&quot;&quot;)
+
+p</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="/sites/cranky-mestorf-a03ae7disciplinas/intror_master/lab42_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+</div>
+</div>
+<div id="transformação-com-dados-numéricos" class="section level2">
+<h2>Transformação com dados numéricos</h2>
+<pre class="r"><code># get first observation for each Species in iris data -- base R
+mini_iris &lt;- iris[c(1, 51, 101), ]
+
+mini_iris %&gt;% gather(key = &quot;flower_att&quot;, value = &quot;measurement&quot;, -Species)</code></pre>
+<pre><code>##       Species   flower_att measurement
+## 1      setosa Sepal.Length         5.1
+## 2  versicolor Sepal.Length         7.0
+## 3   virginica Sepal.Length         6.3
+## 4      setosa  Sepal.Width         3.5
+## 5  versicolor  Sepal.Width         3.2
+## 6   virginica  Sepal.Width         3.3
+## 7      setosa Petal.Length         1.4
+## 8  versicolor Petal.Length         4.7
+## 9   virginica Petal.Length         6.0
+## 10     setosa  Petal.Width         0.2
+## 11 versicolor  Petal.Width         1.4
+## 12  virginica  Petal.Width         2.5</code></pre>
+</div>
+<div id="transformando-dados-de-wide-para-long-para-representar-dois-dados-iguais-de-recortes-distintos-no-mesmo-gráfico---dados-categóricos" class="section level2">
+<h2>Transformando dados de wide para long para representar dois dados iguais de recortes distintos no mesmo gráfico - dados categóricos</h2>
+<pre class="r"><code>dados_bh &lt;- read_delim(&quot;dados_aluno.csv&quot;, 
+    delim = &quot;;&quot;, escape_double = FALSE, trim_ws = TRUE)</code></pre>
+<pre class="r"><code># &quot;Na unha!!!!&quot;
+antes &lt;- dados_bh %&gt;% 
+  select(internet_compras_antes, genero, escolaridade) %&gt;% 
+  mutate(dado = &quot;antes&quot;) %&gt;% 
+  rename(&quot;internet&quot; = &quot;internet_compras_antes&quot;)
+
+depois &lt;- dados_bh %&gt;% 
+  select(internet_compras_depois, genero, escolaridade) %&gt;% 
+  mutate(dado = &quot;durante&quot;) %&gt;% 
+  rename(&quot;internet&quot; = &quot;internet_compras_depois&quot;)
+
+data_plot &lt;- data.frame(rbind(antes, depois))
+
+##### Alternativa usando a função gather para gerar o data_plot - &quot;elegante&quot;
+data_plot_long &lt;- dados_bh %&gt;% 
+  gather(key = &quot;dado&quot;, value = &quot;antes_depois&quot;, -genero, -escolaridade)</code></pre>
+</div>
+<div id="gráficos" class="section level2">
+<h2>Gráficos</h2>
+<pre class="r"><code>ggplot(data_plot_long) + 
+  geom_bar(aes(x = antes_depois, fill = dado), position = &quot;dodge&quot;) +
+  coord_flip() +
+  facet_wrap(~ genero)
+
+ggplot(data_plot_long) + 
+  geom_bar(aes(x = antes_depois, fill = dado), position = &quot;dodge&quot;) +
+  coord_flip() +
+  facet_grid(escolaridade ~ genero)</code></pre>
+</div>
+<div id="extra-função-case_when-dentro-do-mutate" class="section level2">
+<h2>Extra: função “case_when” dentro do mutate</h2>
+<pre class="r"><code>data_plot_long &lt;- dados_bh %&gt;% 
+  gather(key = &quot;dado&quot;, value = &quot;antes_depois&quot;, -genero, -escolaridade) %&gt;% 
+  mutate(dado = case_when(dado == &#39;internet_compras_antes&#39; ~ &#39;antes&#39;,
+                          dado == &#39;internet_compras_depois&#39; ~ &#39;depois&#39;))   
+ggplot(data_plot_long) + 
+  geom_bar(aes(x = antes_depois, fill = dado), position = &quot;dodge&quot;) +
+  coord_flip() +
+  facet_wrap(~ genero)</code></pre>
+<p><img src="/sites/cranky-mestorf-a03ae7disciplinas/intror_master/lab42_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+</div>
+</div>

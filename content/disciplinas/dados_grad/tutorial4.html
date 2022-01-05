@@ -17,8 +17,8 @@ output:
 type: docs
 ---
 
-<script src="/places/rmarkdown-libs/header-attrs/header-attrs.js"></script>
-  <link rel="stylesheet" href="D:/assets/css/custom.css" type="text/css" />
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+  <link rel="stylesheet" href="/assets/css/custom.css" type="text/css" />
 
 
 <p>A poluição por plástico é um problema importante e crescente, afetando negativamente a saúde dos oceanos e da vida selvagem.
@@ -80,7 +80,7 @@ View(plastic_waste)</code></pre>
 <pre class="r"><code>ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
   geom_histogram(binwidth = 0.2)</code></pre>
 <pre><code>## Warning: Removed 51 rows containing non-finite values (stat_bin).</code></pre>
-<p><img src="/places/courses/dados_grad/tutorial4_files/figure-html/plastic_waste_per_cap-hist-1.png" width="672" /></p>
+<p><img src="/disciplinas/dados_grad/tutorial4_files/figure-html/plastic_waste_per_cap-hist-1.png" width="672" /></p>
 <p>Um país se destaca como uma observação incomum no topo da distribuição.</p>
 <p>Uma maneira de identificar este país é filtrar os dados para países onde os resíduos plásticos per capita são maiores que 3,5 kg/pessoa.</p>
 <pre class="r"><code>plastic_waste %&gt;%
@@ -152,5 +152,5 @@ Você deve encontrar um tempo para se reunir com sua equipe e completá-los apó
 <ol style="list-style-type: decimal">
 <li>Recrie o seguinte gráfico e interprete o que você vê no contexto dos dados.</li>
 </ol>
-<p><img src="/places/courses/dados_grad/tutorial4_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p><img src="/disciplinas/dados_grad/tutorial4_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 </div>

@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/st/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/</loc>
     <lastmod>2021-09-11T00:00:00+00:00</lastmod>
   </url><url>
@@ -13,6 +16,8 @@
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/urban_analytics/</loc>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_adm/</loc>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/intro_r/tidyverse/</loc>
     <lastmod>2021-10-15T00:00:00+01:00</lastmod>
   </url><url>
@@ -22,14 +27,44 @@
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/padlet/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/est_2/</loc>
+    <lastmod>2021-06-30T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/est_2/</loc>
+    <lastmod>2021-06-30T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/intro_r/abrindo_dados/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/est_3/</loc>
     <lastmod>2021-06-30T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/atividade1/</loc>
+    <lastmod>2021-12-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/encontro2/</loc>
+    <lastmod>2021-12-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade1/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/intro_r/install/</loc>
     <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/atividade3/</loc>
+    <lastmod>2021-12-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade2/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab1/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/est_3/</loc>
+    <lastmod>2021-06-30T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/est_3/</loc>
+    <lastmod>2021-06-30T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/log_urb/desafios/</loc>
     <lastmod>2021-06-30T00:00:00+01:00</lastmod>
@@ -41,7 +76,7 @@
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/</loc>
-    <lastmod>2021-05-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/</loc>
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
@@ -61,14 +96,38 @@
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/log_all/transportes/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade3/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab21/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/log_all/transportes_covid/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade4/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab22/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab31/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/dados_grad/project1/</loc>
     <lastmod>2021-06-20T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/log_all/estoques/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/atividade2/</loc>
+    <lastmod>2021-12-05T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade5/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab32/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/log_all/omnichannel/</loc>
     <lastmod>2021-08-25T00:00:00+01:00</lastmod>
@@ -88,6 +147,12 @@
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/ver_1/</loc>
     <lastmod>2021-06-24T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/ver_1/</loc>
+    <lastmod>2021-06-24T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/ver_1/</loc>
+    <lastmod>2021-06-24T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/dados_grad/sinc1/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
   </url><url>
@@ -103,6 +168,9 @@
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/localizacao/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab41/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/est_5/</loc>
     <lastmod>2021-07-20T00:00:00+01:00</lastmod>
   </url><url>
@@ -110,6 +178,12 @@
     <lastmod>2021-06-30T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/project1/</loc>
+    <lastmod>2021-06-09T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/project1/</loc>
+    <lastmod>2021-06-09T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/project1/</loc>
     <lastmod>2021-06-09T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/sinc2/</loc>
@@ -130,10 +204,16 @@
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/sinc8/</loc>
     <lastmod>2021-06-30T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab42/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/dados_grad/sinc4/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/intro_r/intro_rmarkdown/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab43/</loc>
     <lastmod>2021-10-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/log_all/custos/</loc>
@@ -172,12 +252,25 @@
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/log_urb/</loc>
     <lastmod>2021-05-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/est_1/</loc>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/est_1/</loc>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/est_2/</loc>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/est_1/</loc>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/dados_grad/sinc5/</loc>
     <lastmod>2021-06-30T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab5/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab51/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab52/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log/est_7/</loc>
     <lastmod>2021-07-20T00:00:00+01:00</lastmod>
@@ -230,16 +323,64 @@
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/intro_r/ggplot/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc1/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/sinc1/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/sinc1/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/st/sinc1/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/intro_r/funcoes_manipulacao/</loc>
     <lastmod>2021-05-15T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/urban/</loc>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/sinc2/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/sinc2/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc2/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/sinc3/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/sinc3/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/sinc4/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/sinc4/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc3/</loc>
+    <lastmod>2021-10-25T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_adm/sinc5/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/log_epc/sinc5/</loc>
+    <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/map/</loc>
     <lastmod>2021-05-05T00:00:00+01:00</lastmod>
   </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc4/</loc>
+    <lastmod>2021-10-25T00:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/intro_r/reprodutibility/</loc>
     <lastmod>2021-10-15T00:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc5/</loc>
+    <lastmod>2021-10-25T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/log_all/sustentavel/</loc>
     <lastmod>2021-08-25T00:00:00+01:00</lastmod>
@@ -250,14 +391,14 @@
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/intro_r/intro_r/</loc>
     <lastmod>2021-10-15T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/</loc>
+    <lastmod>2021-12-05T00:00:00+01:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/</loc>
-    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
+    <lastmod>2021-12-05T00:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/</loc>
-    <lastmod>2021-09-11T00:00:00+00:00</lastmod>
+    <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/</loc>
+    <lastmod>2021-10-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://app.netlify.com/sites/cranky-mestorf-a03ae7/post/2021-09-10-pacotes-para-analise-exploratoria-de-dados-no-r/</loc>
     <lastmod>2021-09-10T09:37:49-03:00</lastmod>

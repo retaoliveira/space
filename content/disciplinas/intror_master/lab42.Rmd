@@ -1,0 +1,125 @@
+---
+title: "Lab 4.2"
+draft: no
+date: '2021-10-15T00:00:00+01:00'
+menu:
+  intror_master:
+    parent: Unidade 4
+    weight: 19
+toc: yes
+type: docs
+weight: 19
+---
+
+# Dados _wide_ x _long_
+
+## Exercícios
+
+### **Diretrizes gerais:**
+
+1. Baixe o arquivo .Rmd e o .csvb e abra no RStudio. 
+
+[Arquivo .Rmd](https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EYmurCXsRpdFukK0xyqRN_kBbANT34n3CeMjjoUxNvhUTQ?e=5o9BbT)
+
+[Arquivo .csv](https://cefetmgbr-my.sharepoint.com/:x:/g/personal/renataoliveira_cefetmg_br/Ednh1eJllo9DjZR5u6J6Q1YBMDz7KXzoF1XtdYdrZpo8MA?e=6NEs85)
+
+2. Siga as diretrizes da atividade. 
+
+3. Rode o arquivo .Rmd por meio do ícone `knitr` 
+
+4. Salve o .Rmd e **submeta-o por meio do email renataoliveira@gmail.com**. 
+
+<hr></hr>
+
+
+### Exercício 1.
+
+Rode o código para gerar o histograma a seguir: 
+
+```{r}
+# library
+library(tidyverse)
+
+# Build dataset with different distributions
+data <- data.frame(
+  type = c(rep("variable 1", 1000), rep("variable 2", 1000)),
+  value = c(rnorm(1000), rnorm(1000, mean = 0, sd = 5))
+)
+
+# Represent it
+p <- data %>%
+  ggplot(aes(x=value, fill=type)) +
+    geom_histogram( color="#e9ecef", alpha=0.6, position = 'identity') +
+    scale_fill_manual(values=c("#69b3a2", "#404080")) +
+    theme_minimal() +
+    labs(fill="")
+
+p
+```
+
+
+## Transformação com dados numéricos
+
+```{r}
+# get first observation for each Species in iris data -- base R
+mini_iris <- iris[c(1, 51, 101), ]
+
+mini_iris %>% gather(key = "flower_att", value = "measurement", -Species)
+
+```
+
+## Transformando dados de wide para long para representar dois dados iguais de recortes distintos no mesmo gráfico - dados categóricos
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+dados_bh <- read_delim("dados_aluno.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+```
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+# "Na unha!!!!"
+antes <- dados_bh %>% 
+  select(internet_compras_antes, genero, escolaridade) %>% 
+  mutate(dado = "antes") %>% 
+  rename("internet" = "internet_compras_antes")
+
+depois <- dados_bh %>% 
+  select(internet_compras_depois, genero, escolaridade) %>% 
+  mutate(dado = "durante") %>% 
+  rename("internet" = "internet_compras_depois")
+
+data_plot <- data.frame(rbind(antes, depois))
+
+##### Alternativa usando a função gather para gerar o data_plot - "elegante"
+data_plot_long <- dados_bh %>% 
+  gather(key = "dado", value = "antes_depois", -genero, -escolaridade)
+
+```
+
+## Gráficos
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+ggplot(data_plot_long) + 
+  geom_bar(aes(x = antes_depois, fill = dado), position = "dodge") +
+  coord_flip() +
+  facet_wrap(~ genero)
+
+ggplot(data_plot_long) + 
+  geom_bar(aes(x = antes_depois, fill = dado), position = "dodge") +
+  coord_flip() +
+  facet_grid(escolaridade ~ genero)
+
+```
+
+## Extra: função "case_when" dentro do mutate
+
+```{r echo=TRUE, message=FALSE, warning=FALSE}
+data_plot_long <- dados_bh %>% 
+  gather(key = "dado", value = "antes_depois", -genero, -escolaridade) %>% 
+  mutate(dado = case_when(dado == 'internet_compras_antes' ~ 'antes',
+                          dado == 'internet_compras_depois' ~ 'depois'))   
+ggplot(data_plot_long) + 
+  geom_bar(aes(x = antes_depois, fill = dado), position = "dodge") +
+  coord_flip() +
+  facet_wrap(~ genero)
+
+```

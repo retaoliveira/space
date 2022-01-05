@@ -1,0 +1,124 @@
+---
+title: "Lab 5"
+draft: no
+date: '2021-10-15T00:00:00+01:00'
+menu:
+  intror_master:
+    parent: Unidade 5
+    weight: 25
+toc: yes
+type: docs
+weight: 25
+---
+
+<script src="/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<div id="funções-e-programação-de-interações-no-r" class="section level1">
+<h1>Funções e programação de interações no R</h1>
+<div id="exercícios" class="section level2">
+<h2>Exercícios</h2>
+<div id="diretrizes-gerais" class="section level3">
+<h3><strong>Diretrizes gerais:</strong></h3>
+<ol style="list-style-type: decimal">
+<li>Instale o pacote <code>cepespR</code></li>
+</ol>
+<pre class="r"><code>devtools::install_github(&quot;Cepesp-Fgv/cepesp-r&quot;)</code></pre>
+<pre><code>## Using github PAT from envvar GITHUB_PAT</code></pre>
+<pre><code>## Skipping install of &#39;cepespR&#39; from a github remote, the SHA1 (7253b4af) has not changed since last install.
+##   Use `force = TRUE` to force installation</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Baixe o arquivo .Rmd e o .csvb e abra no RStudio.</li>
+</ol>
+<p><a href="https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/ETeYkh2-WipAmE0p9htIqBcBJ-bArZ06Oce43hAV5507nA?e=DuQfI3">Arquivo .Rmd</a></p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Siga as diretrizes da atividade.</p></li>
+<li><p>Rode o arquivo .Rmd por meio do ícone <code>knitr</code></p></li>
+<li><p>Salve o .Rmd e <strong>submeta-o por meio do email <a href="mailto:renataoliveira@gmail.com" class="email">renataoliveira@gmail.com</a></strong>.</p></li>
+</ol>
+<hr>
+</hr>
+</div>
+<div id="exercício-1." class="section level3">
+<h3>Exercício 1.</h3>
+<p><strong>Agradecimento: Leo Barone pelo maravilhoso exercício!</strong></p>
+</div>
+</div>
+<div id="funções-iteração-e-vetorialização-do-código" class="section level2">
+<h2>Funções, iteração e vetorialização do código</h2>
+<p>Neste breve tutorial vamos ver alguns exemplos de como criar funções e utilizar processos iterativos (loops), e sua forma vetorializada (famílias de funções <em>apply</em> e <em>map</em>) facilitam a organização do código, reduzem bastante o esforço de programação e tornam o programa mais eficiente.</p>
+<p>Estes exemplos servirão de norte para que você leia, em sala, os capítulos <a href="http://r4ds.had.co.nz/functions.html">19 - Functions</a>, <a href="http://r4ds.had.co.nz/iteration.html">20 - Iteration</a>, e o trecho do capítulo <a href="http://r4ds.had.co.nz/vectors.html#lists">18 - Vectors</a> que trata de listas.</p>
+</div>
+<div id="exemplo-1---substituindo-repetição-de-código-por-loops" class="section level2">
+<h2>Exemplo 1 - substituindo repetição de código por loops</h2>
+<p>Imagine que você precisa organizar dados dos candidatos à presidência de diversos anos (2006 a 2014) e vai utilizar a API do CEPESP Data. Utilizando a função <em>candidates</em> do pacote <em>cepespR</em> podemos obter os dados:</p>
+<pre class="r"><code>library(cepespR)
+candidatos06 &lt;- get_candidates(year = 2006, position = &quot;President&quot;)
+candidatos10 &lt;- get_candidates(year = 2010, position = &quot;President&quot;)
+candidatos14 &lt;- get_candidates(year = 2014, position = &quot;President&quot;)</code></pre>
+<p>e, a seguir, podemos juntar todos em um único data_frame:</p>
+<pre class="r"><code>candidatos &lt;- rbind(candidatos06, candidatos10, candidatos14)</code></pre>
+<p>Simples, não? Imagine agora que você quer repetir mesma tarefa não 4, mas centenas de vezes. O código deixaria de ser simples e passaria a ter centenas de linhas.</p>
+<p>Essa centena de linhas seria pura repetição de código. No nosso exemplo, a obtenção dos dados para candidatos à presidência em 2006 e em 2010 são idênticas, exceto por 2 números. Como podemos evitar a repetição de códigos?</p>
+<p>Neste tutorial vamos rever dois tópicos que são fundamentais para tornar o seu código mais enxuto e eficiente: funções e iterações (loops e similares).</p>
+<p>No exemplo acima, um simples <em>for loop</em> resolveria nosso problema de repetição de código. Veja abaixo e tente entender sozinha(o) o que está acontencendo:</p>
+<pre class="r"><code>library(dplyr)
+vetor_anos &lt;- c(2006, 2010, 2014)
+candidatos &lt;- data.frame()
+for (ano in vetor_anos){
+  candidatos &lt;- bind_rows(candidatos, 
+                      get_candidates(year = ano, position = &quot;President&quot;))
+}</code></pre>
+<p>Simples, não? Se quiséssemos utilizar mais anos em nossa análise, bastaria mudar o vetor “percorrido” pelo loop que contém o número de anos.</p>
+<p>Vamos supor agora que não queremos juntar todos os anos, apenas contar o número de linhas (que é o número de candidatos) em cada um dos anos e armazenar o resultado em um vetor. Veja como fazemos isso com um <em>for loop</em>:</p>
+<pre class="r"><code>n_candidatos &lt;- c()
+for (ano in vetor_anos){
+  n_candidatos &lt;- c(n_candidatos, nrow(get_candidates(year = ano, position = &quot;President&quot;)))
+}</code></pre>
+<p>Igualmente simples. Há outras maneiras de produzir o mesmo resultado em R sem utilizar <em>for loops</em>. Note que podemos pensar um <em>for loop</em> como uma função que recebe como argumento um vetor e realiza a mesma tarefa para cada elemento do vetor.</p>
+</div>
+<div id="exemplo-2---combinando-loops-e-funções" class="section level2">
+<h2>Exemplo 2 - combinando loops e funções</h2>
+<p>Uma das bases mais estudadas em política comparada e estudos empíricos sobre é a Polity IV, que contém varáveis sobre diversas características de um conjunto grande de países e em vários anos. Quem quiser conhecer mais sobre os dados pode acessar <a href="http://www.systemicpeace.org/inscrdata.html">aqui</a> ou ler a documentação <a href="http://www.systemicpeace.org/inscr/p4manualv2016.pdf">aqui</a>.</p>
+<p>A principal variável da base de dados é um indicador de grau de democracia que resulta da combinação de um conjunto variáveis componentes codificadas diretamente a partir da observação dos casos. Vamos ignorar seus significados e apenas observar que essas variáveis componentes recebem valores de 0 a 7, se o caso for uma democracia, ou os códigos -66, -77 e -88 em períodos autoritários ou de transição.</p>
+<p>Comece abrindo os dados que estão no repositório do curso e criando uma cópia, ‘p4’, que será modificada.</p>
+<pre class="r"><code>p4_raw &lt;- read.csv2(&quot;https://raw.githubusercontent.com/leobarone/FLS6397_2018/master/data/p4v2016.csv&quot;)
+p4 &lt;- p4_raw</code></pre>
+<p>Como as variáveis contêm alguns códigos numéricos cujas distâncias matemáticas não fazem nenhum sentido (-66, -77 e -88), precisamos transformá-los em NA para podermos calcular qualquer estatística descritiva com a variável. Vamos realizar a transformação nas variáveis ‘xconst’, ‘xrreg’, ‘xropen’, ‘xconst’ e aprender um novo operador, <em>%in%</em>. Todas as variáveis se referem sobre características da competição pelo poder Executivo em um país em um ano:</p>
+<pre class="r"><code>p4$xrcomp[p4$xrcomp %in% c(-66, -77, -88)] &lt;- NA
+p4$xrreg[p4$xrreg %in% c(-66, -77, -88)] &lt;- NA
+p4$xropen[p4$xropen %in% c(-66, -77, -88)] &lt;- NA
+p4$xconst[p4$xconst %in% c(-66, -77, -88)] &lt;- NA</code></pre>
+<p>Como vamos repetir a mesma transformação de variáveis diversas vezes, convém escrever uma função para tal transformação. Observe com cuidado o código abaixo:</p>
+<pre class="r"><code>limpa_var &lt;- function(x) {
+  x[x %in% c(-66, -77, -88)] &lt;- NA
+  return(x)
+}</code></pre>
+<p>Vamos refazer o código acima utilizando a função que acabamos de criar (lembre-se criar um novo objeto ‘p4’, pois as variáveis foram transformadas no código anterior):</p>
+<pre class="r"><code>p4 &lt;- p4_raw
+p4$xrcomp &lt;- limpa_var(p4$xrcomp)
+p4$xrreg &lt;- limpa_var(p4$xrreg)
+p4$xropen &lt;- limpa_var(p4$xropen)
+p4$xconst &lt;- limpa_var(p4$xconst)</code></pre>
+<p>Melhor. Temos linhas mais enxutas. Se estívessemos aplicando transformações mais complexas às variáveis, encurtaríamos bastante o código.</p>
+<p>Ainda assim, temos muitas repetições de linha. O que muda de uma linha à outra é apenas o nome da variável. Como vimos no caso anterior, podemos realizar tarefas repetidas em loop. Vamos, dessa forma, aplicar a função que criamos em loop:</p>
+<pre class="r"><code>p4 &lt;- p4_raw
+vetor_var &lt;- c(&#39;xrcomp&#39;, &#39;xrreg&#39;, &#39;xropen&#39;, &#39;xconst&#39;)
+for (var in vetor_var){
+  p4[, var] &lt;- limpa_var(p4[, var])
+}</code></pre>
+<p>Se estívessemos utilizando todas as variáveis do banco de dados codificadas da mesma maneira (são várias) teríamos uma economia bastante importante de código.</p>
+<p>Obs: uma forma alternativa de selecionar variáveis de um data frame utilizando colchetes é aplicando colchetes duplo (em vez de separar linhas e colunas dentro do colchetes por vírgula). O estilo de código abaixo, encontrado com frequência no livro “R for Data Science”, é equivalente ao que acabamos de ver.</p>
+<pre class="r"><code>for (var in vetor_var){
+  p4[[var]] &lt;- limpa_var(p4[[var]])
+}</code></pre>
+</div>
+<div id="exercício" class="section level2">
+<h2>Exercício</h2>
+<p>Refere-se os dados de ‘Polity’ baixados anteriormente (<em>p4_raw</em>).
+1. Use um <em>for loop</em> para identificar o valor máximo na tabela das três variáveis: <em>parcomp</em> (a competitividade da participação), <em>polcomp</em> (a competitividade da política) e <em>polity2</em> (o indicador geral da democracia).</p>
+</div>
+</div>

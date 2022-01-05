@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academia 4.3.1">
+  <meta name="generator" content="Hugo 0.91.2" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Renata Oliveira">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Scrape em tabelasExercíciosDiretrizes gerais:Instale o pacote tabulizerdevtools::install_github(c(&quot;ropensci/tabulizerjars&quot;, &quot;ropensci/tabulizer&quot;))## Using github PAT from envvar GITHUB_PAT## Skipping install of &#39;tabulizerjars&#39; from a github remote, the SHA1 (d1924e01) has not changed since last install.## Use `force = TRUE` to force installation## Downloading GitHub repo ropensci/tabulizer@HEAD## ## checking for file &#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&#39; ...v checking for file &#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&#39; (565ms)## - preparing &#39;tabulizer&#39;:## checking DESCRIPTION meta-information .">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab52/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#fc6f5c">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/sites/cranky-mestorf-a03ae7/css/academia.min.76e69f7370e1e1222344c0109d841c44.css">
+
+  
+
+  
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/sites/cranky-mestorf-a03ae7/site.webmanifest">
+  <link rel="icon" type="image/png" href="/sites/cranky-mestorf-a03ae7/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/sites/cranky-mestorf-a03ae7/img/icon-192.png">
+
+  <link rel="canonical" href="https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab52/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Profa. Renata Oliveira">
+  <meta property="og:url" content="https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab52/">
+  <meta property="og:title" content="Lab 5.2 | Profa. Renata Oliveira">
+  <meta property="og:description" content="Scrape em tabelasExercíciosDiretrizes gerais:Instale o pacote tabulizerdevtools::install_github(c(&quot;ropensci/tabulizerjars&quot;, &quot;ropensci/tabulizer&quot;))## Using github PAT from envvar GITHUB_PAT## Skipping install of &#39;tabulizerjars&#39; from a github remote, the SHA1 (d1924e01) has not changed since last install.## Use `force = TRUE` to force installation## Downloading GitHub repo ropensci/tabulizer@HEAD## ## checking for file &#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&#39; ...v checking for file &#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&#39; (565ms)## - preparing &#39;tabulizer&#39;:## checking DESCRIPTION meta-information ."><meta property="og:image" content="https://app.netlify.com/sites/cranky-mestorf-a03ae7/img/icon-192.png">
+  <meta property="twitter:image" content="https://app.netlify.com/sites/cranky-mestorf-a03ae7/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2021-10-15T00:00:00&#43;01:00">
+  
+  <meta property="article:modified_time" content="2021-10-15T00:00:00&#43;01:00">
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Lab 5.2 | Profa. Renata Oliveira</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/sites/cranky-mestorf-a03ae7/">Profa. Renata Oliveira</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>Courses</span><span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/sites/cranky-mestorf-a03ae7/cursos/intro_r/"><span>Introdução ao R</span></a>
+            </li>
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/sites/cranky-mestorf-a03ae7/cursos/spatial/"><span>Sistemas de Suporte à Decisão Espacial</span></a>
+            </li>
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/sites/cranky-mestorf-a03ae7/cursos/log_all/"><span>Logística</span></a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/files/cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  
+
+<div class="container-fluid docs">
+  <div class="row flex-xl-nowrap">
+    <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
+      
+
+
+
+
+
+<form class="docs-search d-flex align-items-center">
+  <button class="btn docs-toggle d-md-none p-0 mr-3" type="button" data-toggle="collapse" data-target="#docs-nav" aria-controls="docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  
+  <input name="q" type="search" class="form-control" id="search-query" placeholder="Search..." autocomplete="off">
+  
+</form>
+
+<nav class="collapse docs-links" id="docs-nav">
+  
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/">Organização do curso</a>
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc1/">Encontros</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc1/">Encontro Síncrono 1</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc2/">Encontro Síncrono 2</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc3/">Encontro Síncrono 3</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc4/">Encontro Síncrono 4</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc5/">Encontro Síncrono 5</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade1/">Unidade 1</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade1/">Atividade 1</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab1/">Lab 1</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade2/">Unidade 2</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade2/">Atividade 2</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab21/">Lab 2.1 - `ggplot`</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab22/">Lab 2.2 - `ggplot` e `dplyr`</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade3/">Unidade 3</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade3/">Atividade 3</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab31/">Lab 3.1</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab32/">Lab 3.2</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade4/">Unidade 4</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade4/">Atividade 4</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab41/">Lab 4.1</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab42/">Lab 4.2</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab43/">Lab 4.3</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  <div class="docs-toc-item">
+    <a class="docs-toc-link" href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade5/">Unidade 5</a>
+    <ul class="nav docs-sidenav">
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade5/">Atividade 5</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab5/">Lab 5</a>
+      </li>
+      
+      <li >
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab51/">Lab 5.1</a>
+      </li>
+      
+      <li class="active">
+        <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab52/">Lab 5.2</a>
+      </li>
+      
+    </ul>
+    
+
+  </div>
+  
+  
+</nav>
+
+    </div>
+
+    
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">Contents</a></li>
+      </ul>
+
+      
+
+      
+    </div>
+    
+
+    <main class="col-12 col-md-9 col-xl-8 py-md-3 pl-md-5 docs-content" role="main">
+
+      <article class="article" itemscope itemtype="http://schema.org/Article">
+
+        <div class="docs-article-container">
+          <h1 itemprop="name">Lab 5.2</h1>
+
+          <div class="article-style" itemprop="articleBody">
+            
+<script src="/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+
+</div>
+
+<div id="scrape-em-tabelas" class="section level1">
+<h1>Scrape em tabelas</h1>
+<div id="exercícios" class="section level2">
+<h2>Exercícios</h2>
+<div id="diretrizes-gerais" class="section level3">
+<h3><strong>Diretrizes gerais:</strong></h3>
+<ol style="list-style-type: decimal">
+<li>Instale o pacote <code>tabulizer</code></li>
+</ol>
+<pre class="r"><code>devtools::install_github(c(&quot;ropensci/tabulizerjars&quot;, &quot;ropensci/tabulizer&quot;))</code></pre>
+<pre><code>## Using github PAT from envvar GITHUB_PAT</code></pre>
+<pre><code>## Skipping install of &#39;tabulizerjars&#39; from a github remote, the SHA1 (d1924e01) has not changed since last install.
+##   Use `force = TRUE` to force installation</code></pre>
+<pre><code>## Downloading GitHub repo ropensci/tabulizer@HEAD</code></pre>
+<pre><code>## 
+##   
+  
+  
+   checking for file &#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&#39; ...
+  
+v  checking for file &#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&#39; (565ms)
+## 
+  
+  
+  
+-  preparing &#39;tabulizer&#39;:
+##    checking DESCRIPTION meta-information ...
+  
+   checking DESCRIPTION meta-information ... 
+  
+v  checking DESCRIPTION meta-information
+## 
+  
+  
+  
+-  checking for LF line-endings in source and make files and shell scripts
+## 
+  
+  
+  
+-  checking for empty or unneeded directories
+## 
+  
+Removed empty directory 
+  
+   Removed empty directory &#39;tabulizer/docs&#39;
+## 
+  
+  
+  
+-  building &#39;tabulizer_0.2.2.tar.gz&#39;
+## 
+  
+   
+## </code></pre>
+<pre><code>## Installing package into &#39;C:/Users/user/Documents/R/win-library/4.1&#39;
+## (as &#39;lib&#39; is unspecified)</code></pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Baixe o arquivo .Rmd e o folder com os arquivos em .pdf e abra no RStudio.</li>
+</ol>
+<p><a href="https://www.dropbox.com/s/3eryvmh6fx7hszg/tabulizer.Rmd?dl=0">Arquivo .Rmd</a></p>
+<p><a href="https://www.dropbox.com/sh/06oe1s96w2d4qhp/AABretq0u92RGeuPmekbbWXva?dl=0">Arquivos .pdf</a></p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Siga as diretrizes da atividade.</p></li>
+<li><p>Rode o arquivo .Rmd por meio do ícone <code>knitr</code></p></li>
+<li><p>Salve o .Rmd e <strong>submeta-o por meio do email <a href="mailto:renataoliveira@gmail.com" class="email">renataoliveira@gmail.com</a></strong>.</p></li>
+</ol>
+<hr>
+</hr>
+<pre class="r"><code>library(hrbrthemes)
+library(ggplot2)
+library(Cairo)
+library(extrafont)
+library(rJava)      # Needed for tabulizer
+library(tabulizer)  # Handy tool for PDF Scraping
+library(tidyverse)  # Core data manipulation and visualization libraries
+library(janitor)
+
+extrafont::loadfonts()</code></pre>
+<p>Este chunk serve para fazer a leitura dos arquivos</p>
+<pre class="r"><code># PDF Scrape Tables
+
+#Store folder of pdf to be loaded
+folder &lt;- &quot;pdf/&quot;
+
+# Number of files in folder
+num_files &lt;- length(dir(folder, pattern=&quot;*.pdf&quot;))
+
+# Generate file list of shapefiles
+files &lt;- as.data.frame(dir(folder, pattern=&quot;*.pdf&quot;))
+names(files) &lt;- &quot;data&quot;
+
+## Generate static maps 
+
+tmp &lt;- data.frame(bairro = NA , sg = NA, srag = NA, obitos = NA, data = NA)
+
+for (i in 1:num_files) {
+   file_name &lt;- files[i,1]
+   data &lt;- print(str_sub(files[i,1], -14, -7))
+   scrape &lt;- tabulizer::extract_tables(file = paste0(&quot;pdf/&quot;, files[i,1]), output = &quot;data.frame&quot;, page = 2, guess = TRUE, method = &quot;stream&quot;)
+   scrape1 &lt;- as.data.frame(scrape[[1]])
+   scrape1 &lt;- scrape1 %&gt;% 
+      separate(col = &#39;Síndrome.Respiratória.Aguda.Grave&#39;, into = c(&quot;total de casos&quot;, &quot;óbitos&quot;), sep = &#39; &#39;) %&gt;% 
+      slice(-1)
+   scrape1 &lt;- scrape1[,c(1,3,5,6)] 
+   names(scrape1) &lt;- c(&quot;bairro&quot;, &quot;sg&quot;, &quot;srag&quot;, &quot;obitos&quot;)
+   if (length(scrape) != 1) {
+      scrape2 &lt;- as.data.frame(scrape[[2]])
+      scrape2[5,] &lt;- colnames(scrape2)
+      names(scrape2) &lt;- c(&quot;bairro&quot;, &quot;sg&quot;, &quot;srag&quot;, &quot;obitos&quot;)
+      scrape2 &lt;- scrape2 %&gt;% 
+         filter(bairro != &quot;TOTAL&quot;) 
+      scrape2 &lt;- scrape2 %&gt;% 
+         mutate(bairro = str_replace_all(bairro, &quot;\\.&quot;, &quot; &quot;), sg = str_replace(sg, &quot;X&quot;, &quot;&quot;), srag = str_replace(srag, &quot;X&quot;, &quot;&quot;), obitos = str_replace(obitos, &quot;X&quot;, &quot;&quot;))
+      tmp_dia &lt;- rbind(scrape1, scrape2)
+      tmp_dia[,5] &lt;- data
+      names(tmp_dia) &lt;- c(&quot;bairro&quot;, &quot;sg&quot;, &quot;srag&quot;, &quot;obitos&quot;, &quot;data&quot;)
+   } else {
+      tmp_dia &lt;- scrape1
+      tmp_dia[,5] &lt;- data
+      names(tmp_dia) &lt;- c(&quot;bairro&quot;, &quot;sg&quot;, &quot;srag&quot;, &quot;obitos&quot;, &quot;data&quot;)
+   }   
+   
+   tmp &lt;- tmp %&gt;% 
+      bind_rows(tmp, tmp_dia) %&gt;% 
+      filter(!is.na(sg))
+   
+}</code></pre>
+</div>
+</div>
+</div>
+
+          </div>
+
+          
+
+
+
+          
+          <div class="article-widget">
+            
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab51/" rel="next">Lab 5.1</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc1/" rel="prev">Encontro Síncrono 1</a>
+  </div>
+  
+</div>
+
+          </div>
+          
+        </div>
+
+        <div class="body-footer">
+          Last updated on Oct 15, 2021
+        </div>
+
+      </article>
+
+      <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        
+        <p>
+          
+          Build with 
+          <a href="https://retaoliveira.space" target="_blank" rel="noopener"><i class="far fa-heart"></i>
+          ,
+          <a href="https://github.com/retaoliveira" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
+          , the
+          <a href="https://cran.r-project.org/" target="_blank" rel="noopener"><i class="fab fa-r-project"></i> </a>
+          <a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener">blogdown</a>
+          package, and 
+          <a href="https://themes.gohugo.io/academia-hugo/" target="_blank" rel="noopener">Academia Hugo</a>
+          for
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/retaoliveira" target="_blank" rel="noopener" title="DM Me"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="skype:retaoliveira"  title="Skype Me"><i class="fab fa-skype" aria-hidden="true"></i></a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </main>
+  </div>
+</div>
+
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/sites/cranky-mestorf-a03ae7/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js" integrity="sha256-pB/deHc9CGfFpJRjC43imB29Rse8tak+5eXqntO94ck=" crossorigin="anonymous"></script>
+    <script>
+      anchors.add();
+    </script>
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/sites/cranky-mestorf-a03ae7/js/academia.min.1864145399ae9e7997bb63a7a7dd152c.js"></script>
+
+    
+
+
+
+
+
+
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

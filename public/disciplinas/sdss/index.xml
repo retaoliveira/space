@@ -1,15 +1,418 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Análise de dados para gestão organizacional on Profa. Renata Oliveira</title>
+    <title>Sistemas de Suporte à Decisão Espacial on Profa. Renata Oliveira</title>
     <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/</link>
-    <description>Recent content in Análise de dados para gestão organizacional on Profa. Renata Oliveira</description>
+    <description>Recent content in Sistemas de Suporte à Decisão Espacial on Profa. Renata Oliveira</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 May 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Atividade 1.1</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/atividade1/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/atividade1/</guid>
+      <description>&lt;h2 id=&#34;a-unidade-5-é-estruturada-considerando-os-seguintes-tópicos&#34;&gt;A &lt;strong&gt;Unidade 5&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Representação de fenômenos no espaço&lt;/li&gt;
+&lt;li&gt;Sistemas de coordenadas geográficas&lt;/li&gt;
+&lt;li&gt;Sistemas de coordenadas projetadas&lt;/li&gt;
+&lt;li&gt;Cartografia temática&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;esta-atividade-deverá-ser-realizada-até-dia-1612-são-propostas-as-seguintes-atividades&#34;&gt;Esta atividade deverá ser realizada até dia &lt;strong&gt;16/12&lt;/strong&gt;. São propostas as seguintes atividades:&lt;/h2&gt;
+&lt;h3 id=&#34;1-faça-o-download-do-shapefile-referente-às-regionais-de-bh-atividades-econômicas-formais-e-autônomos-formais-e-informais-no-site-bhmaphttpsbhmappbhgovbrv2mapaidebhgeozoom4lat77968930925lon6092509075baselayerbase-ou-pelo-link&#34;&gt;1. Faça o download do shapefile referente às regionais de BH, atividades econômicas formais e autônomos (formais e informais) no site &lt;a href=&#34;https://bhmap.pbh.gov.br/v2/mapa/idebhgeo?#zoom=4&amp;amp;lat=7796893.0925&amp;amp;lon=609250.9075&amp;amp;baselayer=base&#34;&gt;BHMAP&lt;/a&gt; ou pelo &lt;a href=&#34;&#34;&gt;link&lt;/a&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;2-instale-os-pacotes&#34;&gt;2. Instale os pacotes:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;install.packages(&amp;quot;sf&amp;quot;)
+install.packages(&amp;quot;terra&amp;quot;)
+install.packages(&amp;quot;spData&amp;quot;)
+install.packages(&amp;quot;spDataLarge&amp;quot;, repos = &amp;quot;https://nowosad.r-universe.dev&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;3-explore-a-documentação-do-pacote-sf&#34;&gt;3. Explore a documentação do pacote &lt;code&gt;sf&lt;/code&gt;&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;vignette(package = &amp;quot;sf&amp;quot;) # see which vignettes are available
+vignette(&amp;quot;sf1&amp;quot;)          # an introduction to the package
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;4-siga-os-comandos-a-seguir-para-explorar-o-pacote-sf&#34;&gt;4. Siga os comandos a seguir para explorar o pacote &lt;code&gt;sf&lt;/code&gt;:&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;world&lt;/code&gt; é um &lt;code&gt;sf data frame&lt;/code&gt; contendo colunas espaciais e de atributos, cujos nomes são retornados pela função &lt;code&gt;names()&lt;/code&gt;(a última coluna deste exemplo contém as informações geográficas).&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;library(sf)
+library(terra)
+library(spData)
+library(spDataLarge) 
+class(world)
+names(world)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Veja o que acontece quando você roda o comando &lt;code&gt;plot&lt;/code&gt; sobre esse dataframe:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;plot(world)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Copie o código abaixo e rode-o no seu &lt;code&gt;.Rmd&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;plot(world[&amp;quot;continent&amp;quot;], reset = FALSE)
+cex = sqrt(world$pop) / 10000
+world_cents = st_centroid(world, of_largest = TRUE)
+plot(st_geometry(world_cents), add = TRUE, cex = cex)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;O que quer dizer a representação gerada por você?&lt;/p&gt;
+&lt;p&gt;Os objetos sf podem armazenar informações adicionais sobre os sistemas de referência de coordenadas (CRS). O valor padrão é NA (Não Disponível), como pode ser verificado com st_crs():&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;st_crs(world)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;a href=&#34;https://epsg.io/&#34;&gt;EPSG&lt;/a&gt; simplifica a exploração de sistemas de referência de coordenadas utilizados em todo o mundo para a criação de mapas e geodados e para a identificação da geo-posição. É uma ferramenta prática para qualquer pessoa interessada em cartografia e elaboração de mapas digitais, que precisa conhecer os valores exatos de latitude e longitude para coordenadas numéricas em diferentes sistemas de referência espacial.&lt;/p&gt;
+&lt;p&gt;Quando um sistema de referência de coordenadas (CRS) está faltando ou o CRS errado está configurado, a função &lt;code&gt;st_set_crs()&lt;/code&gt; pode ser usada:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;new_vector = st_set_crs(new_vector, &amp;quot;EPSG:4326&amp;quot;) # set CRS
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Caso você queira carregar um shapefile para o ambiente R/RStudio, utilize a função:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;shapefile &amp;lt;- st_read(&#39;caminho do arquivo&#39;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;5-responda-para-você-mesmo-as-seguintes-perguntas-que-seguem&#34;&gt;5. Responda, para você mesmo, as seguintes perguntas que seguem:&lt;/h3&gt;
+&lt;p&gt;a. Qual a diferença entre dados espaciais e dados não-espaciais?&lt;/p&gt;
+&lt;p&gt;b. Qual a diferença entre dados vetoriais e raster?&lt;/p&gt;
+&lt;p&gt;c. Quais os cuidados necessários para representação geográfica em diferentes sistemas de projeção geográfica?&lt;/p&gt;
+&lt;p&gt;d. Quais os tipos de geometria de dados vetoriais são representados por meio do pacote &lt;code&gt;sf&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;e. Qual o EPGS para estudos em BH que precisem de um sistema de projeção de coordenadas?&lt;/p&gt;
+&lt;h3 id=&#34;6-realize-as-questões-a-seguir&#34;&gt;6. Realize as questões a seguir:&lt;/h3&gt;
+&lt;p&gt;a. Crie um documento &lt;code&gt;.Rmd&lt;/code&gt; para que você armazene o código gerado.&lt;/p&gt;
+&lt;p&gt;b. Carregue os shapefiles referentes às atividades econômicas e autônomos.&lt;/p&gt;
+&lt;p&gt;c. Carregue o shapefile referente às regionais de BH.&lt;/p&gt;
+&lt;p&gt;d. Verifique os CRS e se necessário, altere os sistemas de coordenadas.&lt;/p&gt;
+&lt;p&gt;e. Represente os shapefiles por meio do pacote
+&lt;a href=&#34;https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html&#34;&gt;&lt;code&gt;tmap&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dica: tm_shape(objeto_sf) + tm_borders() para polígonos e tm_shape(objeto_sf) + tm_symbols(col = &amp;ldquo;red&amp;rdquo;, scale = .05) para pontos. Veja a seguir o código onde regional são as feições geométricas poligonais e econ são os pontos referentes às atividades econômicas formais.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;tm_shape(regional) + tm_borders() + tm_shape(econ) + tm_symbols(col = &amp;quot;red&amp;quot;, scale = .05)
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Encontro 2 - representação e manipulação de dados espaciais</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/encontro2/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/encontro2/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;principal-referência&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Principal referência&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://geocompr.robinlovelace.net/index.html&#34;&gt;Geocomputation with R&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;pacotes-referências&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Pacotes referências&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://r-spatial.github.io/sf/&#34;&gt;Simple Features&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html&#34;&gt;tmap&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;outras-informações&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Outras informações&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://concla.ibge.gov.br/busca-online-cnae.html?subclasse=5612100&amp;amp;tipo=cnae&amp;amp;versao=8&amp;amp;view=subclasse&#34;&gt;CNAE&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;código-para-implementação-de-funções-de-representação-e-manipulação-de-dados-espaciais&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Código para implementação de funções de representação e manipulação de dados espaciais&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;vignette(package = &amp;quot;sf&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(sf)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Linking to GEOS 3.9.1, GDAL 3.2.1, PROJ 7.2.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(terra)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## terra version 1.4.22&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(spData)
+library(tmap)
+library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.6     v dplyr   1.0.7
+## v tidyr   1.1.4     v stringr 1.4.0
+## v readr   2.1.1     v forcats 0.5.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x tidyr::extract()  masks terra::extract()
+## x dplyr::filter()   masks stats::filter()
+## x dplyr::lag()      masks stats::lag()
+## x purrr::simplify() masks terra::simplify()
+## x dplyr::src()      masks terra::src()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;class(world)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## [1] &amp;quot;sf&amp;quot;         &amp;quot;tbl_df&amp;quot;     &amp;quot;tbl&amp;quot;        &amp;quot;data.frame&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;names(world)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##  [1] &amp;quot;iso_a2&amp;quot;    &amp;quot;name_long&amp;quot; &amp;quot;continent&amp;quot; &amp;quot;region_un&amp;quot; &amp;quot;subregion&amp;quot; &amp;quot;type&amp;quot;     
+##  [7] &amp;quot;area_km2&amp;quot;  &amp;quot;pop&amp;quot;       &amp;quot;lifeExp&amp;quot;   &amp;quot;gdpPercap&amp;quot; &amp;quot;geom&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(world)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning: plotting the first 9 out of 10 attributes; use max.plot = 10 to plot
+## all&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/encontro2_files/figure-html/unnamed-chunk-3-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(world[&amp;quot;continent&amp;quot;], reset = FALSE)
+cex = sqrt(world$pop) / 10000
+world_cents = st_centroid(world, of_largest = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Warning in st_centroid.sf(world, of_largest = TRUE): st_centroid assumes
+## attributes are constant over geometries of x&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;plot(st_geometry(world_cents), add = TRUE, cex = cex)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/encontro2_files/figure-html/unnamed-chunk-4-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;autonomos &amp;lt;- st_read(&amp;quot;shapefile/autonomos.shp&amp;quot;)
+autonomos &amp;lt;- st_transform(autonomos, &amp;quot;EPSG:4326&amp;quot;)
+st_crs(autonomos)
+st_bbox(autonomos)
+economica &amp;lt;- st_read(&amp;quot;shapefile/economica.shp&amp;quot;)
+economica_auto &amp;lt;- st_transform(autonomos)
+st_crs(economica_auto)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;st_crs(autonomos)
+new_shape &amp;lt;- st_transform(autonomos, &amp;quot;EPSG:4326&amp;quot;) # set CRS
+st_crs(new_shape)
+st_bbox(autonomos)
+st_bbox(new_shape)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;representação&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Representação&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;autonomos &amp;lt;- st_read(&amp;quot;shapefile/autonomos.shp&amp;quot;)
+economica &amp;lt;- st_read(&amp;quot;shapefile/economica.shp&amp;quot;)
+regional &amp;lt;- st_read(&amp;quot;shapefile/regional.shp&amp;quot;)
+
+tm_shape(regional) +
+   tm_polygons(&amp;quot;NOME&amp;quot;,palette = &amp;quot;RdYlBu&amp;quot;)
+
+tm_shape(regional) +
+   tm_borders() +
+tm_shape(autonomos) +
+   tm_dots(col = &amp;quot;red&amp;quot;) +
+   tm_scale_bar()&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;manipulação-de-dados-espaciais&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Manipulação de dados espaciais&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;farmacias &amp;lt;- economica %&amp;gt;% 
+   filter(CNAE_PRINC == &amp;#39;4771701&amp;#39; | CNAE_PRINC == &amp;#39;4771702&amp;#39;)
+
+tm_shape(regional) +
+   tm_borders() +
+tm_shape(farmacias) +
+   tm_dots()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;world &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Simple feature collection with 177 features and 10 fields
+## Geometry type: MULTIPOLYGON
+## Dimension:     XY
+## Bounding box:  xmin: -180 ymin: -89.9 xmax: 180 ymax: 83.64513
+## Geodetic CRS:  WGS 84
+## # A tibble: 177 x 11
+##    iso_a2 name_long continent region_un subregion type  area_km2     pop lifeExp
+##  * &amp;lt;chr&amp;gt;  &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;     &amp;lt;chr&amp;gt;    &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;   &amp;lt;dbl&amp;gt;
+##  1 FJ     Fiji      Oceania   Oceania   Melanesia Sove~   1.93e4  8.86e5    70.0
+##  2 TZ     Tanzania  Africa    Africa    Eastern ~ Sove~   9.33e5  5.22e7    64.2
+##  3 EH     Western ~ Africa    Africa    Northern~ Inde~   9.63e4 NA         NA  
+##  4 CA     Canada    North Am~ Americas  Northern~ Sove~   1.00e7  3.55e7    82.0
+##  5 US     United S~ North Am~ Americas  Northern~ Coun~   9.51e6  3.19e8    78.8
+##  6 KZ     Kazakhst~ Asia      Asia      Central ~ Sove~   2.73e6  1.73e7    71.6
+##  7 UZ     Uzbekist~ Asia      Asia      Central ~ Sove~   4.61e5  3.08e7    71.0
+##  8 PG     Papua Ne~ Oceania   Oceania   Melanesia Sove~   4.65e5  7.76e6    65.2
+##  9 ID     Indonesia Asia      Asia      South-Ea~ Sove~   1.82e6  2.55e8    68.9
+## 10 AR     Argentina South Am~ Americas  South Am~ Sove~   2.78e6  4.30e7    76.3
+## # ... with 167 more rows, and 2 more variables: gdpPercap &amp;lt;dbl&amp;gt;,
+## #   geom &amp;lt;MULTIPOLYGON [°]&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;world_agg1 &amp;lt;- world %&amp;gt;%
+  group_by(continent) %&amp;gt;%
+  summarize(pop = sum(pop, na.rm = TRUE))
+
+tm_shape(world) +
+   tm_polygons(&amp;quot;pop&amp;quot;, style = &amp;quot;jenks&amp;quot; )&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/encontro2_files/figure-html/unnamed-chunk-9-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;world_agg2  &amp;lt;- world %&amp;gt;% 
+  group_by(continent) %&amp;gt;%
+  summarize(pop = sum(pop, na.rm = TRUE), `area (sqkm)` = sum(area_km2), n = n())&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;junção-não-espacial---relaciona-dados-por-meio-de-uma-chave&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Junção não espacial - relaciona dados por meio de uma chave&lt;/h1&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;coffee_data&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## # A tibble: 47 x 3
+##    name_long                coffee_production_2016 coffee_production_2017
+##    &amp;lt;chr&amp;gt;                                     &amp;lt;int&amp;gt;                  &amp;lt;int&amp;gt;
+##  1 Angola                                       NA                     NA
+##  2 Bolivia                                       3                      4
+##  3 Brazil                                     3277                   2786
+##  4 Burundi                                      37                     38
+##  5 Cameroon                                      8                      6
+##  6 Central African Republic                     NA                     NA
+##  7 Congo, Dem. Rep. of                           4                     12
+##  8 Colombia                                   1330                   1169
+##  9 Costa Rica                                   28                     32
+## 10 Côte d&amp;#39;Ivoire                               114                    130
+## # ... with 37 more rows&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;juntos &amp;lt;- world %&amp;gt;% 
+   left_join(coffee_data)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Joining, by = &amp;quot;name_long&amp;quot;&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;tm_shape(juntos) +
+   tm_polygons(&amp;#39;coffee_production_2017&amp;#39;, style = &amp;quot;jenks&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/encontro2_files/figure-html/unnamed-chunk-12-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Atividade 2.1</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/atividade3/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/atividade3/</guid>
+      <description>&lt;h2 id=&#34;a-unidade-6-é-estruturada-considerando-os-seguintes-tópicos&#34;&gt;A &lt;strong&gt;Unidade 6&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dados espaciais e geocodificação;&lt;/li&gt;
+&lt;li&gt;Estrutura de dados espaciais;&lt;/li&gt;
+&lt;li&gt;Como transformar dados não espaciais em espaciais&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;esta-atividade-deverá-ser-realizada-até-dia-0601-são-propostas-as-seguintes-atividades&#34;&gt;Esta atividade deverá ser realizada até dia &lt;strong&gt;06/01&lt;/strong&gt;. São propostas as seguintes atividades:&lt;/h2&gt;
+&lt;h3 id=&#34;1-chame-os-pacotes&#34;&gt;1. Chame os pacotes:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;library(sf)      # vector data package
+library(dplyr)   # tidyverse package for data frame manipulation
+library(spData)  # spatial data package
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Os conjuntos de dados vetoriais geográficos são estruturados no R graças à classe &lt;code&gt;sf&lt;/code&gt;, que estende o data.frame da base R. Como os data.frames, os objetos &lt;code&gt;sf&lt;/code&gt; têm uma coluna por variável (como &amp;lsquo;nome&amp;rsquo;) e uma linha por observação ou característica (por exemplo, por estação de ônibus). Os objetos &lt;code&gt;sf&lt;/code&gt; diferem dos data.frame básicos porque têm uma coluna geométrica de classe &lt;code&gt;sfc&lt;/code&gt; que pode conter uma gama de entidades geográficas (ponto único e &amp;lsquo;multi&amp;rsquo;, linha e características de polígono) por linha.&lt;/p&gt;
+&lt;h3 id=&#34;2-siga-os-comandos-a-seguir-para-explorar-e-manipular-dados-geográficos-com-o-pacote-sf&#34;&gt;2. Siga os comandos a seguir para explorar e manipular dados geográficos com o pacote &lt;code&gt;sf&lt;/code&gt;:&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;world&lt;/code&gt; é um &lt;code&gt;sf data frame&lt;/code&gt; contendo colunas espaciais e de atributos, cujos nomes são retornados pela função &lt;code&gt;names()&lt;/code&gt;(a última coluna deste exemplo contém as informações geográficas).&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;class(world)
+names(world)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Veja o que acontece quando você roda o código a seguir:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;world_agg1 = world %&amp;gt;%
+  group_by(continent) %&amp;gt;%
+  summarize(pop = sum(pop, na.rm = TRUE))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Copie o código abaixo e rode-o no seu &lt;code&gt;.Rmd&lt;/code&gt;:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;world_agg2  = world %&amp;gt;% 
+  group_by(continent) %&amp;gt;%
+  summarize(pop = sum(pop, na.rm = TRUE), `area (sqkm)` = sum(area_km2), n = n())
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;O que quer dizer a representação gerada por você?&lt;/p&gt;
+&lt;h3 id=&#34;3-junção-de-atributos-vetoriais&#34;&gt;3. Junção de atributos vetoriais&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;world_coffee = left_join(world, coffee_data)
+class(world_coffee)
+plot(world_coffee[&amp;quot;coffee_production_2017&amp;quot;])
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;E agora? O que aconteceu?&lt;/p&gt;
+&lt;p&gt;O que mudou quando você rodou o código a seguir?&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;coffee_renamed = rename(coffee_data, nm = name_long)
+world_coffee2 = left_join(world, coffee_renamed, by = c(name_long = &amp;quot;nm&amp;quot;))
+plot(world_coffee2[&amp;quot;coffee_production_2017&amp;quot;])
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;4-realize-as-atividades-a-seguir-e-responda-as-questões&#34;&gt;4. Realize as atividades a seguir e responda as questões:&lt;/h3&gt;
+&lt;p&gt;a. Crie um documento &lt;code&gt;.Rmd&lt;/code&gt; para que você armazene o código gerado. 
+b. Carregue os dados e os pacotes&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;library(sf)
+library(dplyr)
+library(terra)
+library(spData)
+data(us_states)
+data(us_states_df)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;c. Crie um novo objeto chamado &lt;code&gt;us_states_name&lt;/code&gt; que contenha apenas a coluna &lt;code&gt;NAME&lt;/code&gt; do objeto &lt;code&gt;us_states&lt;/code&gt; usando a sintaxe do tidyverse (select()). Qual é a classe do novo objeto e o que o torna geográfico?&lt;/p&gt;
+&lt;p&gt;d. Selecione colunas do objeto &lt;code&gt;us_states&lt;/code&gt; que contenham dados da população e crie um novo objeto.&lt;/p&gt;
+&lt;p&gt;e. Encontre e plot (salve a figura) todos os estados com as seguintes características:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pertencem à região Centro-Oeste.&lt;/li&gt;
+&lt;li&gt;Pertence à região Oeste, têm uma área abaixo de 250.000 km2 e em 2015 uma população maior que 5.000.000 de residentes (dica: você pode precisar usar as unidades funcionais::set_units() ou as.numeric()).&lt;/li&gt;
+&lt;li&gt;Pertencente à região Sul, tinha uma área maior que 150.000 km2 ou uma população total em 2015 maior que 7.000.000 de residentes.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;f. Qual era a população total em 2015 no conjunto de dados us_states? Qual era a população total, mínima e máxima em 2015?&lt;/p&gt;
+&lt;p&gt;g. Quantos estados existem em cada região?&lt;/p&gt;
+&lt;p&gt;h. Qual era a população total mínima e máxima em 2015 em cada região? Qual era a população total em 2015 em cada região?&lt;/p&gt;
+&lt;p&gt;i. Adicione variáveis de &lt;code&gt;us_states_df&lt;/code&gt; aos &lt;code&gt;us_states&lt;/code&gt;, e crie um novo objeto chamado &lt;code&gt;us_states_stats&lt;/code&gt;. Qual função foi utilizada e por quê? Qual variável é a chave em ambos os conjuntos de dados? Qual é a classe do novo objeto?&lt;/p&gt;
+&lt;p&gt;j. Qual era a densidade populacional em 2015 em cada estado? Qual foi a densidade de população em 2010 em cada estado?&lt;/p&gt;
+&lt;p&gt;k. Quanto a densidade populacional mudou entre 2010 e 2015 em cada estado? Calcule a mudança nas porcentagens e mapeie-as.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;VOCÊ ESTÁ MANIPULANDO DADOS ESPACIAIS. MAS AINDA PRECISAMOS EVOLUIR PARA A ANÁLISE ESPACIAL DE DADOS, OK?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Créditos: Lovelace - Geocomputing (&lt;a href=&#34;https://geocompr.robinlovelace.net/attr.html#exercises-1)&#34;&gt;https://geocompr.robinlovelace.net/attr.html#exercises-1)&lt;/a&gt;. Best book ever!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Atividade 2.2</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/atividade2/</link>
+      <pubDate>Sun, 05 Dec 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/sdss/atividade2/</guid>
+      <description>&lt;h2 id=&#34;a-unidade-6-é-estruturada-considerando-os-seguintes-tópicos&#34;&gt;A &lt;strong&gt;Unidade 6&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Dados espaciais e geocodificação;&lt;/li&gt;
+&lt;li&gt;Estrutura de dados espaciais;&lt;/li&gt;
+&lt;li&gt;Como transformar dados não espaciais em espaciais&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;esta-atividade-deverá-ser-realizada-até-dia-0601-são-propostas-as-seguintes-atividades&#34;&gt;Esta atividade deverá ser realizada até dia &lt;strong&gt;06/01&lt;/strong&gt;. São propostas as seguintes atividades:&lt;/h2&gt;
+&lt;h3 id=&#34;1-faça-uma-pesquisa-e-defina&#34;&gt;1. Faça uma pesquisa e defina:&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Geocodificação&lt;/li&gt;
+&lt;li&gt;Geocodificação reversa&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-o-que-o-openstreetmap-e-o-nominatim&#34;&gt;2. O que o OpenStreetMap? E o Nominatim?&lt;/h3&gt;
+&lt;h3 id=&#34;3-instale-e-chame-os-pacotes&#34;&gt;3. Instale e chame os pacotes:&lt;/h3&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;devtools::install_github(&amp;quot;hrbrmstr/nominatim&amp;quot;)
+install.packages(&amp;quot;ggmap&amp;quot;)
+install.packages(&amp;quot;RCurl&amp;quot;)
+install.packages(&amp;quot;jsonlite&amp;quot;)
+install.packages(&amp;quot;tmaptools&amp;quot;)
+install.packages(&amp;quot;leaflet&amp;quot;)
+install.packages(&amp;quot;RgoogleMaps&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;library(nominatim)
+library(ggmap)
+library(tmaptools)
+library(RCurl)
+library(jsonlite)
+library(tidyverse)
+library(leaflet)
+library(RgoogleMaps)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;4-geocodificação-com-o-osm&#34;&gt;4. Geocodificação com o OSM&lt;/h3&gt;
+&lt;h4 id=&#34;usando-o-pacote-nominatim&#34;&gt;Usando o pacote &lt;code&gt;nominatim&lt;/code&gt;:&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;b1 &amp;lt;- osm_geocode(&amp;quot;Berlin, Germany&amp;quot;)
+b1[c(&amp;quot;lat&amp;quot;, &amp;quot;lon&amp;quot;)]
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;usando-o-pacote-tmaptools&#34;&gt;Usando o pacote &lt;code&gt;tmaptools&lt;/code&gt;&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;# modifying some search requests
+pubs_m &amp;lt;- pubs
+pubs_m[pubs_m==&amp;quot;The Crown and Sugar Loaf, Fleet Street&amp;quot;] &amp;lt;- &amp;quot;The Crown and Sugar Loaf&amp;quot;
+pubs_m[pubs_m==&amp;quot;Ye Olde Mitre, Hatton Garden&amp;quot;] &amp;lt;- &amp;quot;Ye Olde Mitre&amp;quot;
+pubs_m_df &amp;lt;- data.frame(Pubs = pubs_m, stringsAsFactors = FALSE)
+
+# geocoding the London pubs
+# &amp;quot;bar&amp;quot; is special phrase added to limit the search
+pubs_tmaptools &amp;lt;- geocode_OSM(paste(pubs_m, &amp;quot;bar&amp;quot;, sep = &amp;quot; &amp;quot;),
+                              details = TRUE, as.data.frame = TRUE)
+
+# extracting from the result only coordinates and address
+pubs_tmaptools &amp;lt;- pubs_tmaptools[, c(&amp;quot;lat&amp;quot;, &amp;quot;lon&amp;quot;, &amp;quot;display_name&amp;quot;)]
+pubs_tmaptools &amp;lt;- cbind(Pubs = pubs_m_df[-10, ], pubs_tmaptools)
+
+# print the results
+pubs_tmaptools
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;5-geocodificação-com-o-google&#34;&gt;5. Geocodificação com o Google&lt;/h3&gt;
+&lt;p&gt;Para usar o Google, cadastre-se na plataforma Cloud e substitua no código a seguir a sua API&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;register_google(key = api_key)
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;rode-o-código-a-seguir-e-veja-o-que-acontece&#34;&gt;Rode o código a seguir e veja o que acontece:&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;library(ggmap)  
+geocode(&amp;quot;Berlin, Germany&amp;quot;, source=&amp;quot;google&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;outro-exemplo&#34;&gt;Outro exemplo:&lt;/h4&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;# create a list of London pubs
+pubs &amp;lt;- c(&amp;quot;The Angel, Bermondsey&amp;quot;, &amp;quot;The Churchill Arms, Notting Hill&amp;quot;, &amp;quot;The Auld Shillelagh, Stoke Newington&amp;quot;, &amp;quot;The Sekforde, Clerkenwell&amp;quot;, &amp;quot;The Dove, Hammersmith&amp;quot;, &amp;quot;The Crown and Sugar Loaf, Fleet Street&amp;quot;, &amp;quot;The Lamb, Holborn&amp;quot;, &amp;quot;Prince of Greenwich, Greenwich&amp;quot;, &amp;quot;Ye Olde Mitre, Hatton Garden&amp;quot;, &amp;quot;The Glory, Haggerston&amp;quot;, &amp;quot;The Blue Posts, Soho&amp;quot;, &amp;quot;The Old Bank of England, Fleet Street&amp;quot;)
+pubs_df &amp;lt;- data.frame(Pubs = pubs, stringsAsFactors = FALSE)
+
+# run the geocode function from ggmap package
+pubs_ggmap &amp;lt;- geocode(location = pubs, output = &amp;quot;more&amp;quot;, source = &amp;quot;google&amp;quot;)
+pubs_ggmap &amp;lt;- cbind(pubs_df, pubs_ggmap)
+
+# print the results
+pubs_ggmap[, 1:6]
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;mais-uma-opção-usando-o-rgooglemaps&#34;&gt;Mais uma opção usando o &lt;code&gt;RgoogleMaps&lt;/code&gt;:&lt;/h4&gt;
+&lt;p&gt;Crie o dataframe:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;cidades &amp;lt;- c(&amp;quot;Belo Horizonte MG&amp;quot;,&amp;quot;Contagem MG&amp;quot;, &amp;quot;Juiz de Fora MG&amp;quot;,
+             &amp;quot;Uberlandia MG&amp;quot;, &amp;quot;Montes Claros MG&amp;quot;, &amp;quot;Uberaba MG&amp;quot;,
+             &amp;quot;Varginha MG&amp;quot;, &amp;quot;Governador Valadares MG&amp;quot;, &amp;quot;Salto da Divisa MG&amp;quot;,
+             &amp;quot;Para de Minas MG&amp;quot;, &amp;quot;Bom Despacho MG&amp;quot;, &amp;quot;Manhuacu MG&amp;quot;,
+             &amp;quot;Rio Casca MG&amp;quot;, &amp;quot;Tres Coracoes MG&amp;quot;, &amp;quot;Tres Pontas MG&amp;quot;,
+             &amp;quot;Sao Sebastiao do Paraiso MG&amp;quot;, &amp;quot;Iturama MG&amp;quot;, &amp;quot;Joaima MG&amp;quot;,
+             &amp;quot;Vicosa MG&amp;quot;, &amp;quot;Montalvania MG&amp;quot;, &amp;quot;Frutal MG&amp;quot;, &amp;quot;Ipatinga MG&amp;quot;,
+             &amp;quot;Aimores MG&amp;quot;, &amp;quot;Muriae MG&amp;quot;, &amp;quot;Januaria MG&amp;quot;)
+DF &amp;lt;- data.frame(cidade=cidades, lat=NA, lon=NA)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Rode os chunks de código:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;getGeoCode(&amp;quot;Belo Horizonte, Minas Gerais, Brazil&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;DF &amp;lt;- with(DF,data.frame(cidade=cidade, t(sapply(DF$cidade, getGeoCode))))
+knitr::kable(DF, format=&amp;quot;markdown&amp;quot;, digits=4)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Plote os pontos&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;box &amp;lt;- make_bbox(lon, lat, data = DF)
+map &amp;lt;-
+  ggmap(
+    get_map(location = box, maptype=&amp;quot;toner&amp;quot;, source=&amp;quot;stamen&amp;quot;)
+    ) +
+  geom_point(data=DF, x=DF$lon, y=DF$lat, color=&amp;quot;red&amp;quot;)
+map
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;maptype = c(&amp;quot;terrain&amp;quot;, &amp;quot;satellite&amp;quot;, &amp;quot;roadmap&amp;quot;, &amp;quot;hybrid&amp;quot;, &amp;quot;toner&amp;quot;, &amp;quot;watercolor&amp;quot;)
+source = c(&amp;quot;google&amp;quot;, &amp;quot;osm&amp;quot;, &amp;quot;stamen&amp;quot;, &amp;quot;cloudmade&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;map &amp;lt;-
+  ggmap(
+    get_map(location = box, maptype=&amp;quot;terrain&amp;quot;, source=&amp;quot;google&amp;quot;, color=&amp;quot;bw&amp;quot;)
+    ) +
+  geom_point(data=DF, x=DF$lon, y=DF$lat, color=&amp;quot;red&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;map
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Créditos: &lt;a href=&#34;https://rstudio-pubs-static.s3.amazonaws.com/27602_ac1f676e281d4b0dbd21ceb29017c2ca.html&#34;&gt;https://rstudio-pubs-static.s3.amazonaws.com/27602_ac1f676e281d4b0dbd21ceb29017c2ca.html&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>

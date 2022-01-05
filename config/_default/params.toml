@@ -53,27 +53,27 @@ time_format = "3:04 PM"
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "test@example.org"
-phone = "888 888 88 88"
-address = "Building 1 Room 1, Stanford University, California, 90210, USA"
+email = "renataoliveira@gmail.com"
+phone = "+55 31 9 8866 2226"
+address = "Av. Amazonas, 7675 - Nova Gameleira - Belo Horizonte, Minas Gerais, Brazil"
 
 # Office hours: use `<br>` to insert a line break, or set to "" to remove office hours
-office_hours = """Monday 10:00 to 13:00<br>
-                  Wednesday 09:00 to 10:00"""
+#office_hours = """Monday 10:00 to 13:00<br>
+#                  Wednesday 09:00 to 10:00"""
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
-appointment_url = "https://calendly.com"
+#appointment_url = "https://calendly.com"
 
 # Contact links
 #   Set to `[]` to disable, or comment out unwanted lines with a hash `#`.
 contact_links = [
-  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/Twitter"},
-  {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:echo123?call"},
-  {icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
-  {icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
+  {icon = "twitter", icon_pack = "fab", name = "DM Me", link = "https://twitter.com/retaoliveira"},
+  {icon = "skype", icon_pack = "fab", name = "Skype Me", link = "skype:retaoliveira"},
+  #{icon = "keybase", icon_pack = "fab", name = "Chat on Keybase", link = "https://keybase.io/"},
+  #{icon = "comments", icon_pack = "fas", name = "Discuss on Forum", link = "https://discourse.gohugo.io"},
   # {icon = "telegram", icon_pack = "fab", name = "Telegram Me", link = "https://telegram.me/@Telegram"},
   ]
-
+  
 # Display a map.
 # To show your address on a map in the contact widget, you need to enter your latitude, longitude and choose
 # a map provider below.
@@ -91,8 +91,8 @@ contact_links = [
 #   3: OpenStreetMap (Mapbox)
 map = 2
 map_api_key = "AIzaSyBu5nZKbeK-WHQ70oqOWo-_4VmwOwKP9YQ"
-latitude = "37.4275"
-longitude = "-122.1697"
+latitude = "-19.93884818664568"
+longitude = "-43.99917650214459"
 zoom = 15
 
 ############################
@@ -122,7 +122,7 @@ reading_time = true
 comment_count = true
 
 # Display next/previous section pager? (true/false)
-section_pager = false
+section_pager = true
 docs_section_pager = true  # Display pager in Docs layout (e.g. tutorials)?
 
 # Enable in-built social sharing buttons? (true/false)
@@ -148,13 +148,36 @@ sharing = true
   publication_view = 3
   talk_view = 2
 
+############################
+## Comments
+############################
+[comments]
+  # Comment provider:
+  #   0: Disabled
+  #   1: Disqus (https://disqus.com)
+  #   2: Commento (https://commento.io)
+  engine = 1
+
+  # Which page types are commentable?
+  commentable = {page = true, post = true, docs = true, project = true, publication = true, talk = true}
+
+  # Configuration of Disqus.
+  [comments.disqus]
+    shortname = ""  # Paste the shortname from your Disqus dashboard.
+    show_count = true  # Show comment count in page header? (true/false)
+
+  # Configuration of Commento.
+  [comments.commento]
+    # If self-hosting Commento, enter its URL here (e.g. "https://commento.?.com"), otherwise leave empty.
+    url = ""
+
 # Search.
 [search]
   # Search provider:
   #   0: No search engine
   #   1: academia (built-in)
   #   2: Algolia (https://www.algolia.com)
-  engine = 0
+  engine = 1
 
   # Configuration of Algolia search engine.
   # Paste the values from your Algolia dashboard.
@@ -163,3 +186,9 @@ sharing = true
     api_key = ""
     index_name = ""
     show_logo = false
+
+############################
+## Icon Pack Extensions
+############################
+[icon.pack]
+  ai = true # Academicons icon pack https://jpswalsh.github.io/academicons/

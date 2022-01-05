@@ -17,8 +17,8 @@ output:
 type: docs
 ---
 
-<script src="/places/rmarkdown-libs/header-attrs/header-attrs.js"></script>
-  <link rel="stylesheet" href="D:/assets/css/custom.css" type="text/css" />
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+  <link rel="stylesheet" href="/assets/css/custom.css" type="text/css" />
 
 
 <pre class="r"><code>library(tidyverse)
@@ -38,7 +38,7 @@ hotels_no_usa_cancelled &lt;- select(hotels_no_usa, hotel, is_canceled)
 
 ggplot(hotels_no_usa, aes(x = arrival_date_year)) +
   geom_bar()</code></pre>
-<p><img src="/places/courses/dados_grad/tutorial5_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><img src="/disciplinas/dados_grad/tutorial5_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <pre class="r"><code>hotels_no_usa_pipe &lt;- hotels %&gt;% 
   filter(country != &quot;USA&quot; &amp; lead_time &lt; 100) %&gt;% 
   select(hotel, is_canceled, lead_time) %&gt;% 

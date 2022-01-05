@@ -1,0 +1,139 @@
+---
+date: "2021-12-05T00:00:00+01:00"
+draft: false
+menu:
+  sdss:
+    parent: Encontros
+    weight: 9
+title: Encontro 2 - representação e manipulação de dados espaciais
+toc: false
+type: docs
+weight: 9
+---
+
+# Principal referência
+
+[Geocomputation with R](https://geocompr.robinlovelace.net/index.html)
+
+# Pacotes referências
+
+[Simple Features](https://r-spatial.github.io/sf/)
+
+[tmap](https://cran.r-project.org/web/packages/tmap/vignettes/tmap-getstarted.html)
+
+# Outras informações 
+
+[CNAE](https://concla.ibge.gov.br/busca-online-cnae.html?subclasse=5612100&tipo=cnae&versao=8&view=subclasse)
+
+# Código para implementação de funções de representação e manipulação de dados espaciais
+
+```{r}
+vignette(package = "sf")
+```
+
+```{r}
+library(sf)
+library(terra)
+library(spData)
+library(tmap)
+library(tidyverse)
+class(world)
+names(world)
+```
+
+```{r}
+plot(world)
+```
+```{r}
+plot(world["continent"], reset = FALSE)
+cex = sqrt(world$pop) / 10000
+world_cents = st_centroid(world, of_largest = TRUE)
+plot(st_geometry(world_cents), add = TRUE, cex = cex)
+```
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+autonomos <- st_read("shapefile/autonomos.shp")
+autonomos <- st_transform(autonomos, "EPSG:4326")
+st_crs(autonomos)
+st_bbox(autonomos)
+economica <- st_read("shapefile/economica.shp")
+economica_auto <- st_transform(autonomos)
+st_crs(economica_auto)
+```
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+st_crs(autonomos)
+new_shape <- st_transform(autonomos, "EPSG:4326") # set CRS
+st_crs(new_shape)
+st_bbox(autonomos)
+st_bbox(new_shape)
+```
+
+
+# Representação
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+autonomos <- st_read("shapefile/autonomos.shp")
+economica <- st_read("shapefile/economica.shp")
+regional <- st_read("shapefile/regional.shp")
+
+tm_shape(regional) +
+   tm_polygons("NOME",palette = "RdYlBu")
+
+tm_shape(regional) +
+   tm_borders() +
+tm_shape(autonomos) +
+   tm_dots(col = "red") +
+   tm_scale_bar()
+   
+```
+
+# Manipulação de dados espaciais
+
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=TRUE}
+
+farmacias <- economica %>% 
+   filter(CNAE_PRINC == '4771701' | CNAE_PRINC == '4771702')
+
+tm_shape(regional) +
+   tm_borders() +
+tm_shape(farmacias) +
+   tm_dots()
+
+
+
+```
+
+```{r}
+world 
+
+world_agg1 <- world %>%
+  group_by(continent) %>%
+  summarize(pop = sum(pop, na.rm = TRUE))
+
+tm_shape(world) +
+   tm_polygons("pop", style = "jenks" )
+```
+```{r}
+world_agg2  <- world %>% 
+  group_by(continent) %>%
+  summarize(pop = sum(pop, na.rm = TRUE), `area (sqkm)` = sum(area_km2), n = n())
+```
+
+# Junção não espacial - relaciona dados por meio de uma chave
+
+```{r}
+coffee_data
+```
+
+```{r}
+juntos <- world %>% 
+   left_join(coffee_data)
+
+tm_shape(juntos) +
+   tm_polygons('coffee_production_2017', style = "jenks")
+```
+
+
+
+

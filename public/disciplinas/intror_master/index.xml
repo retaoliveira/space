@@ -1,15 +1,2421 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Análise de dados para gestão organizacional on Profa. Renata Oliveira</title>
+    <title>Introdução ao R on Profa. Renata Oliveira</title>
     <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/</link>
-    <description>Recent content in Análise de dados para gestão organizacional on Profa. Renata Oliveira</description>
+    <description>Recent content in Introdução ao R on Profa. Renata Oliveira</description>
     <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 15 May 2021 00:00:00 +0000</lastBuildDate>
     
 	    <atom:link href="https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Atividade 1</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade1/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade1/</guid>
+      <description>&lt;h2 id=&#34;a-unidade-1-é-estruturada-considerando-os-seguintes-tópicos&#34;&gt;A &lt;strong&gt;Unidade 1&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalação do R e do RStudio&lt;/li&gt;
+&lt;li&gt;Como instalar o Git&lt;/li&gt;
+&lt;li&gt;Criando uma conta no Github&lt;/li&gt;
+&lt;li&gt;Instalar e carregar pacotes no R&lt;/li&gt;
+&lt;li&gt;Instalar pacotes no R a partir do Github&lt;/li&gt;
+&lt;li&gt;E aí, R? Entendendo o ambiente de trabalho&lt;/li&gt;
+&lt;li&gt;Primeiros documentos no R - RMarkdown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;esta-atividade-deverá-ser-realizada-até-dia-1910-quando-teremos-nosso-primeiro-encontro-síncrono-são-propostas-as-seguintes-atividades&#34;&gt;Esta atividade deverá ser realizada até dia &lt;strong&gt;19/10&lt;/strong&gt;, quando teremos nosso primeiro encontro síncrono. São propostas as seguintes atividades:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Instale o R, o RStudio e o Git no seu computador - &lt;a href=&#34;https://www.places.education/cursos/intro_r/install/&#34;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Crie uma conta no Github, caso ainda não tenha - &lt;a href=&#34;https://www.places.education/cursos/intro_r/github/&#34;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Faça o tutorial - &lt;a href=&#34;https://www.places.education/cursos/intro_r/swirl/&#34;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Faça o tutorial de Markdown desenvolvido pelas R-Ladies Beatriz Milz e Haydée Svab -  &lt;a href=&#34;https://beatriz-milz.shinyapps.io/tutorial_markdown/#section-introdu%C3%A7%C3%A3o&#34;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Crie o seu primeiro documento RMarkdown. Para tanto, escolha o tipo de output que quer gerar. Não se preocupe com o conteúdo por enquanto. Apenas explore as diferentes possibilidades de outputs! Lembre-se que a extensão desse arquivo é &lt;code&gt;.Rmd&lt;/code&gt; -  &lt;a href=&#34;https://www.places.education/cursos/intro_r/intro_rmarkdown/&#34;&gt;Link&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;No &lt;a href=&#34;https://rmarkdown.rstudio.com/gallery.html&#34;&gt;site do RStudio&lt;/a&gt; há uma série de modelos de arquivos que podem ser gerados a partir do RMarkdown.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;as-entregas-seráão&#34;&gt;A(s) entrega(s) será(ão):&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Arquivo .Rmd&lt;/strong&gt; referente à &lt;strong&gt;tarefa 5&lt;/strong&gt; desta atividade pela tarefa no SIGAA.&lt;/li&gt;
+&lt;li&gt;Explorar toda a documentação, tentar solucionar dúvidas com os colegas e &lt;strong&gt;trazer dúvidas para nosso encontro&lt;/strong&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;h2 id=&#34;algumas-dicas-adicionais-para-a-tarefa-5&#34;&gt;Algumas dicas adicionais para a tarefa 5.&lt;/h2&gt;
+&lt;p&gt;No RStudio, crie um novo documento &lt;code&gt;R Markdown&lt;/code&gt; escolhendo &lt;code&gt;Arquivo | Novo | R Markdown&lt;/code&gt;.
+Clique no botão &lt;code&gt;Knit HTML&lt;/code&gt; na barra de ferramentas do doc para visualizar seu documento.&lt;/p&gt;
+&lt;p&gt;Se você quiser tornar o seu documento público, recomendo, inicialmente, utilizar o &lt;code&gt;RPubs&lt;/code&gt;. Alguns passos para isso:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Na janela de pré-visualização, clique no botão &lt;code&gt;Publicar&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;É um processo em duas etapas. Na primeira etapa, você precisa registrar uma conta &lt;code&gt;RPubs&lt;/code&gt; ou fazer o login, caso já tenha uma. Você escreve o título de seu documento e dá uma breve descrição (para que outros possam encontrar seu trabalho a partir da busca).&lt;/li&gt;
+&lt;li&gt;Uma vez terminado e clicando no botão &lt;code&gt;Continue&lt;/code&gt; na parte inferior, você irá diretamente para o artigo publicado.&lt;/li&gt;
+&lt;li&gt;Você pode optar por atualizar seu conteúdo.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;h2 id=&#34;bônus-rode-o-seu-primeiro-documento-em-rmarkdown&#34;&gt;BÔNUS: Rode o seu primeiro documento em RMarkdown!&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Salve o &lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/ESP5b0WfqYJFplhjSRiciG0BNKQZnv2HzbHnPBxZEBr3Ew?e=gVcWCQ&#34;&gt;arquivo&lt;/a&gt; em um diretório que você consiga acessar depois. Sugiro criar um diretório para essa finalidade.&lt;/li&gt;
+&lt;li&gt;Abra o arquivo no RStudio: &lt;code&gt;File | Open File&lt;/code&gt; e navegue até o arquivo &lt;code&gt;01-covid.Rmd&lt;/code&gt; selecionando-o.&lt;/li&gt;
+&lt;li&gt;Você identificará o arquivo por meio do &lt;code&gt;YAML&lt;/code&gt; com &lt;code&gt;title: &amp;quot;Mortes por COVID-19&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Verifique se houve alguma mensagem abaixo da barra de ferramentas da janela de edição do &lt;code&gt;RMarkdown&lt;/code&gt; para que sejam instalados &lt;code&gt;packages&lt;/code&gt; necessários para rodar esse &lt;code&gt;.Rmd&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Clique no botão de &lt;code&gt;knitr&lt;/code&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Aprecie o seu documento BÔNUS!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Atividade 2</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade2/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade2/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;Unidade 2&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Estrutura de dados no R;&lt;/li&gt;
+&lt;li&gt;Tipos de dados, importação de base de dados, criação de objeto (vetores, matrizes, data frames), operadores aritméticos, de comparação e lógicos;&lt;/li&gt;
+&lt;li&gt;Visualização de dados no R.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Esta atividade deverá ser realizada até dia &lt;strong&gt;26/10&lt;/strong&gt;, quando teremos nosso segundo encontro síncrono. São propostas as seguintes atividades:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Faça o download do arquivo disponível no &lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EeRUAZXugYhOqiO6lRHfbVYBYUZx8HUcj8vN538pmX0t4g?e=8UQAnq&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolva as questões.&lt;/li&gt;
+&lt;li&gt;Gere um tipo de documento .Rmd de sua preferência.&lt;/li&gt;
+&lt;li&gt;Envie por email (&lt;a href=&#34;mailto:renataoliveira@gmail.com&#34;&gt;renataoliveira@gmail.com&lt;/a&gt; ou &lt;a href=&#34;mailto:renataoliveira@cefetmg.br&#34;&gt;renataoliveira@cefetmg.br&lt;/a&gt;) o arquivo .Rmd e o arquivo gerado.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;as-entregas-seráão&#34;&gt;A(s) entrega(s) será(ão):&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Arquivos&lt;/strong&gt; referentes à &lt;strong&gt;tarefa 4&lt;/strong&gt; desta atividade.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;h1 id=&#34;operações-matemáticas-e-vetores&#34;&gt;Operações matemáticas e vetores&lt;/h1&gt;
+&lt;h2 id=&#34;exercícios&#34;&gt;Exercícios:&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Questão 1:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Qual é a classe dos vetores abaixo? Imprima o vetor com &lt;em&gt;print&lt;/em&gt; e tente advinhar. Use a função &lt;em&gt;class&lt;/em&gt; para descobrir a resposta.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v1 &amp;lt;- c(1, 2, TRUE, 4)
+v2 &amp;lt;- c(&amp;quot;T&amp;quot;, &amp;quot;TRUE&amp;quot;, &amp;quot;FALSE&amp;quot;, &amp;quot;T&amp;quot;)
+v3 &amp;lt;- c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;)
+v4 &amp;lt;- c(1, &amp;quot;4&amp;quot;, 4, 1)
+v5 &amp;lt;- c(1, 2, &amp;quot;feijao com arroz&amp;quot;)
+v6 &amp;lt;- c(&amp;quot;Beatriz&amp;quot;, &amp;quot;Pedro&amp;quot;, TRUE)
+v7 &amp;lt;- c(T, T, F, T, F, F, 42)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Você consegue identificar as regras de combinação de tipos de dados diferentes em um mesmo vetor? Se tiver dúvidas, pergunte.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Questão 2:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Veja as cores de veículos comercializados por uma concessionária na semana passada.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;colours &amp;lt;- factor(c(&amp;quot;red&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;red&amp;quot;,&amp;quot;white&amp;quot;,
+                    &amp;quot;silver&amp;quot;,&amp;quot;red&amp;quot;,&amp;quot;white&amp;quot;,&amp;quot;silver&amp;quot;,
+                    &amp;quot;red&amp;quot;,&amp;quot;red&amp;quot;,&amp;quot;white&amp;quot;,&amp;quot;silver&amp;quot;,&amp;quot;silver&amp;quot;),
+                  levels=c(&amp;quot;red&amp;quot;,&amp;quot;blue&amp;quot;,&amp;quot;white&amp;quot;,&amp;quot;silver&amp;quot;,&amp;quot;black&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Se você colocar o código a seguir, o que acontece? Por que? Responda na atividade da semana.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;colours[4] &amp;lt;- &amp;quot;orange&amp;quot;
+colours
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Utilize a função &lt;code&gt;table&lt;/code&gt; para determinar a quantidade de automóveis comercializados de cada cor. Pesquise na internet e pergunte caso tenha dúvidas.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;table(colours)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;d11 &amp;lt;- plyr::count(colours)
+d12 &amp;lt;- plyr::count(mtcars, vars = &amp;quot;cyl&amp;quot;)
+d13 &amp;lt;- gmodels::CrossTable(colours)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Questão 3:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Considere:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;car.type &amp;lt;- factor(c(&amp;quot;saloon&amp;quot;,&amp;quot;saloon&amp;quot;,&amp;quot;hatchback&amp;quot;,
+    &amp;quot;saloon&amp;quot;,&amp;quot;convertible&amp;quot;,&amp;quot;hatchback&amp;quot;,&amp;quot;convertible&amp;quot;,
+    &amp;quot;saloon&amp;quot;, &amp;quot;hatchback&amp;quot;,&amp;quot;saloon&amp;quot;, &amp;quot;saloon&amp;quot;,
+    &amp;quot;saloon&amp;quot;,&amp;quot;hatchback&amp;quot;),
+    levels=c(&amp;quot;saloon&amp;quot;,&amp;quot;hatchback&amp;quot;,&amp;quot;convertible&amp;quot;))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Gere a tabela de frequências para os dados &lt;code&gt;car.type&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Experimente:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;table(car.type, colours)
+gmodels::CrossTable(car.type, colours)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Qual a diferença entre o uso da função &lt;code&gt;table&lt;/code&gt; com um ou argumentos? 
+Qual a diferença entre &lt;code&gt;table(car.type, colours)&lt;/code&gt; e &lt;code&gt;table(colours, car.type)&lt;/code&gt;?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Questão 4:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Crie dois novos vetores. No primeiro, anote (invente) o número de palavras que você escreveu no último trabalho acadêmico ou relatório técnico em cada semana, considerando os últimos três meses. No segundo, anote (chute, novamente) quantos litros de café você tomou em cada semana.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Nomeie os elementos dos 2 vetores.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Calcule sua produtividade em &amp;ldquo;palavras por Litro de café&amp;rdquo;. Atribua o resultado a um novo vetor.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lab 1</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab1/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab1/</guid>
+      <description>&lt;h2 id=&#34;a-unidade-1-é-estruturada-considerando-os-seguintes-tópicos&#34;&gt;A &lt;strong&gt;Unidade 1&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Instalação do R e do RStudio&lt;/li&gt;
+&lt;li&gt;Como instalar o Git&lt;/li&gt;
+&lt;li&gt;Criando uma conta no Github&lt;/li&gt;
+&lt;li&gt;Instalar e carregar pacotes no R&lt;/li&gt;
+&lt;li&gt;Instalar pacotes no R a partir do Github&lt;/li&gt;
+&lt;li&gt;E aí, R? Entendendo o ambiente de trabalho&lt;/li&gt;
+&lt;li&gt;Primeiros documentos no R - RMarkdown&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;diretrizes-gerais&#34;&gt;Diretrizes gerais:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EdTjtwRl5F5DjFDlgrOB6BgB4fqdODik9Jkp0cA_sB696Q?e=jdqlwW&#34;&gt;Arquivo&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Instale os pacotes:&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;tidyverse&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;tinytex&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;knitr&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;flexdashboard&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;xaringan&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;&amp;quot;xaringanthemer&amp;quot;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Chame as bibliotecas dos pacotes instalados&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;library(&amp;quot;tidyverse&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;library(&amp;quot;tinytex&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;library(&amp;quot;knitr&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;library(&amp;quot;flexdashboard&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;library(&amp;quot;xaringan&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;library(&amp;quot;xaringanthemer&amp;quot;)&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Corrija os problemas de códigos nos respectivos chunks.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio da tarefa no Sigaa&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Dica: As barras que delimitam o endereçamento do arquivo no seu computador, quando exibidas no explorer do Windows, são invertidas (). O R trabalha com barras normais (/) para endereçamento.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;preparação-para-o-exercício&#34;&gt;Preparação para o exercício:&lt;/h2&gt;
+&lt;p&gt;Carregue o &lt;em&gt;data frame&lt;/em&gt; &lt;em&gt;mtcars&lt;/em&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;data(mtcars)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;encontre-o-erro-em-todos-os-códigos-abaixo-corrija-os-e-rode-o-script&#34;&gt;Encontre o erro em todos os códigos abaixo, corrija-os e rode o script:&lt;/h2&gt;
+&lt;p&gt;Q1)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;Head(mtcars)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q2)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;str(Mtcars)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q3)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;dim[mtcars]
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q4)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;nomes(mtcars)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q5)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;head(mtcars, x = 10)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q6)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v1 &amp;lt;- (&amp;quot;pato&amp;quot;, &amp;quot;cachorro&amp;quot;, &amp;quot;minhoca&amp;quot;, &amp;quot;lagarto&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q7)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v2 &amp;lt;- c(&amp;quot;1&amp;quot;, &amp;quot;2&amp;quot;, &amp;quot;3&amp;quot;, &amp;quot;4&amp;quot;)
+v1 + 42
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q8)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v1 &amp;lt;- c(&amp;quot;pato&amp;quot;, &amp;quot;cachorro&amp;quot;, &amp;quot;minhoca&amp;quot;, &amp;quot;lagarto&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q9)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v3 &amp;lt;- c(33 31 40 25 27 40)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q10)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v1 &amp;lt;- c(pato, cachorro, minhoca, lagarto)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q11)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v1 &amp;lt;- c(&amp;quot;pato&amp;quot; &amp;quot;cachorro&amp;quot; &amp;quot;minhoca&amp;quot; &amp;quot;lagarto&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q12)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v3 &amp;lt;- C(33, 31, 40, 25, 27, 40)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q13)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v1 &amp;lt;- c(&amp;quot;pato&amp;quot;, &amp;quot;cachorro&amp;quot;&amp;quot;, &amp;quot;minhoca&amp;quot;, &amp;quot;lagarto&amp;quot;)
+v3 &amp;lt;- c(33, 31, 40, 25, 27, 40)
+myData &amp;lt;- data.frame(v1, v3)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q14)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v1 &amp;lt;- c(&amp;quot;pato&amp;quot;, &amp;quot;cachorro&amp;quot;&amp;quot;, &amp;quot;minhoca&amp;quot;, &amp;quot;lagarto&amp;quot;)
+v4 &amp;lt;- c(33, 31, 40, 25)
+myData &amp;lt;- data.frame(v1 = animal, v4 = idade)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q15)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;ls
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Q16)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;v1 &amp;lt;- c(&amp;quot;pato&amp;quot;, &amp;quot;cachorro&amp;quot;, &amp;quot;minhoca&amp;quot;, &amp;quot;lagarto&amp;quot;)
+sum(v1)
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Atividade 3</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade3/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade3/</guid>
+      <description>&lt;h2 id=&#34;a-unidade-3-é-estruturada-considerando-os-seguintes-tópicos&#34;&gt;A &lt;strong&gt;Unidade 3&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Manipulação e transformação de dados no R: funções para manipulação e tratamento de dados.&lt;/li&gt;
+&lt;li&gt;Estatística descritiva e mineração de dados&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;esta-atividade-deverá-ser-realizada-até-dia-0911-quando-teremos-nosso-segundo-encontro-síncrono-são-propostas-as-seguintes-atividades&#34;&gt;Esta atividade deverá ser realizada até dia &lt;strong&gt;09/11&lt;/strong&gt;, quando teremos nosso segundo encontro síncrono. São propostas as seguintes atividades:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Faça o download do arquivo disponível no &lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EX0uowQRoZZMlQnHVPmDy5sBtJt3ZVjBLNcDuNvS1qZU6Q?e=3z9FTB&#34;&gt;link&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Resolva as questões.&lt;/li&gt;
+&lt;li&gt;Gere um tipo de documento .Rmd de sua preferência.&lt;/li&gt;
+&lt;li&gt;Envie por email (&lt;a href=&#34;mailto:renataoliveira@gmail.com&#34;&gt;renataoliveira@gmail.com&lt;/a&gt; ou &lt;a href=&#34;mailto:renataoliveira@cefetmg.br&#34;&gt;renataoliveira@cefetmg.br&lt;/a&gt;) o arquivo .Rmd e o arquivo gerado.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;as-entregas-seráão&#34;&gt;A(s) entrega(s) será(ão):&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Arquivos&lt;/strong&gt; referentes à &lt;strong&gt;tarefa 4&lt;/strong&gt; desta atividade.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;p&gt;A poluição por plástico é um problema importante e crescente, afetando negativamente a saúde dos oceanos e da vida selvagem.
+&lt;a href=&#34;https://ourworldindata.org/plastic-pollution&#34;&gt;Our World in Data&lt;/a&gt; tem muitos  dados em vários níveis, em escala global, por país e ao longo do tempo.&lt;/p&gt;
+&lt;p&gt;Para este laboratório, nos concentramos nos dados de 2010.&lt;/p&gt;
+&lt;p&gt;Além disso, a National Geographic realizou um concurso de comunicação de visualização de dados sobre resíduos plásticos, como visto &lt;a href=&#34;https://www.nationalgeographic.org/funding-opportunities/innovation-challenges/plastic/dataviz/&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Os dados estão no &lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/%E2%9D%8C/g/personal/renataoliveira_cefetmg_br/ESK2oL3BBs1FgbPSB8LbpbEBQVLJX5MmsHnTKqFkFJbYPA?e=fbprgc&#34;&gt;Link&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;objetivos-de-aprendizagem&#34;&gt;Objetivos de aprendizagem&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;Visualizar dados numéricos e categóricos e interpretar visualizações&lt;/li&gt;
+&lt;li&gt;Recriação de visualizações&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;pacotes&#34;&gt;Pacotes&lt;/h2&gt;
+&lt;p&gt;Usaremos o pacote &lt;strong&gt;tidyverse&lt;/strong&gt;* para esta análise.
+Execute o seguinte código no Console para carregar este pacote.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;library(tidyverse)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;dados&#34;&gt;Dados&lt;/h2&gt;
+&lt;p&gt;O conjunto de dados para esta tarefa pode ser encontrado no link a seguir, acessado por meio do comando:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;
+#url_file &amp;lt;- &amp;quot;atalho no seu computador/plastic-waste.csv&amp;quot;
+
+#plastic_waste &amp;lt;- read_csv(url_file)
+
+#library(readr)
+plastic_waste &amp;lt;- read_csv(&amp;quot;D:/OneDrive - cefetmg.br/01_disciplinas/ERE/2020_2/R_adm/00_aulas/class07_dados_adm/data/plastic-waste.csv&amp;quot;)
+
+View(plastic_waste)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;As descrições das variáveis são as seguintes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;code&lt;/code&gt;: código do país&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;entity&lt;/code&gt;: Nome do país&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;continent&lt;/code&gt;: Nome do continente&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;year&lt;/code&gt;: Ano&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gdp_per_cap&lt;/code&gt;: PIB per capita internacional 2011 $, taxa&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;plastic_waste_per_cap&lt;/code&gt;: Quantidade de resíduos plásticos per capita em kg/dia&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mismanaged_plastic_waste_per_cap&lt;/code&gt;: Quantidade de resíduos plásticos mal administrados per capita em kg/dia&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;mismanaged_plastic_waste&lt;/code&gt;: Toneladas de resíduos plásticos mal administrados&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;coastal_pop&lt;/code&gt;: Número de indivíduos que vivem no litoral/na costa&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;total_pop&lt;/code&gt;: População total de acordo com Gapminder&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;warm-up&#34;&gt;Warm up&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Recorde que o RStudio está dividido em quatro painéis. Sem olhar, você pode nomeá-las todas e descrever brevemente seu propósito?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Verifique se o conjunto de dados foi carregado para o Ambiente. Quantas observações há no conjunto de dados? Ao clicar no conjunto de dados no Ambiente, você poderá inspecioná-lo com mais cuidado. Alternativamente, você pode digitar &lt;code&gt;View(plastic_waste)&lt;/code&gt; no Console para fazer isso.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Dê uma rápida olhada nos dados e observe que há células que levam o valor &lt;code&gt;NA&lt;/code&gt; - o que isso significa?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&#34;exercícios&#34;&gt;Exercícios&lt;/h1&gt;
+&lt;p&gt;Vamos começar dando uma olhada na distribuição de resíduos plásticos per capita em 2010.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_histogram(binwidth = 0.2)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Um país se destaca como uma observação incomum no topo da distribuição.&lt;/p&gt;
+&lt;p&gt;Uma maneira de identificar este país é filtrar os dados para países onde os resíduos plásticos per capita são maiores que 3,5 kg/pessoa.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;plastic_waste %&amp;gt;%
+  filter(plastic_waste_per_cap &amp;gt; 3.5)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Você esperava este resultado?&lt;/p&gt;
+&lt;p&gt;Você poderia considerar fazer alguma pesquisa sobre Trinidad e Tobago para ver por que os resíduos plásticos per capita são tão altos lá, ou se isto é um erro de dados.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Faça um histograma para a distribuição de resíduos plásticos per capita desagregados (facet) por continente. O que você pode dizer sobre como os continentes se comparam uns aos outros em termos de seus resíduos plásticos per capita?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_histogram() +
+  facet_wrap(~ continent)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Outra forma de visualizar os dados numéricos é utilizando gráficos de densidade.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(data = plastic_waste, aes(x = plastic_waste_per_cap)) +
+  geom_density()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;E comparar as distribuições entre continentes por curvas de densidade de coloração por continente.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent)) +
+  geom_density()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;O gráfico resultante pode ser um pouco difícil de ler, então vamos também preencher as curvas com cores.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density()
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A sobreposição de cores torna difícil dizer o que está acontecendo com as distribuições nos continentes plotados devido a continentes plotados sobre eles.&lt;/p&gt;
+&lt;p&gt;Podemos mudar o nível de transparência da cor de preenchimento para ajudar nisso.&lt;/p&gt;
+&lt;p&gt;O argumento &lt;code&gt;alpha&lt;/code&gt; recebe valores entre 0 e 1: 0 é completamente transparente e 1 é completamente opaco.
+Não há como dizer qual valor funcionará melhor, então você só precisa tentar alguns valores.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(data = plastic_waste, 
+       mapping = aes(x = plastic_waste_per_cap, 
+                     color = continent, 
+                     fill = continent)) +
+  geom_density(alpha = 0.5)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Isto ainda não parece ótimo&amp;hellip;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Recriar as parcelas de densidade acima usando um nível &lt;code&gt;alpha&lt;/code&gt; diferente (inferior) que funcione melhor para exibir as curvas de densidade para todos os continentes.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Descreva porque definimos a &amp;ldquo;cor&amp;rdquo; e &amp;ldquo;preenchimento&amp;rdquo; das curvas através do mapeamento estético do gráfico, mas definimos o nível &amp;ldquo;alpha&amp;rdquo; como uma característica da geometria de plotagem.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;E ainda outra maneira de visualizar esta relação é utilizando gráficos boxplot.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(data = plastic_waste, 
+       mapping = aes(x = continent, 
+                     y = plastic_waste_per_cap)) +
+  geom_boxplot()
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;Converta os boxplot da tarefa anterior para &lt;a href=&#34;http://ggplot2.tidyverse.org/reference/geom_violin.html&#34;&gt;plot de violino&lt;/a&gt;. O que os gráficos de violino revelam que os boxplot não revelam? Quais características são aparentes nas parcelas de box mas não nas parcelas de violino?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;ggplot(data = plastic_waste, 
+       mapping = aes(x = continent, 
+                     y = plastic_waste_per_cap)) +
+  geom_violin()
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Visualizar a relação entre os resíduos plásticos per capita e os resíduos plásticos mal administrados per capita usando um gráfico de dispersão. Descrever a relação.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Colorir os pontos no gráfico de dispersão por continente.
+Parece haver alguma distinção clara entre continentes com relação a como os resíduos plásticos per capita e os resíduos plásticos mal administrados per capita estão associados?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Visualize a relação entre os resíduos plásticos per capita e a população total, assim como os resíduos plásticos per capita e a população costeira.
+Você precisará fazer duas parcelas separadas.
+Algum destes pares de variáveis parece estar associado de forma mais linear?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;
+plastic_waste %&amp;gt;% 
+  ggplot(aes(x = mismanaged_plastic_waste_per_cap, y = plastic_waste_per_cap, color = continent)) + 
+    geom_point() +
+    scale_color_viridis_d() +
+    labs(x = &amp;quot;Resíduos plásticos mal administrados per capita&amp;quot;, 
+         y = &amp;quot;Resíduos plásticos per capita&amp;quot;, 
+         color = &amp;quot;Continente&amp;quot;,
+         title = &amp;quot;Resíduos plásticos per capita e os resíduos plásticos mal administrados per capita&amp;quot;,
+         subtitle = &amp;quot;por continente&amp;quot;) +
+    theme_minimal()
+
+plastic_waste %&amp;gt;% 
+  ggplot(aes(x = coastal_pop, y = plastic_waste_per_cap, color = continent)) + 
+    geom_point() +
+    scale_color_viridis_d() +
+    labs(x = &amp;quot;Resíduos plásticos mal administrados per capita&amp;quot;, 
+         y = &amp;quot;Resíduos plásticos per capita&amp;quot;, 
+         color = &amp;quot;Continente&amp;quot;,
+         title = &amp;quot;Resíduos plásticos per capita e os resíduos plásticos mal administrados per capita&amp;quot;,
+         subtitle = &amp;quot;por continente&amp;quot;) +
+    theme_minimal()
+
+plastic_waste %&amp;gt;% 
+  ggplot(aes(x = total_pop, y = plastic_waste_per_cap, color = continent)) + 
+    geom_point() +
+    scale_color_viridis_d() +
+    labs(x = &amp;quot;Resíduos plásticos mal administrados per capita&amp;quot;, 
+         y = &amp;quot;Resíduos plásticos per capita&amp;quot;, 
+         color = &amp;quot;Continente&amp;quot;,
+         title = &amp;quot;Resíduos plásticos per capita e os resíduos plásticos mal administrados per capita&amp;quot;,
+         subtitle = &amp;quot;por continente&amp;quot;) +
+    theme_minimal()
+
+
+&lt;/code&gt;&lt;/pre&gt;&lt;ol&gt;
+&lt;li&gt;Recrie o seguinte gráfico e interprete o que você vê no contexto dos dados.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;plastic_waste %&amp;gt;% 
+  mutate(coastal_pop_prop = coastal_pop / total_pop) %&amp;gt;%
+  filter(plastic_waste_per_cap &amp;lt; 3) %&amp;gt;%
+  ggplot(aes(x = coastal_pop_prop, y = plastic_waste_per_cap, color = continent)) + 
+    geom_point() +
+    geom_smooth(color = &amp;quot;black&amp;quot;) +
+    scale_color_viridis_d() +
+    labs(x = &amp;quot;Coastal population proportion (Coastal / total population)&amp;quot;, 
+         y = &amp;quot;Plastic waste per capita &amp;quot;, 
+         color = &amp;quot;Continent&amp;quot;,
+         title = &amp;quot;Plastic waste vs. coastal population proportion&amp;quot;,
+         subtitle = &amp;quot;by continent&amp;quot;) +
+    theme_minimal()
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lab 2.1 - `ggplot`</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab21/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab21/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;Unidade 2&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Estrutura de dados no R;&lt;/li&gt;
+&lt;li&gt;Tipos de dados, importação de base de dados, criação de objeto (vetores, matrizes, data frames), operadores aritméticos, de comparação e lógicos;&lt;/li&gt;
+&lt;li&gt;Visualização de dados no R.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;diretrizes-gerais&#34;&gt;&lt;strong&gt;Diretrizes gerais&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EQRGYbjqPK9PpLiRI6M2SBUBsfh__B4NfDOM5EvLeYG_wg?e=z7pDKM&#34;&gt;Arquivo&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Siga as diretrizes da atividade.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio da tarefa no Sigaa&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;h2 id=&#34;atividade&#34;&gt;&lt;strong&gt;Atividade&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Dê uma olhada no dataframe Starwars.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;glimpse(starwars)
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Modifique o seguinte gráfico para que a cor de todos os pontos seja ROSA.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(starwars, 
+       aes(x = height, y = mass, color = gender, size = birth_year)) +
+  geom_point(color = &amp;quot;pink&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;Adicione texto no título, eixos x e y e tamanho dos pontos. Remova o comentário para ver o efeito.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(starwars, 
+       aes(x = height, y = mass, color = as.factor(gender), size = birth_year)) +
+  geom_point() +
+  labs(
+    title = &amp;quot;TEste&amp;quot;,
+    x = &amp;quot;Adoro&amp;quot;, 
+    y = &amp;quot;WOW&amp;quot;,
+    size = &amp;quot;Idade&amp;quot;
+    )
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;4&#34;&gt;
+&lt;li&gt;Escolha uma única variável categórica do conjunto de dados e faça um gráfico de barras de sua distribuição.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(Um pouco de código inicial é fornecido abaixo, e o chunk é definido para não ser rodado com &lt;code&gt;eval = FALSE&lt;/code&gt; porque o código atual ali não é válido e, portanto, o documento não permitia o &lt;code&gt;knit&lt;/code&gt;. Uma vez substituído o código por um código válido, defina a opção &amp;ldquo;eval = TRUE&amp;rdquo;, ou remova a opção &amp;ldquo;eval&amp;rdquo; por completo, uma vez que está definida como &amp;ldquo;TRUE&amp;rdquo; por padrão).&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(starwars, aes(___)) +
+  geom___
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;5&#34;&gt;
+&lt;li&gt;Escolha uma única variável numérica e faça um histograma dela.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;(Desta vez nenhum código inicial é fornecido, você está por sua conta!)&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;6&#34;&gt;
+&lt;li&gt;Escolha uma variável numérica e uma variável categórica e faça uma visualização (você escolhe o tipo!) para visualizar a relação entre as duas variáveis. Junto com seu código e sua saída, forneça uma interpretação da visualização.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;7&#34;&gt;
+&lt;li&gt;Escolha duas variáveis categóricas e faça uma visualização para entender visualmente a relação entre as duas variáveis. Junto com seu código e saída, forneça uma interpretação da visualização.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;8&#34;&gt;
+&lt;li&gt;Escolha duas variáveis numéricas e duas variáveis categóricas e faça uma visualização que incorpore todas elas e forneça uma interpretação com sua resposta.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Atividade 4</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade4/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade4/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;introdução-ao-r---processamento-com-matrizes&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Introdução ao R - Processamento com Matrizes&lt;/h1&gt;
+&lt;p&gt;Lucélia Vaz&lt;/p&gt;
+&lt;div id=&#34;retrospecto-e-agenda&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Retrospecto e agenda&lt;/h2&gt;
+&lt;p&gt;1 - O que é o ambiente R e para que serve?&lt;/p&gt;
+&lt;p&gt;2 - Tipos básicos de dados no R.&lt;/p&gt;
+&lt;p&gt;3 - Criando e nomeando vetores no R.&lt;/p&gt;
+&lt;p&gt;4 - Subconjuntos de vetores no R.&lt;/p&gt;
+&lt;p&gt;5 - Como criar e nomear matrizes no R.&lt;/p&gt;
+&lt;p&gt;6 - Operações aritméticas com matrizes.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;recursos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Recursos&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://youtu.be/SWxoJqTqo08&#34;&gt;Vídeos DataCamp&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/❌/g/personal/renataoliveira_cefetmg_br/EXg-lGMviChHstCtTLP8d9AB62Z00cdNFQTrbsFJPDMAlA?e=JZ0gIm&#34;&gt;Dados&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercício&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercício&lt;/h2&gt;
+&lt;p&gt;Os dados abaixo correspondem às observações sobre Despesa de Consumo Pessoal e Produto Interno Bruto em bilhões de dólares de 2000, para os Estados Unidos. Os dados foram obtidos no livro do Gujarati, intitulado Econometria básica. Existe uma teoria que estabelece uma relação entre o consumo e a renda de um país (medida em termos do Produto Interno Bruto). Partindo do pressuposto que, esta é uma relação linear, temos que o a Despesa de consumo pessoal (Y) guarda a seguinte relação com o Produto Interno Bruto (X).&lt;/p&gt;
+&lt;p&gt;Y= β&lt;sub&gt;0&lt;/sub&gt; + β&lt;sub&gt;1&lt;/sub&gt;X&lt;/p&gt;
+&lt;p&gt;Com base no exposto acima, siga as orientações abaixo para obter os valores de β0 e β1 e, assim, determinar a equação da reta.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;base-de-dados&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Base de dados&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;as.matrix(RendaConsumo)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;atividade&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Atividade&lt;/h2&gt;
+&lt;p&gt;a - Crie um vetor de uns que tenha um número de entradas igual ao número de linhas da matriz acima. Pode denominá-lo “uns”.&lt;/p&gt;
+&lt;p&gt;b - Crie uma matriz juntando o vetor de “uns” e a terceira coluna da matriz acima. Pode denominá-la X.&lt;/p&gt;
+&lt;p&gt;c - Crie um vetor a partir da segunda coluna da matriz acima. Pode denominá-lo Y.&lt;/p&gt;
+&lt;p&gt;d - Realize o seguinte cálculo: (X&lt;sup&gt;T&lt;/sup&gt;X)&lt;sup&gt;−1&lt;/sup&gt; X&lt;sup&gt;T&lt;/sup&gt;Y.&lt;/p&gt;
+&lt;p&gt;e - Identifique o β&lt;sub&gt;0&lt;/sub&gt; e o β&lt;sub&gt;1&lt;/sub&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 2.2 - `ggplot` e `dplyr`</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab22/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab22/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;Unidade 2&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Estrutura de dados no R;&lt;/li&gt;
+&lt;li&gt;Tipos de dados, importação de base de dados, criação de objeto (vetores, matrizes, data frames), operadores aritméticos, de comparação e lógicos;&lt;/li&gt;
+&lt;li&gt;Visualização de dados no R.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;diretrizes-gerais&#34;&gt;&lt;strong&gt;Diretrizes gerais&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EdOhUzJEDXhFsbtqeXPtQk4BG0o3aTwZCnp8ZdotdiNaxg?e=gHdRz4&#34;&gt;Arquivo&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Siga as diretrizes da atividade.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio da tarefa no Sigaa&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;h2 id=&#34;atividade&#34;&gt;&lt;strong&gt;Atividade&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Nessa mini-análise trabalharemos com os dados usados no projeto publicada por Five Thirty Eight &lt;a href=&#34;https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/&#34;&gt;&amp;ldquo;The Dollar-And-Cents Case Against Hollywood&amp;rsquo;s Exclusion of Women&amp;rdquo;&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Sua tarefa é preencher os espaços em branco assinalados por &lt;code&gt;___&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;dados-e-pacotes&#34;&gt;Dados e pacotes&lt;/h3&gt;
+&lt;p&gt;Começamos com o carregamento dos pacotes que vamos utilizar. Lembrem-se que, caso haja algum problema com o carregamento dos pacotes, tente instalá-los novamente.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;library(fivethirtyeight)
+library(tidyverse)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;O conjunto de dados contém informações sobre &lt;code&gt;r nrow(bechdel)&lt;/code&gt; filmes lançados entre &lt;code&gt;r min(bechdel$year)&lt;/code&gt; e &lt;code&gt;r max(bechdel$year)&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Entretanto, vamos focar nossa análise em filmes lançados entre 1990 e 2013.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;bechdel90_13 &amp;lt;- bechdel %&amp;gt;% 
+  filter(between(year, 1990, 2013))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Existem &amp;lsquo;___&amp;rsquo; filmes. (insira a quantidade de filmes)&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;As variáveis financeiras em que vamos nos concentrar são as seguintes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;budget_2013&lt;/code&gt;: Orçamento em dólares de 2013 ajustados à inflação.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;domgross_2013&lt;/code&gt;: Dólares internos brutos (EUA) em 2013, dólares ajustados pela inflação.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;intgross_2013&lt;/code&gt;: Total internacional (i.e., mundial) bruto em 2013 dólares corrigidos da inflação.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;E também utilizaremos as variáveis &lt;code&gt;binary&lt;/code&gt; e &lt;code&gt;clean_test&lt;/code&gt; para &lt;strong&gt;grouping&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;análise&#34;&gt;Análise&lt;/h3&gt;
+&lt;p&gt;Vamos ver como o orçamento médio e o bruto variam conforme o filme caso tenha passado no teste de Bechdel, que é armazenado na variável &amp;ldquo;binary&amp;rdquo;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;bechdel90_13 %&amp;gt;%
+  group_by(binary) %&amp;gt;%
+  summarise(med_budget = median(budget_2013),
+            med_domgross = median(domgross_2013, na.rm = TRUE),
+            med_intgross = median(intgross_2013, na.rm = TRUE))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Em seguida, vamos ver como o orçamento meidano e o bruto variam por um indicador mais detalhado do resultado do teste de Bechdel.&lt;/p&gt;
+&lt;p&gt;Essa informação é armazenada na variável &amp;lsquo;clean_test&amp;rsquo;, que assume os seguintes valores:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ok&lt;/code&gt; = passa no teste&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;dubious&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;men&lt;/code&gt; = as mulheres só falam de homens&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;notalk&lt;/code&gt; = as mulheres não falam umas com as outras&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;nowomen&lt;/code&gt; = menos de duas mulheres&lt;/li&gt;
+&lt;/ul&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;bechdel90_13 %&amp;gt;%
+  group_by(clean_test) %&amp;gt;%
+  summarise(med_budget = median(budget_2013),
+            med_domgross = median(domgross_2013, na.rm = TRUE),
+            med_intgross = median(intgross_2013, na.rm = TRUE))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A fim de avaliar como o retorno do investimento varia entre os filmes que passam e fracassam no &lt;strong&gt;teste de Bechdel&lt;/strong&gt;, vamos primeiro criar uma nova variável chamada &lt;code&gt;roi&lt;/code&gt; como uma razão do orçamento bruto.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;bechdel90_13 &amp;lt;- bechdel90_13 %&amp;gt;%
+  mutate(roi = (intgross_2013 + domgross_2013) / budget_2013)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Vamos ver quais filmes têm o maior retorno sobre o investimento.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;bechdel90_13 %&amp;gt;%
+  arrange(desc(roi)) %&amp;gt;% 
+  select(title, roi, year)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Abaixo está uma visualização do retorno do investimento por resultado de teste, porém é difícil ver as distribuições devido a algumas observações extremas.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(data = bechdel90_13, 
+       mapping = aes(x = clean_test, y = roi, color = binary)) +
+  geom_boxplot() +
+  labs(title = &amp;quot;Retorno do investimento vs. Resultados do teste Bechdel&amp;quot;,
+       x = &amp;quot;Resultado detalhado de Bechdel&amp;quot;,
+       y = &amp;quot;___&amp;quot;,
+       color = &amp;quot;Resultado binário de Bechdel&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Quais são os filmes com retorno de investimento &lt;em&gt;muito altos&lt;/em&gt;?&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;bechdel90_13 %&amp;gt;%
+  filter(roi &amp;gt; 400) %&amp;gt;%
+  select(title, budget_2013, domgross_2013, year)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Veja como é a relação entre os filmes com menor retorno e o resultado detalhado do teste Bechedel.&lt;/p&gt;
+&lt;p&gt;A ampliação dos filmes com &lt;code&gt;roi &amp;lt; ___&lt;/code&gt; proporciona uma melhor visão de como os medianos através das categorias se comparam:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;ggplot(data = bechdel90_13, mapping = aes(x = clean_test, y = roi, color = binary)) +
+  geom_boxplot() +
+  labs(title = &amp;quot;Retorno do investimento vs. Resultado do teste de Bechdel&amp;quot;,
+       subtitle = &amp;quot;___&amp;quot;, # Something about zooming in to a certain level
+       x = &amp;quot;Resultado detalhado de Bechdel&amp;quot;,
+       y = &amp;quot;Retorno do investimento&amp;quot;,
+       color = &amp;quot;Resultado binário de Bechdel&amp;quot;) +
+  coord_cartesian(ylim = c(0, 15))
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Lab 3.1</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab31/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab31/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;Unidade 3&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Manipulação e transformação de dados no R: funções para manipulação e tratamento de dados.&lt;/li&gt;
+&lt;li&gt;Estatística descritiva e mineração de dados&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;diretrizes-gerais&#34;&gt;&lt;strong&gt;Diretrizes gerais:&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EcU3lYCIuexHvd6r57WRh8kBI8DepOiAIe1rWevMHgT-nA&#34;&gt;Arquivo&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Siga as diretrizes da atividade.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio da tarefa no Sigaa&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;h2 id=&#34;manipulação-de-dados&#34;&gt;&lt;strong&gt;Manipulação de dados&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;exercício-1&#34;&gt;Exercício 1.&lt;/h3&gt;
+&lt;p&gt;Carregue os dados no seu ambiente.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;# From TidyTuesday: https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-02-11/readme.md
+hotels &amp;lt;- read_csv(&amp;quot;https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-11/hotels.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-2&#34;&gt;Exercício 2.&lt;/h3&gt;
+&lt;p&gt;As pessoas estão viajando por um capricho?
+Vamos ver&amp;hellip;&lt;/p&gt;
+&lt;p&gt;Preencha os espaços em branco para filtragem de reservas de hotel onde o hóspede é &lt;strong&gt;não&lt;/strong&gt; dos EUA (código do país &lt;code&gt;USA&lt;/code&gt;) e o &lt;code&gt;lead_time&lt;/code&gt; é menos de 1 dia.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Você precisará definir &lt;code&gt;eval=TRUE&lt;/code&gt; quando tiver uma resposta que queira experimentar.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;
+# on the fly
+hotels %&amp;gt;%
+  filter(
+    country != &amp;quot;USA&amp;quot;, 
+    lead_time &amp;lt; 1
+    )
+
+# Com registro de objeto
+
+hotel &amp;lt;- hotels %&amp;gt;% 
+  filter(country != &amp;quot;USA&amp;quot;, lead_time &amp;lt; 1) %&amp;gt;% 
+  select(country, lead_time) 
+
+# Sem pipe
+
+hotels_sem_pipe &amp;lt;- filter(hotels, country != &amp;quot;USA&amp;quot;, lead_time &amp;lt; 1)
+hotels_sem_pipe &amp;lt;- select(hotels_sem_pipe, country, lead_time)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-3&#34;&gt;Exercício 3.&lt;/h3&gt;
+&lt;p&gt;Quantas marcações envolvem pelo menos 1 criança &lt;strong&gt;ou&lt;/strong&gt; bebê?&lt;/p&gt;
+&lt;p&gt;No seguinte &lt;code&gt;chunk&lt;/code&gt;, substitua&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;[AT LEAST]&lt;/code&gt; com o operador lógico para &amp;ldquo;pelo menos&amp;rdquo; (em dois lugares)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;[OR]&lt;/code&gt; com o operador lógico para &amp;ldquo;ou&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Você precisará definir &lt;code&gt;eval=TRUE&lt;/code&gt; quando tiver uma resposta que queira experimentar.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;hotels %&amp;gt;%
+  filter(children &amp;gt;= 1 | babies &amp;gt;= 1)
+
+# Com registro de objeto
+hotel_bebe_chil &amp;lt;- hotels %&amp;gt;%
+  filter(children &amp;gt;= 1 | babies &amp;gt;= 1)
+
+# Sem pipe
+
+hotel_bebe_chil_sem_pipe &amp;lt;- filter(hotels, children &amp;gt;= 1 | babies &amp;gt;= 1)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-4&#34;&gt;Exercício 4.&lt;/h3&gt;
+&lt;p&gt;Você acha que é mais provável encontrar reservas com crianças ou bebês em hotéis urbanos ou resorts hoteleiros?
+Teste sua intuição.&lt;/p&gt;
+&lt;p&gt;Usando &lt;code&gt;filter()&lt;/code&gt; determine o número de reservas em hotéis resort que têm mais de 1 criança &lt;strong&gt;ou&lt;/strong&gt; bebê no quarto?&lt;/p&gt;
+&lt;p&gt;Então, faça o mesmo para hotéis urbanos, e compare o número de linhas no dataframe filtrado resultantes.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;# Com registro de objeto
+hotel_bebe_chil_resort &amp;lt;- hotels %&amp;gt;%
+  filter(children &amp;gt;= 1 | babies &amp;gt;= 1) %&amp;gt;% 
+  filter(hotel == &amp;quot;Resort Hotel&amp;quot;)
+
+# Sem pipe
+
+hotel_bebe_chil_sem_pipe &amp;lt;- filter(hotels, children &amp;gt;= 1 | babies &amp;gt;= 1)
+hotel_bebe_chil_resort_sem_pipe &amp;lt;- filter(hotel_bebe_chil_resort, hotel == &amp;quot;Resort Hotel&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;# Com registro de objeto
+hotel_bebe_chil_city &amp;lt;- hotels %&amp;gt;%
+  filter(children &amp;gt;= 1 | babies &amp;gt;= 1) %&amp;gt;% 
+  mutate(hotel = tolower(hotel)) %&amp;gt;% 
+  filter(hotel == &amp;quot;city hotel&amp;quot;)
+
+# Sem pipe
+
+hotel_bebe_chil_sem_pipe &amp;lt;- filter(hotels, children &amp;gt;= 1 | babies &amp;gt;= 1)
+hotel_bebe_chil_city_sem_pipe &amp;lt;- filter(hotel_bebe_chil_sem_pipe, hotel == &amp;quot;City Hotel&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;hotel_bebe_chil_class &amp;lt;- hotels %&amp;gt;% 
+  filter(children &amp;gt;= 1 | babies &amp;gt;= 1) %&amp;gt;% 
+  group_by(hotel) %&amp;gt;% 
+  summarise(n = max(stays_in_weekend_nights))
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-5&#34;&gt;Exercício 5.&lt;/h3&gt;
+&lt;p&gt;Criar uma tabela de freqüência do número de &lt;code&gt;adults&lt;/code&gt; em uma reserva.&lt;/p&gt;
+&lt;p&gt;Mostre os resultados em ordem decrescente para que a observação mais comum esteja no topo.&lt;/p&gt;
+&lt;p&gt;Qual é o número mais comum de adultos em reservas neste conjunto de dados?&lt;/p&gt;
+&lt;p&gt;Há algum resultado surpreendente?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Não esqueça de rotular também seu &lt;code&gt;chunk&lt;/code&gt; R (onde diz &lt;code&gt;lable-me-1&lt;/code&gt;).
+Seu rótulo deve ser curto, informativo, e não deve incluir espaços.
+Também não deve repetir uma etiqueta anterior, caso contrário o R Markdown lhe dará um erro sobre a repetição de etiquetas R em pedaços.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-6&#34;&gt;Exercício 6.&lt;/h3&gt;
+&lt;p&gt;Repita o exercício 5, uma vez para reservas canceladas (&lt;code&gt;is_canceled&lt;/code&gt; codificado como 1) e uma vez para reservas não canceladas (&lt;code&gt;is_canceled&lt;/code&gt; codificado como 0).&lt;/p&gt;
+&lt;p&gt;O que isto revela sobre os resultados surpreendentes que você observou no exercício anterior?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Não se esqueça de rotular também seu &lt;code&gt;chunk&lt;/code&gt; de R (onde diz &lt;code&gt;label-me-2&lt;/code&gt;).&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;# add code here
+# pay attention to correctness and code style
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-7&#34;&gt;Exercício 7.&lt;/h3&gt;
+&lt;p&gt;Calcular a tarifa mínima, média, mediana e máxima média diária (&lt;code&gt;adr&lt;/code&gt;) agrupados por tipo de &lt;code&gt;hotel&lt;/code&gt; para que você possa obter estas estatísticas separadamente para hotéis de resorts e cidades.&lt;/p&gt;
+&lt;p&gt;Que tipo de hotel é mais caro, em média?&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;# add code here
+# pay attention to correctness and code style
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-8&#34;&gt;Exercício 8.&lt;/h3&gt;
+&lt;p&gt;Observamos dois valores incomuns nas estatísticas resumidas acima &amp;ndash; um mínimo negativo, e um máximo muito alto).
+Que tipos de hotéis são estes?&lt;/p&gt;
+&lt;p&gt;Localize estas observações no conjunto de dados e descubra a data de chegada (ano e mês), assim como quantas pessoas (adultos, crianças e bebês) permaneceram no quarto.&lt;/p&gt;
+&lt;p&gt;Você pode investigar os dados no espectador para localizar estes valores, mas de preferência você deve identificá-los de forma reprodutível com algum código.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dica:&lt;/strong&gt; Por exemplo, você pode &lt;code&gt;filter&lt;/code&gt; para o dado quantidade &lt;code&gt;adr&lt;/code&gt; e &lt;code&gt;select&lt;/code&gt; as colunas relevantes.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;# add code here
+# pay attention to correctness and code style
+&lt;/code&gt;&lt;/pre&gt;&lt;h4 id=&#34;dicionário-de-dados&#34;&gt;Dicionário de dados&lt;/h4&gt;
+&lt;p&gt;Abaixo está o dicionário de dados completo.
+Note que é longo (há muitas variáveis nos dados), mas utilizamos um conjunto limitado de variáveis para nossa análise.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;variable&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;class&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;hotel&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Hotel (H1 = Resort Hotel or H2 = City Hotel)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;is_canceled&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Value indicating if the booking was canceled (1) or not (0)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;lead_time&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of days that elapsed between the entering date of the booking into the PMS and the arrival date&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;arrival_date_year&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Year of arrival date&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;arrival_date_month&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Month of arrival date&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;arrival_date_week_number&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Week number of year for arrival date&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;arrival_date_day_of_month&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Day of arrival date&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;stays_in_weekend_nights&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of weekend nights (Saturday or Sunday) the guest stayed or booked to stay at the hotel&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;stays_in_week_nights&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of week nights (Monday to Friday) the guest stayed or booked to stay at the hotel&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;adults&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of adults&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;children&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of children&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;babies&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of babies&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;meal&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Type of meal booked. Categories are presented in standard hospitality meal packages: &lt;br&gt; Undefined/SC – no meal package;&lt;br&gt;BB – Bed &amp;amp; Breakfast; &lt;br&gt; HB – Half board (breakfast and one other meal – usually dinner); &lt;br&gt; FB – Full board (breakfast, lunch and dinner)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;country&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Country of origin. Categories are represented in the ISO 3155–3:2013 format&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;market_segment&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Market segment designation. In categories, the term &amp;ldquo;TA&amp;rdquo; means &amp;ldquo;Travel Agents&amp;rdquo; and &amp;ldquo;TO&amp;rdquo; means &amp;ldquo;Tour Operators&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;distribution_channel&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Booking distribution channel. The term &amp;ldquo;TA&amp;rdquo; means &amp;ldquo;Travel Agents&amp;rdquo; and &amp;ldquo;TO&amp;rdquo; means &amp;ldquo;Tour Operators&amp;rdquo;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;is_repeated_guest&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Value indicating if the booking name was from a repeated guest (1) or not (0)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;previous_cancellations&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of previous bookings that were cancelled by the customer prior to the current booking&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;previous_bookings_not_canceled&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of previous bookings not cancelled by the customer prior to the current booking&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;reserved_room_type&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Code of room type reserved. Code is presented instead of designation for anonymity reasons&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;assigned_room_type&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Code for the type of room assigned to the booking. Sometimes the assigned room type differs from the reserved room type due to hotel operation reasons (e.g. overbooking) or by customer request. Code is presented instead of designation for anonymity reasons&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;booking_changes&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of changes/amendments made to the booking from the moment the booking was entered on the PMS until the moment of check-in or cancellation&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;deposit_type&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Indication on if the customer made a deposit to guarantee the booking. This variable can assume three categories:&lt;br&gt;No Deposit – no deposit was made;&lt;br&gt;Non Refund – a deposit was made in the value of the total stay cost;&lt;br&gt;Refundable – a deposit was made with a value under the total cost of stay.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;agent&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ID of the travel agency that made the booking&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;company&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;ID of the company/entity that made the booking or responsible for paying the booking. ID is presented instead of designation for anonymity reasons&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;days_in_waiting_list&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of days the booking was in the waiting list before it was confirmed to the customer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;customer_type&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Type of booking, assuming one of four categories:&lt;br&gt;Contract - when the booking has an allotment or other type of contract associated to it;&lt;br&gt;Group – when the booking is associated to a group;&lt;br&gt;Transient – when the booking is not part of a group or contract, and is not associated to other transient booking;&lt;br&gt;Transient-party – when the booking is transient, but is associated to at least other transient booking&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;adr&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Average Daily Rate as defined by dividing the sum of all lodging transactions by the total number of staying nights&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;required_car_parking_spaces&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of car parking spaces required by the customer&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;total_of_special_requests&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Number of special requests made by the customer (e.g. twin bed or high floor)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;reservation_status&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;character&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Reservation last status, assuming one of three categories:&lt;br&gt;Canceled – booking was canceled by the customer;&lt;br&gt;Check-Out – customer has checked in but already departed;&lt;br&gt;No-Show – customer did not check-in and did inform the hotel of the reason why&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;reservation_status_date&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;double&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;Date at which the last status was set. This variable can be used in conjunction with the ReservationStatus to understand when was the booking canceled or when did the customer checked-out of the hotel&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;junção-de-dataframes&#34;&gt;&lt;strong&gt;Junção de dataframes&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;exercício-1-1&#34;&gt;Exercício 1.&lt;/h3&gt;
+&lt;p&gt;Carregar arquivos&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Façam o download do arquivo .zip.&lt;/li&gt;
+&lt;li&gt;Removam os arquivos de dados do arquivo .zip.&lt;/li&gt;
+&lt;li&gt;Carregue os arquivos de dados usando a função &lt;code&gt;read_csv&lt;/code&gt; e atribuindo cada conjunto de dados a um objeto&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;professions &amp;lt;- read_csv(&amp;quot;D:/Dropbox/Public/dados/professions.csv&amp;quot;)
+dates &amp;lt;- read_csv(&amp;quot;D:/Dropbox/Public/dados/dates.csv&amp;quot;)
+works &amp;lt;- read_csv(&amp;quot;D:/Dropbox/Public/dados/works.csv&amp;quot;)
+enrolment &amp;lt;- read_csv(&amp;quot;D:/Dropbox/Public/dados/enrolment.csv&amp;quot;)
+survey &amp;lt;- read_csv(&amp;quot;D:/Dropbox/Public/dados/survey.csv&amp;quot;)
+purchases &amp;lt;- read_csv(&amp;quot;D:/Dropbox/Public/dados/purchases.csv&amp;quot;)
+prices &amp;lt;- read_csv(&amp;quot;D:/Dropbox/Public/dados/prices.csv&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-2-1&#34;&gt;Exercício 2.&lt;/h3&gt;
+&lt;p&gt;Manipulação de dados - mulheres cientistas&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Faça a junção dos dataframes&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Ordene por ano de nascimento&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Filtre apenas as linhas que têm informações sobre ano de nascimento e ano de morte&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Encontre as pesquisadoras que estão vivas&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gere um dataframe considerando apenas a coluna com o nome das cientistas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-3-1&#34;&gt;Exercício 3.&lt;/h3&gt;
+&lt;p&gt;Manipulação de dados - matrículas&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Gere um dataframe com os alunos matriculados e que responderam estar frequentando as aulas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gere um dataframe com os alunos matriculados e que responderam &lt;strong&gt;não&lt;/strong&gt; estar frequentando as aulas.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gere um dataframe com os alunos que estão frequentando as aulas e que não estão matriculados.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-4-1&#34;&gt;Exercício 4.&lt;/h3&gt;
+&lt;p&gt;Manipulação de dados - compras&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Gere um dataframe com a síntese da soma da receita da loja por consumidor&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;
+
+&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    
+    <item>
+      <title>Atividade 5</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade5/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/atividade5/</guid>
+      <description>&lt;h2 id=&#34;esta-atividade-deverá-ser-realizada-até-dia-2211-são-propostas-as-seguintes-atividades&#34;&gt;Esta atividade deverá ser realizada até dia &lt;strong&gt;22/11&lt;/strong&gt;. São propostas as seguintes atividades:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Instale o pacote &lt;code&gt;cepespR&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r}&#34; data-lang=&#34;{r}&#34;&gt;devtools::install_github(&amp;quot;Cepesp-Fgv/cepesp-r&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e o .csvb e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/ETG7uY5TF9ZHlNv70InRlLwBtCYguNA9Sw-QtdIX0qSLwA?e=wTD4jf&#34;&gt;Arquivo .Rmd&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Resolva as questões.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Gere um tipo de documento .Rmd de sua preferência.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Envie por email (&lt;a href=&#34;mailto:renataoliveira@gmail.com&#34;&gt;renataoliveira@gmail.com&lt;/a&gt; ou &lt;a href=&#34;mailto:renataoliveira@cefetmg.br&#34;&gt;renataoliveira@cefetmg.br&lt;/a&gt;) o arquivo .Rmd e o arquivo gerado.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Agradecimento: Leo Barone pelo maravilhoso tutorial!&lt;/strong&gt;&lt;/p&gt;
+&lt;h1 id=&#34;botando-o-computador-para-trabalhar&#34;&gt;Botando o computador para trabalhar&lt;/h1&gt;
+&lt;p&gt;Se há um tutorial sobre lógica de programação, é este. Os tópicos deste tutorial são os mais importantes para que possamos escrever algoritmos e botar o computador para fazer o que sabe de melhor: repetir instruções e tarefas. Veremos, em primeiro lugar, operadores relacionais e lógicos e, a seguir, cláusulas condicionais, loops e funções.&lt;/p&gt;
+&lt;h2 id=&#34;operadores-relacionais&#34;&gt;Operadores relacionais&lt;/h2&gt;
+&lt;p&gt;Uma das especialidades do computador é verificar se proposições simples são verdadeiras ou falsas. &lt;strong&gt;Operadores relacionais&lt;/strong&gt; servem para verificar se objetos são iguais, diferentes, maiores ou menores. São seis operadores relacionais e a tabela abaixo apresenta os seus símbolos.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Operador&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Símbolo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Igual&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;==&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Diferente&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;!=&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Maior&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Maior ou igual&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;gt;=&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Menor&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Menor ou igual&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;lt;=&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Não discutiremos todas as regras de comparação de objetos, mas passaremos por um conjunto grande de exemplos a partir do qual elas podem ser inferidas.&lt;/p&gt;
+&lt;p&gt;Vamos começar com alguns exemplos simples:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;42 == 41
+42 != 41
+(2 + 2) == (3 + 1)
+(2 + 2) != (3 + 1)
+5 &amp;gt; 3
+5 &amp;lt; 3
+42 &amp;gt; 42
+42 &amp;lt; 41
+42 &amp;gt;= 42
+42 &amp;lt;= 41
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Antes de avançar, tenha certeza que entendeu os exemplos acima.&lt;/p&gt;
+&lt;p&gt;Operadores relacionais também vale para textos:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;&amp;quot;texto&amp;quot; == &amp;quot;texto&amp;quot;
+&amp;quot;texto&amp;quot; == &amp;quot;texTo&amp;quot;
+&amp;quot;texto&amp;quot; != &amp;quot;texto&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Note no segundo exemplo que o R é &amp;ldquo;case sensitive&amp;rdquo;, ou seja, diferencia maiúsculas de minúsculas ao comparar textos.&lt;/p&gt;
+&lt;p&gt;Textos também podem ser ordenados (lexicograficamente, isto é, alfabeticamente):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;&amp;quot;a&amp;quot; &amp;gt; &amp;quot;b&amp;quot;
+&amp;quot;a&amp;quot; &amp;lt; &amp;quot;b&amp;quot;
+&amp;quot;A&amp;quot; &amp;lt; &amp;quot;b&amp;quot;
+&amp;quot;A&amp;quot; &amp;gt; &amp;quot;a&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Inclusive palavras inteiras e sentenças:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;&amp;quot;cachorro&amp;quot; &amp;lt; &amp;quot;cachorro quente&amp;quot;
+&amp;quot;churrasco de gato&amp;quot; &amp;gt; &amp;quot;cachorro quente&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;E valores lógicos? Veja se entende o que acontece nos exemplos abaixo:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;TRUE == 1
+FALSE == 0
+TRUE &amp;gt; FALSE
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Podemos comparar valores armazenados em variáveis da mesma maneira que fizemos nos exemplos até aqui:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;x &amp;lt;- 5
+y &amp;lt;- 10
+x &amp;gt; y
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;operadores-relacionais-e-vetores&#34;&gt;Operadores relacionais e vetores&lt;/h2&gt;
+&lt;p&gt;É possível comparar um vetor com um valor. Neste caso, cada elemento do vetor é comparado individualmente ao valor e o resultado é um vetor lógico de tamanho igual ao vetor comparado.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;votos16 &amp;lt;- c(1030, 551, 992, 345, 203, 2037)
+votos16 &amp;gt;= 1000
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Vamos usar o vetor &amp;ldquo;votos16&amp;rdquo;, que contém votos de candidatos fictícios em 2016, com os votos dos mesmo candidatos em 2012:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;votos12 &amp;lt;- c(890, 354, 950, 400, 50, 3416)
+votos16 &amp;gt; votos12
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Veja que, na comparação entre dois vetores, os elementos são comparados par a par de acordo com a sua posição no vetor. O vetor lógico resultante tem o mesmo tamanho dos vetores comparados.&lt;/p&gt;
+&lt;h2 id=&#34;operadores-lógicos-booleanos&#34;&gt;Operadores Lógicos (Booleanos)&lt;/h2&gt;
+&lt;p&gt;É perfeitamente possível combinar proposições com os &lt;strong&gt;operadores lógicos&lt;/strong&gt; &amp;ldquo;e&amp;rdquo;, &amp;ldquo;ou&amp;rdquo; e &amp;ldquo;não&amp;rdquo;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Operador&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Símbolo&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;E&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&amp;amp;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Ou&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;|&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Não&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;!&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Por exemplo, se queremos verificar todos os candidatos que obtiveram acima de 500 (exclusive) &lt;strong&gt;E&lt;/strong&gt; abaixo de 1500 (inclusive) votos, fazemos:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;votos16 &amp;gt; 500 &amp;amp; votos16 &amp;lt;= 1500
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Veja a tabela de possibilidades de combinação de duas proposições com a conjunção &amp;ldquo;e&amp;rdquo;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Proposição 1&lt;/th&gt;
+&lt;th&gt;Proposição 2&lt;/th&gt;
+&lt;th&gt;Combinação&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Se o valor atende às duas condições, então o resultado é TRUE. Se ao menos uma proposição é falsa, sob a conjunção &amp;ldquo;e&amp;rdquo;, então a combinação das proposições também é.&lt;/p&gt;
+&lt;p&gt;Com o operador &amp;ldquo;Ou&amp;rdquo;, a combinação de proposições é verdadeira se pelo menos uma delas for verdadeira.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;votos16 &amp;lt; 500 | votos12 &amp;gt; 1500
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Veja a tabela de possibilidades de combinação de duas proposições com a conjunção &amp;ldquo;ou&amp;rdquo;:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Proposição 1&lt;/th&gt;
+&lt;th&gt;Proposição 2&lt;/th&gt;
+&lt;th&gt;Combinação&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;td&gt;TRUE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;td&gt;FALSE&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Finalmente, o operador lógico &amp;ldquo;não&amp;rdquo; tem a função de reverter um proposição:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;!TRUE
+!(5 &amp;gt; 3)
+!(votos16 &amp;gt; 500 &amp;amp; votos16 &amp;lt;= 1500)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Lembre-se que, quando trabalhamos com vetores lógicos, podemos tratá-los como se fossem zeros e uns, tal qual no exemplo:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;sum(votos16 &amp;gt; votos12)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;cláusulas-condicionais&#34;&gt;Cláusulas condicionais&lt;/h2&gt;
+&lt;p&gt;Um dos usos mais importantes dos operadores relacionais e lógicos é na construção de &lt;strong&gt;cláusulas condicionais&lt;/strong&gt;, &amp;ldquo;if&amp;rdquo;, &amp;ldquo;else&amp;rdquo; e &amp;ldquo;else if&amp;rdquo;. Elas são fundamentais para a construção de funções e algoritmos. Veja um uso simples do condicional &lt;em&gt;if&lt;/em&gt;, para o cálculo do valor absoluto de uma variável:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;# exemplo com x negativo
+x &amp;lt;- -23
+
+if (x &amp;lt; 0){
+  x &amp;lt;- -x
+}
+
+print(x)
+
+# exemplo com x positivo
+x &amp;lt;- 23
+
+if (x &amp;lt; 0){
+  x &amp;lt;- -x
+}
+
+print(x)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;A condição que o &lt;em&gt;if&lt;/em&gt; deve atender vem entre parênteses. A instrução a ser atendida caso a cláusula seja verdadeira vem dentro das chaves. Aliás, é boa prática (na maioria dos casos) abrir as chaves em uma linha, escrever as instruções em outra, e fechar as chaves na linha seguinte ao final das instruções, como no exemplo. Também é boa prática &amp;ldquo;identar&amp;rdquo;, ou seja, desalinhar as instruções do restante do código. Falaremos sobre &amp;ldquo;estilo&amp;rdquo; em algum momento do curso. Por enquanto, apenas observe e não se assuste. Diferentemente de outras linguagens, R não requer identação para funcionar.&lt;/p&gt;
+&lt;p&gt;Vamos supor que um candidato teve determinada quantia de votos. Ele precisava de 700 para ser eleito. Vamos criar uma nova variável, &amp;ldquo;status&amp;rdquo;, que receberá valor &amp;ldquo;eleito&amp;rdquo; se &amp;ldquo;votos&amp;rdquo; for maior que 700. Supondo que o candidato recebeu 800 votos, fazemos:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;votos &amp;lt;- 800
+
+if (votos &amp;gt; 700){
+  status &amp;lt;- &amp;quot;eleito&amp;quot;
+}
+
+print(status)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Mas e se quisermos dar o valor &amp;ldquo;nao eleito&amp;rdquo; a &amp;ldquo;status&amp;rdquo; caso ele não tenha recebido mais de 700 votos? Usamos &lt;em&gt;else&lt;/em&gt; para indicar o que fazer em todos os casos em que a condição em &lt;em&gt;if&lt;/em&gt; não foi atendida.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;if (votos &amp;gt; 700){
+  status &amp;lt;- &amp;quot;eleito&amp;quot;
+} else {
+  status &amp;lt;- &amp;quot;nao eleito&amp;quot;
+}
+
+print(status)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Por fim, vamos imaginar um regra mais complexa. Se o total de &amp;ldquo;votos&amp;rdquo; do candidato for maior que 1200, então ele está eleito. Se a votação tiver ficado entre 700 (exclusive) e 1200 (inclusive), ele recebe &amp;ldquo;status&amp;rdquo; igual a &amp;ldquo;suplente&amp;rdquo;. Com 700 votos ou menos, o &amp;ldquo;status&amp;rdquo; é não eleito.&lt;/p&gt;
+&lt;p&gt;Veja como traduzir a regra acima em código usando &lt;em&gt;if&lt;/em&gt;, &lt;em&gt;else if&lt;/em&gt; e &lt;em&gt;else&lt;/em&gt;.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;if (votos &amp;gt; 1200){
+  status &amp;lt;- &amp;quot;eleito&amp;quot;
+} else if (votos &amp;gt; 700  &amp;amp; votos &amp;lt;= 1200){
+  status &amp;lt;- &amp;quot;suplente&amp;quot;
+} else {
+  status &amp;lt;- &amp;quot;nao eleito&amp;quot;
+}
+
+print(status)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Outro exemplos simples do uso de condicionais, agora com uma variável de textos&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;partido &amp;lt;- &amp;quot;PMDB&amp;quot;
+
+if (partido == &amp;quot;PMDB&amp;quot; | partido == &amp;quot;PSD&amp;quot; | partido == &amp;quot;DEM&amp;quot;) {
+  print(&amp;quot;governo&amp;quot;)
+} else {
+  print(&amp;quot;oposição&amp;quot;)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;É possível complicar bastante o uso dos condicionais &amp;ldquo;aninhando&amp;rdquo; uma cláusula dentro da outra e criando &amp;ldquo;labirintos&amp;rdquo; de condições. Fazer isso, porém, é mais uma questão de lógica do que de uso da linguagem. Não há variações relevantes do uso em relação aos exemplos simples apresentados acima. Se você consegue fazer os condicionais em papel e caneta e se os exemplos anteriores tiverem ficado claros, então consegue fazê-los em R.&lt;/p&gt;
+&lt;h2 id=&#34;exercício&#34;&gt;Exercício&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Anote quantos cafés você tomou cada dia esta semana. Guarde o valor na variavel &amp;lsquo;cafe&amp;rsquo;.&lt;/li&gt;
+&lt;li&gt;Represente com condicionais a regra: se você tomou 3 ou mais, imprima &amp;ldquo;Hummm, café!&amp;rdquo;. Se você tomou menos de 3, imprima &amp;ldquo;zzzzzz&amp;rdquo;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;repetindo-tarefas---while-loop&#34;&gt;Repetindo tarefas - while loop&lt;/h2&gt;
+&lt;p&gt;Uma das vantagens dos computadores em relação aos seres humanos é a capacidade de repetir tarefas a um custo baixo. Vamos ver um exemplo simples: con  tar até 42. Usaremos como recurso um &lt;em&gt;while&lt;/em&gt; loop, ou seja, daremos um estado inicial, uma condição e uma instrução para o computador e pediremos para ele repetir a instrução &lt;strong&gt;enquanto&lt;/strong&gt; a condição for atendida.&lt;/p&gt;
+&lt;p&gt;Em nosso caso, a instrução será: imprima o número &amp;ldquo;atual&amp;rdquo; (você já entenderá isso), armazenado na variável &amp;ldquo;contador&amp;rdquo;, e some mais um. A condição será: enquanto a variável &amp;ldquo;contador&amp;rdquo; for menor ou igual a 42. Se vamos começar a contar a partir do 1, nosso estado inicial será igualar o &amp;ldquo;contador&amp;rdquo; a 1. Veja como fica o código:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;contador &amp;lt;- 1
+
+while (contador &amp;lt;= 42) {
+  print(contador)
+  contador &amp;lt;- contador + 1
+}
+
+print(contador)
+
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Traduzindo para o português: &amp;ldquo;enquanto o contador for menor ou igual a 42, imprima e some um&amp;rdquo;. A estrutura de um &lt;em&gt;while&lt;/em&gt; loop é sempre: &amp;ldquo;enquanto&amp;rdquo; (condição), &amp;ldquo;faça&amp;rdquo; (instrução).&lt;/p&gt;
+&lt;p&gt;Veja que precisamos planejar muito bem o &lt;em&gt;while&lt;/em&gt; loop. Se, por exemplo, esquecermos de pensar como a condição inicial será alterada a cada &lt;strong&gt;iteração&lt;/strong&gt; (sem o &amp;ldquo;n&amp;rdquo; mesmo, pois é diferente de &amp;ldquo;interação&amp;rdquo;), corremos o risco de criar um &amp;ldquo;loop infinito&amp;rdquo;. O critério de parada (condição entre parênteses) deve ser atendido em algum ponto do programa para que ele seja interrompido.&lt;/p&gt;
+&lt;p&gt;Vamos complicar. Seguiremos contando até 42, mas todas as vezes em que o número for par (ou seja, múltiplo de 2), deixaremos de imprimir o número. Como fazer isso? Com &lt;em&gt;if&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Dica: para saber se um número é divisível por outro, basta usar o resto da divisão (consulte o tutorial anterior %%) e checar se é igual a zero.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;contador &amp;lt;- 1
+
+while (contador &amp;lt;= 42) {
+  if ((contador %% 2) != 0){
+    print(contador)
+  }
+  contador &amp;lt;- contador + 1
+}
+
+print(contador)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Veja que temos agora um código &amp;ldquo;aninhado&amp;rdquo;, pois colocamos um condicional dentro de um loop. Novamente, combinar estruturas de código é mais um problema de lógica do que de linguagem e, se você consegue fazer no papel, consegue traduzir para o R.&lt;/p&gt;
+&lt;h2 id=&#34;repetindo-tarefas---for-loop&#34;&gt;Repetindo tarefas - for loop&lt;/h2&gt;
+&lt;p&gt;E se em vez de repetir uma tarefa até atingir uma condição já soubermos quantas vezes queremos repetí-la? Neste caso, podemos usar o &lt;em&gt;for&lt;/em&gt; loop. O loop não será mais do tipo &amp;ldquo;enquanto x faça y&amp;rdquo; mas &amp;ldquo;para todo i &amp;lsquo;em&amp;rsquo; a até b&amp;rdquo;. Veja como o exemplo de contar até 42 ficaria com &lt;em&gt;for&lt;/em&gt; loop:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;for (i in 1:42){
+  print(i)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Neste caso, lemos &amp;ldquo;para cada i &amp;lsquo;em&amp;rsquo; 1 até 42, faça&amp;rdquo;. O que o &lt;em&gt;for&lt;/em&gt; loop faz é variar o i a cada iteração de acordo com a sequência estabelecida. Outro exemplo, agora na ordem reversa:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;for (i in 10:-10){
+  print(i)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Agora com a condição de não imprimir os pares:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;for (i in 1:42){
+  if((i %% 2) != 0){
+    print(i)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;for&lt;/em&gt; loops não precisam ser apenas com números. Na verdade, você pode colocar após o &amp;ldquo;in&amp;rdquo; qualquer vetor. Por exemplo, um vetor das regiões brasileiras (ou UFs, se você tiver paciência de escrever todas):&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;vetor_regioes &amp;lt;- c(&amp;quot;norte&amp;quot;, &amp;quot;nordeste&amp;quot;, &amp;quot;sudeste&amp;quot;,&amp;quot;sul&amp;quot;, &amp;quot;centro-oeste&amp;quot;)
+
+for (regiao in vetor_regioes){
+  print(regiao)
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Se você já trabalhou com dados eleitorais brasileiros, você certamente teve de abrir diversos arquivos semelhantes, cada um contendo informações de um estado brasileiro. Ou ainda, se você já obteve informações na internet talvez tenha precisado &amp;ldquo;passar&amp;rdquo; por diversas páginas semelhantes. Loops resolvem problemas desse tipo: eles repetem procedimentos variando apenas um índice. Aprender a usar loops economiza um tempo enorme, pois conseguimos automatizar tarefas ou, pelo menos, escrever um código mais curto para aplicar o mesmo comando inúmeras vezes.&lt;/p&gt;
+&lt;p&gt;Vamos parar por aqui com &lt;em&gt;loops&lt;/em&gt; e voltaremos a eles para fazermos exercícios.&lt;/p&gt;
+&lt;h2 id=&#34;escrevendo-funções&#34;&gt;Escrevendo funções&lt;/h2&gt;
+&lt;p&gt;Ao longo dos três tutorais que fizemos usamos diversas funções e já estamos acostumados com elas. Vamos agora aprender a construir funções simples. Vamos do exemplo à aplicação. E nosso exemplo será, novamente, um conversor de farenheit para celsius:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;conversor &amp;lt;- function(farenheit){
+  celsius &amp;lt;- ((farenheit - 32) / 9) * 5
+  return(celsius)
+}
+
+conversor(212)
+conversor(32)
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Temos vários elementos no &amp;ldquo;construtor&amp;rdquo; de funções. Em primeiro lugar, criamos a função como criamos um objeto. Quer dizer, escolhemos um nome para ela e atribuímos a função criada a esse nome.&lt;/p&gt;
+&lt;p&gt;Para criar uma função, usamos &lt;em&gt;function&lt;/em&gt;. Basicamente, o &amp;ldquo;construtor&amp;rdquo; tem duas partes: os argumentos da função, que inserimos no parênteses após &lt;em&gt;function&lt;/em&gt;; e o corpo da função em chaves, que utiliza os argumentos para realizar uma tarefa e retorna um resultado, indicado pela função &lt;em&gt;return&lt;/em&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;exercício-1&#34;&gt;Exercício&lt;/h2&gt;
+&lt;p&gt;Crie uma função chamada &amp;ldquo;quadrado&amp;rdquo; que recebe um número &amp;ldquo;x&amp;rdquo; e retorna o quadrado de x.&lt;/p&gt;
+&lt;h2 id=&#34;reposta&#34;&gt;Reposta&lt;/h2&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;quadrado &amp;lt;- function(x){
+  resultado &amp;lt;- x * x
+  return(resultado)
+}
+
+quadrado(4)
+quadrado(17)
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;exercício-2&#34;&gt;Exercício&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Crie uma função que recebe um valor em reais e retorna o valor em dólares (use a cotação do dia e coloque como nota no script)&lt;/li&gt;
+&lt;li&gt;Crie uma função que recebe um valor em reais e uma cotação do dólar e retorna o valor em dólares (ou seja, que contém 2 parâmetros).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;dica-de-leitura&#34;&gt;Dica de Leitura&lt;/h3&gt;
+&lt;p&gt;Uma boa leitura para acompanhar esta parte do curso são as partes II e III do livro &lt;em&gt;Hands-on Programming With R&lt;/em&gt;, de Garret Grolemund.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 3.2</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab32/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab32/</guid>
+      <description>&lt;p&gt;A &lt;strong&gt;Unidade 3&lt;/strong&gt; é estruturada considerando os seguintes tópicos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Manipulação e transformação de dados no R: funções para manipulação e tratamento de dados.&lt;/li&gt;
+&lt;li&gt;Estatística descritiva e mineração de dados&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;diretrizes-gerais&#34;&gt;&lt;strong&gt;Diretrizes gerais:&lt;/strong&gt;&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EeohRlLO7OtCtKdHO72GS2oBc8B1LBdlZuoRt02jIw2LLg?e=dUCXFm&#34;&gt;Arquivo .Rmd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/%E2%9D%8C/g/personal/renataoliveira_cefetmg_br/EfOboEtruQNLnK1Iz2RynCcBNxYE6pz_gBbjOIUWRSodpw?e=y0igVw&#34;&gt;Dados_1&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/%E2%9D%8C/g/personal/renataoliveira_cefetmg_br/EZBh8qqZVJVFsZu3pfmdbPYBH-4XbbGRkrkpybi0pTSObA?e=4koetd&#34;&gt;Dados_2&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34;&gt;
+&lt;li&gt;
+&lt;p&gt;Siga as diretrizes da atividade.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio da tarefa no Sigaa&lt;/strong&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;h2 id=&#34;manipulação-de-dados&#34;&gt;&lt;strong&gt;Manipulação de dados&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;exercício-1&#34;&gt;Exercício 1.&lt;/h3&gt;
+&lt;p&gt;Carregue os dados no seu ambiente.&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-{r&#34; data-lang=&#34;{r&#34;&gt;
+dados1 &amp;lt;- read_csv(&amp;quot;&amp;quot;)
+dados2 &amp;lt;- read_csv(&amp;quot;&amp;quot;)
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;exercício-2&#34;&gt;Exercício 2.&lt;/h3&gt;
+&lt;p&gt;Responda as seguintes perguntas:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Qual país historicamente ganhou mais medalhas nas olimpíadas de verão? Quantas foram? E qual a representação das mulheres nessa quantidade?&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Demonstre o ranking de medalhas por país por ano olímpico separando os dados em olimpíadas de verão e de inverno.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Considere as olimpíadas de verão: para o país com o maior número de medalhas, demonstre o número de medalhas conquistadas por mulheres e o número de medalhas conquistadas por homens (considere as medalhas totais, levando em conta os atletas (medalhas) em esportes coletivos).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Qual país ganhou mais medalhas no volei masculino? Qual país ganhou mais medalhas no volei feminino?&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 4.1</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab41/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab41/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;juntando-dados&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Juntando dados&lt;/h1&gt;
+&lt;p&gt;Nessa atividade você aprenderá a fazer a união e a junção (cruzamento) de dois dataframes usando o &lt;code&gt;tidyverse&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;A &lt;strong&gt;união de dados&lt;/strong&gt; é mais intuitiva. Basta ter a mesma quantidade de campos e que estes estejam “alinhados”. A função mais usada para isso é o famoso &lt;code&gt;rbind()&lt;/code&gt; (Row Bind). Caso os campos tenham exatamente os mesmos nomes e tipo, o &lt;code&gt;rbind()&lt;/code&gt; consegue fazer a união perfeitamente.&lt;/p&gt;
+&lt;p&gt;O &lt;strong&gt;cruzamento de dados (junção)&lt;/strong&gt; é um pouco mais complexo, mas nem por isso chega a ser algo difícil.&lt;/p&gt;
+&lt;p&gt;Para entender-se como fazer “joins” (cruzamentos), é preciso compreender-se o conceito de chave. Entenda chave como uma coluna que está presente da mesma forma em dois conjuntos de dados distintos. O conceito completo de chave é bem mais complexo que isto, mas, para começarmos a entender e usar os joins, basta usar essa intuição.&lt;/p&gt;
+&lt;p&gt;Tendo esse conceito simplificado de chave em mente, a primeira coisa que se deve fazer quando for preciso cruzar dois conjuntos de dados é tentar identificar quais os campos chaves, ou seja, quais campos estão presentes nos dois grupos.&lt;/p&gt;
+&lt;p&gt;O que acontece quando nem todos os códigos de um grupo estão no outro? E quando um grupo tem códigos repetidos em várias linhas? Para responder a essas e outras perguntas precisamos conhecer os diferentes tipos de joins. Existe pelo menos uma dezena de tipos de &lt;em&gt;joins&lt;/em&gt;, mas 90% das vezes você precisará apenas dos tipos básicos que explicaremos a seguir. Usaremos o pacote dplyr para aplicar os &lt;em&gt;joins.&lt;/em&gt; O R base possui a função &lt;code&gt;merge()&lt;/code&gt; para &lt;em&gt;joins&lt;/em&gt;, se tiver curiosidade procure mais sobre ela depois.&lt;/p&gt;
+&lt;div id=&#34;inner-join-ou-apenas-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Inner Join (ou apenas Join)&lt;/h2&gt;
+&lt;p&gt;Trata-se do &lt;em&gt;join&lt;/em&gt; mais simples, mais básico e mais usado dentre todos os outros tipos. O seu comportamento mantém no resultado apenas as linhas presentes nos dois conjuntos de dados que estão sendo cruzados. O inner join funciona da seguinte forma:&lt;/p&gt;
+&lt;p&gt;A tabela final, após o cruzamento, conterá as linhas com as chaves que estiverem em AMBOS os conjuntos de dados. As linhas com chaves que não estão em ambos serão descartadas. Esta característica torna o &lt;em&gt;inner join&lt;/em&gt; muito útil para fazer-se filtros.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;left-outer-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Left Outer Join&lt;/h2&gt;
+&lt;p&gt;Chama-se &lt;em&gt;left outer join&lt;/em&gt; pois todos os registros do “conjunto à esquerda” estarão presentes no resultado final, além dos registros à direita que coincidirem na chave.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;right-outer-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Right Outer Join&lt;/h2&gt;
+&lt;p&gt;O princípio é EXATAMENTE o mesmo do left join. A única diferença é a permanência dos registros do conjunto à direita. Podemos chegar ao mesmo resultado anterior apenas mudando os data frames de posição na manipulação.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;full-outer-join&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Full Outer Join&lt;/h2&gt;
+&lt;p&gt;Existem, ainda, as situações em que é necessário preservar todos os registros de ambos os conjuntos de dados. O full join tem essa característica. Nenhum dos conjuntos de dados perderá registros no resultado final, isto é, quando as chaves forem iguais, todos os campos estarão preenchidos. Quando não houver ocorrência das chaves em ambos os lados, será informado &lt;code&gt;NA&lt;/code&gt; em qualquer um deles.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercícios&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercícios&lt;/h2&gt;
+&lt;div id=&#34;diretrizes-gerais&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;strong&gt;Diretrizes gerais:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EZ_UXta-KEZJhsy-TOyqJmMBBh3IW0DHw11PffzU4s9N5Q?e=C04dsD&#34;&gt;Arquivo .Rmd&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Siga as diretrizes da atividade.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio do email &lt;a href=&#34;mailto:renataoliveira@gmail.com&#34; class=&#34;email&#34;&gt;renataoliveira@gmail.com&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;/hr&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercício-1.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Exercício 1.&lt;/h3&gt;
+&lt;p&gt;Utilizando os dataframes abaixo, gere:&lt;/p&gt;
+&lt;ol style=&#34;list-style-type: lower-alpha&#34;&gt;
+&lt;li&gt;&lt;p&gt;um dataframe com os participantes&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;um dataframe com os aprovados&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;um dataframe com os eliminados&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Faça a junção de todos os tres dataframes em um único objeto.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;participantes &amp;lt;- data.frame(
+  Nome = c(&amp;#39;Carlos&amp;#39;, &amp;#39;Maurício&amp;#39;, &amp;#39;Ana Maria&amp;#39;, &amp;#39;Rebeca&amp;#39;, &amp;#39;Patrícia&amp;#39;),
+  Estado = c(&amp;#39;Brasília&amp;#39;, &amp;#39;Minas Gerais&amp;#39;, &amp;#39;Goiás&amp;#39;, &amp;#39;São Paulo&amp;#39;, &amp;#39;Ceará&amp;#39;),
+  Idade = c(23, 24, 22, 29, 28)
+)
+
+aprovados &amp;lt;- data.frame(
+  Nome = c(&amp;#39;Carlos&amp;#39;, &amp;#39;Patrícia&amp;#39;),
+  Pontuacao = c(61, 62)
+)
+
+eliminados &amp;lt;- data.frame(
+  Nome = c(&amp;#39;Maurício&amp;#39;, &amp;#39;Ana Maria&amp;#39;, &amp;#39;Rebeca&amp;#39;),
+  Pontuacao = c(49, 48, 48)
+)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Créditos da atividade:
+&lt;a href=&#34;https://cdr.ibpad.com.br/juntando-dados.html&#34;&gt;Ciência de Dados com R - Introdução. Autores: Saulo Guerra, Paulo Felipe de Oliveira, Robert McDonnell e Sillas Gonzaga&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 4.2</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab42/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab42/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;dados-wide-x-long&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Dados &lt;em&gt;wide&lt;/em&gt; x &lt;em&gt;long&lt;/em&gt;&lt;/h1&gt;
+&lt;div id=&#34;exercícios&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercícios&lt;/h2&gt;
+&lt;div id=&#34;diretrizes-gerais&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;strong&gt;Diretrizes gerais:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e o .csvb e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/EYmurCXsRpdFukK0xyqRN_kBbANT34n3CeMjjoUxNvhUTQ?e=5o9BbT&#34;&gt;Arquivo .Rmd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/❌/g/personal/renataoliveira_cefetmg_br/Ednh1eJllo9DjZR5u6J6Q1YBMDz7KXzoF1XtdYdrZpo8MA?e=6NEs85&#34;&gt;Arquivo .csv&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Siga as diretrizes da atividade.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio do email &lt;a href=&#34;mailto:renataoliveira@gmail.com&#34; class=&#34;email&#34;&gt;renataoliveira@gmail.com&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;/hr&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercício-1.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Exercício 1.&lt;/h3&gt;
+&lt;p&gt;Rode o código para gerar o histograma a seguir:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# library
+library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Attaching packages --------------------------------------- tidyverse 1.3.1 --&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## v ggplot2 3.3.5     v purrr   0.3.4
+## v tibble  3.1.6     v dplyr   1.0.7
+## v tidyr   1.1.4     v stringr 1.4.0
+## v readr   2.1.1     v forcats 0.5.1&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## -- Conflicts ------------------------------------------ tidyverse_conflicts() --
+## x dplyr::filter() masks stats::filter()
+## x dplyr::lag()    masks stats::lag()&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# Build dataset with different distributions
+data &amp;lt;- data.frame(
+  type = c(rep(&amp;quot;variable 1&amp;quot;, 1000), rep(&amp;quot;variable 2&amp;quot;, 1000)),
+  value = c(rnorm(1000), rnorm(1000, mean = 0, sd = 5))
+)
+
+# Represent it
+p &amp;lt;- data %&amp;gt;%
+  ggplot(aes(x=value, fill=type)) +
+    geom_histogram( color=&amp;quot;#e9ecef&amp;quot;, alpha=0.6, position = &amp;#39;identity&amp;#39;) +
+    scale_fill_manual(values=c(&amp;quot;#69b3a2&amp;quot;, &amp;quot;#404080&amp;quot;)) +
+    theme_minimal() +
+    labs(fill=&amp;quot;&amp;quot;)
+
+p&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7disciplinas/intror_master/lab42_files/figure-html/unnamed-chunk-1-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;transformação-com-dados-numéricos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Transformação com dados numéricos&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# get first observation for each Species in iris data -- base R
+mini_iris &amp;lt;- iris[c(1, 51, 101), ]
+
+mini_iris %&amp;gt;% gather(key = &amp;quot;flower_att&amp;quot;, value = &amp;quot;measurement&amp;quot;, -Species)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;##       Species   flower_att measurement
+## 1      setosa Sepal.Length         5.1
+## 2  versicolor Sepal.Length         7.0
+## 3   virginica Sepal.Length         6.3
+## 4      setosa  Sepal.Width         3.5
+## 5  versicolor  Sepal.Width         3.2
+## 6   virginica  Sepal.Width         3.3
+## 7      setosa Petal.Length         1.4
+## 8  versicolor Petal.Length         4.7
+## 9   virginica Petal.Length         6.0
+## 10     setosa  Petal.Width         0.2
+## 11 versicolor  Petal.Width         1.4
+## 12  virginica  Petal.Width         2.5&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;transformando-dados-de-wide-para-long-para-representar-dois-dados-iguais-de-recortes-distintos-no-mesmo-gráfico---dados-categóricos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Transformando dados de wide para long para representar dois dados iguais de recortes distintos no mesmo gráfico - dados categóricos&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;dados_bh &amp;lt;- read_delim(&amp;quot;dados_aluno.csv&amp;quot;, 
+    delim = &amp;quot;;&amp;quot;, escape_double = FALSE, trim_ws = TRUE)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# &amp;quot;Na unha!!!!&amp;quot;
+antes &amp;lt;- dados_bh %&amp;gt;% 
+  select(internet_compras_antes, genero, escolaridade) %&amp;gt;% 
+  mutate(dado = &amp;quot;antes&amp;quot;) %&amp;gt;% 
+  rename(&amp;quot;internet&amp;quot; = &amp;quot;internet_compras_antes&amp;quot;)
+
+depois &amp;lt;- dados_bh %&amp;gt;% 
+  select(internet_compras_depois, genero, escolaridade) %&amp;gt;% 
+  mutate(dado = &amp;quot;durante&amp;quot;) %&amp;gt;% 
+  rename(&amp;quot;internet&amp;quot; = &amp;quot;internet_compras_depois&amp;quot;)
+
+data_plot &amp;lt;- data.frame(rbind(antes, depois))
+
+##### Alternativa usando a função gather para gerar o data_plot - &amp;quot;elegante&amp;quot;
+data_plot_long &amp;lt;- dados_bh %&amp;gt;% 
+  gather(key = &amp;quot;dado&amp;quot;, value = &amp;quot;antes_depois&amp;quot;, -genero, -escolaridade)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;gráficos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Gráficos&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;ggplot(data_plot_long) + 
+  geom_bar(aes(x = antes_depois, fill = dado), position = &amp;quot;dodge&amp;quot;) +
+  coord_flip() +
+  facet_wrap(~ genero)
+
+ggplot(data_plot_long) + 
+  geom_bar(aes(x = antes_depois, fill = dado), position = &amp;quot;dodge&amp;quot;) +
+  coord_flip() +
+  facet_grid(escolaridade ~ genero)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;extra-função-case_when-dentro-do-mutate&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Extra: função “case_when” dentro do mutate&lt;/h2&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;data_plot_long &amp;lt;- dados_bh %&amp;gt;% 
+  gather(key = &amp;quot;dado&amp;quot;, value = &amp;quot;antes_depois&amp;quot;, -genero, -escolaridade) %&amp;gt;% 
+  mutate(dado = case_when(dado == &amp;#39;internet_compras_antes&amp;#39; ~ &amp;#39;antes&amp;#39;,
+                          dado == &amp;#39;internet_compras_depois&amp;#39; ~ &amp;#39;depois&amp;#39;))   
+ggplot(data_plot_long) + 
+  geom_bar(aes(x = antes_depois, fill = dado), position = &amp;quot;dodge&amp;quot;) +
+  coord_flip() +
+  facet_wrap(~ genero)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;img src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7disciplinas/intror_master/lab42_files/figure-html/unnamed-chunk-6-1.png&#34; width=&#34;672&#34; /&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 4.3</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab43/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab43/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(tidyverse)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;    #---
+    # +++ Matrix Basics ----
+    #
+  
+        matrix( data= 1:20, nrow= 4)
+        matrix( data= 1:20, nrow= 5)
+        matrix( data= 1:20, 4)
+        matrix( data= 1:20, ncol= 4)
+        matrix( data= 1:20, , 4)
+  
+      #---
+      # OBS IMPORTANTE: ordem DEFAULT de preenchimento: por coluna 
+      #---
+  
+        mA= matrix( data= 1:20, nrow= 4, byrow= T)
+          mA
+  
+      #---
+      # Transposi��o
+      #---
+  
+        t(mA)
+  
+      #---
+      # Matrizes de caracteres  ... 
+      #---
+      
+        mChar= matrix( data= month.abb, nrow= 4)
+      
+      #---
+      # ... ou de logicos 
+      #---
+      
+        vTemp= ((1:12)%%4) == 1
+          mLog= matrix( vTemp, nrow= 4)
+          mLog
+      
+          #---
+          # + direto: 
+          #---
+          
+            matrix( ((1:12)%%4) == 1,  4)
+  
+      #---
+      #
+      #   OBS Elementos de uma matriz sempre têm mesmo tipo. 
+      #       Se não for assim são modificados! 
+      #       Na marra e na surdina.
+      #
+      #---
+  
+        matrix( c(1:10,T,T),  4)
+        matrix( c(1:10,&amp;quot;T&amp;quot;,T),  4)
+  
+    #
+    # +++ END Basics ----
+    #---
+  
+    #---
+    # +++ BEG Operações elementares I: Matrizes e Escalares ----
+    #
+  
+        mA
+        2*mA
+        sqrt(mA)
+        mA^(1/3)
+        2^mA
+        mA&amp;gt;5
+        paste(mA, &amp;quot;1&amp;quot;)
+        c(mA, &amp;quot;1&amp;quot;)
+        c(mA, 1)
+  
+    #
+    # +++ END Operações elementares I: Matrizes e Escalares ----
+    #---
+        
+    #---
+    # +++ BEG Operações elementares II: Matrizes e Vetores ----
+    #
+    
+        mA= t(mA)
+        mA
+                    #---
+        mA + 1:20   # Business as usual
+                    #---
+  
+                    #---
+        mA + 1:10   # 2 {length(mA) / length(1:10) } Ciclos
+                    #---
+  
+                    #---
+        mA + 1:16   # Numero não inteiro de ciclos
+                    #---
+          1:20+1:16
+          matrix( 1:20+1:16, 5 )
+  
+      #---
+      # outro exemplo de ciclo
+      #---
+        mB= matrix( 1:12, 4 )
+        (1:3)^mB
+    
+    #
+    # +++ END Operações elementares II: Matrizes e Vetores ----
+    #---
+  
+    #---
+    # +++ BEG Operações elementares III: Matrizes e Matrizes ----
+    #
+        mB
+        mA
+        mA + mB
+    
+        mA= matrix(1:16, 4)
+        mC= matrix(1:8, 4)
+          mA+mC
+  
+      #---
+      # Produto matricial
+      #---
+    
+        dim(mA)
+        dim(mB)
+          mA%*%mB
+  
+      #---
+      # Inversa
+      #---
+  
+        solve(mA)
+        set.seed(1)
+          mD= matrix(runif(16), 4)
+          solve(mD)
+        mD %*% solve(mD)
+        round(mD %*% solve(mD), digits=6)
+  
+    #
+    # +++ END Operações elementares III: Matrizes e Matrizes ----
+    #---
+  
+  
+    #---
+    # +++ BEG Submatrizes , etc ----
+    #
+  
+        mA
+            mA[1,3]         # elemento [1,3]
+            mA[2,]          # segunda linha
+            mA[1:2,]        # primeira e segunda linhas
+            mA[,c(1,3)]     # primeira e terceira colunas
+            mA[1:2,c(1,3)]  # Uma SubMatriz
+  
+      #---
+      # Lembrando subvetores
+      #---
+        y= 10*(1:11)
+          length(y)
+          y
+          ehPar= c(F, T, F, T, F, T, F, T, F, T, F)
+          y[ehPar]
+          ehPar= ((1:length(y))%%2 == 0)
+  
+      #---
+      # Análogo pra formação de submatrizes
+      #---
+        mD= round(100*mD, 0)
+            row(mD)
+            col(mD)
+          LinMaiorQCol= row(mD)&amp;gt;col(mD)
+        mD[LinMaiorQCol]
+        mD
+        mD[row(mD)==col(mD)]
+  
+    #
+    # +++ END Submatrizes , etc ----
+    #---
+  
+    #---
+    # +++ BEG documentando vetores ----
+    #
+    
+        y=1:12
+        names(y)= month.abb
+        y
+        y[c(2,4)]
+        y[c(&amp;quot;Jan&amp;quot;, &amp;quot;Feb&amp;quot;, &amp;quot;Jul&amp;quot;)]
+    
+    #
+    # +++ END documentando vetores ----
+    #---
+
+    #---
+    # +++ BEG documentando matrizes ----
+    #---
+        
+        mA= matrix(1:20, 5)
+        dimnames(mA)= list(letters[1:5],month.abb[1:4])
+        mA
+        
+        summary(matrix(1:20, 5))
+        summary(mA)
+        
+    #---
+    # +++ END documentando matrizes ----
+    #---
+        
+#---
+#   END matrizes: vetores especiais ----
+#---
+
+#---
+#   BEG listas: uma estrutura mais geral ----
+#---
+
+  dadosDeGB= 
+    list( nome=&amp;quot;Giordanno Bruno&amp;quot;,
+          idade= 48,
+          ehCasado= F,
+          numerosPreferidos= c(pi, log(10)))
+
+    #---
+    # Obs:  Ao contrário de vetores e matrizes, 
+    #       NÃO é necessário que todas as componentes 
+    #       sejam de mesmo tipo
+    #---
+
+  #---
+  # recuperando componentes
+  #---
+
+    dadosDeGB[[2]] 
+    dadosDeGB$nome 
+    dadosDeGB[&amp;quot;nome&amp;quot;] 
+    dadosDeGB[c(&amp;quot;nome&amp;quot;,&amp;quot;idade&amp;quot;)] 
+
+                      #---
+    dadosDeGB[[1:2]]  # &amp;lt;=== Isso não dá pra fazer
+                      #---
+
+  #---
+  # incorporando componentes
+  #---
+    names(dadosDeGB)
+    dadosDeGB$anosDeEstudo= 40
+    names(dadosDeGB)
+
+
+  
+#
+#   END listas: uma estrutura mais geral ----
+#---&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 5</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab5/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab5/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;funções-e-programação-de-interações-no-r&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Funções e programação de interações no R&lt;/h1&gt;
+&lt;div id=&#34;exercícios&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercícios&lt;/h2&gt;
+&lt;div id=&#34;diretrizes-gerais&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;strong&gt;Diretrizes gerais:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Instale o pacote &lt;code&gt;cepespR&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;devtools::install_github(&amp;quot;Cepesp-Fgv/cepesp-r&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Using github PAT from envvar GITHUB_PAT&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Skipping install of &amp;#39;cepespR&amp;#39; from a github remote, the SHA1 (7253b4af) has not changed since last install.
+##   Use `force = TRUE` to force installation&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e o .csvb e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/ETeYkh2-WipAmE0p9htIqBcBJ-bArZ06Oce43hAV5507nA?e=DuQfI3&#34;&gt;Arquivo .Rmd&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Siga as diretrizes da atividade.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio do email &lt;a href=&#34;mailto:renataoliveira@gmail.com&#34; class=&#34;email&#34;&gt;renataoliveira@gmail.com&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;/hr&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercício-1.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Exercício 1.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Agradecimento: Leo Barone pelo maravilhoso exercício!&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;funções-iteração-e-vetorialização-do-código&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Funções, iteração e vetorialização do código&lt;/h2&gt;
+&lt;p&gt;Neste breve tutorial vamos ver alguns exemplos de como criar funções e utilizar processos iterativos (loops), e sua forma vetorializada (famílias de funções &lt;em&gt;apply&lt;/em&gt; e &lt;em&gt;map&lt;/em&gt;) facilitam a organização do código, reduzem bastante o esforço de programação e tornam o programa mais eficiente.&lt;/p&gt;
+&lt;p&gt;Estes exemplos servirão de norte para que você leia, em sala, os capítulos &lt;a href=&#34;http://r4ds.had.co.nz/functions.html&#34;&gt;19 - Functions&lt;/a&gt;, &lt;a href=&#34;http://r4ds.had.co.nz/iteration.html&#34;&gt;20 - Iteration&lt;/a&gt;, e o trecho do capítulo &lt;a href=&#34;http://r4ds.had.co.nz/vectors.html#lists&#34;&gt;18 - Vectors&lt;/a&gt; que trata de listas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exemplo-1---substituindo-repetição-de-código-por-loops&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exemplo 1 - substituindo repetição de código por loops&lt;/h2&gt;
+&lt;p&gt;Imagine que você precisa organizar dados dos candidatos à presidência de diversos anos (2006 a 2014) e vai utilizar a API do CEPESP Data. Utilizando a função &lt;em&gt;candidates&lt;/em&gt; do pacote &lt;em&gt;cepespR&lt;/em&gt; podemos obter os dados:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(cepespR)
+candidatos06 &amp;lt;- get_candidates(year = 2006, position = &amp;quot;President&amp;quot;)
+candidatos10 &amp;lt;- get_candidates(year = 2010, position = &amp;quot;President&amp;quot;)
+candidatos14 &amp;lt;- get_candidates(year = 2014, position = &amp;quot;President&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;e, a seguir, podemos juntar todos em um único data_frame:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;candidatos &amp;lt;- rbind(candidatos06, candidatos10, candidatos14)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Simples, não? Imagine agora que você quer repetir mesma tarefa não 4, mas centenas de vezes. O código deixaria de ser simples e passaria a ter centenas de linhas.&lt;/p&gt;
+&lt;p&gt;Essa centena de linhas seria pura repetição de código. No nosso exemplo, a obtenção dos dados para candidatos à presidência em 2006 e em 2010 são idênticas, exceto por 2 números. Como podemos evitar a repetição de códigos?&lt;/p&gt;
+&lt;p&gt;Neste tutorial vamos rever dois tópicos que são fundamentais para tornar o seu código mais enxuto e eficiente: funções e iterações (loops e similares).&lt;/p&gt;
+&lt;p&gt;No exemplo acima, um simples &lt;em&gt;for loop&lt;/em&gt; resolveria nosso problema de repetição de código. Veja abaixo e tente entender sozinha(o) o que está acontencendo:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+vetor_anos &amp;lt;- c(2006, 2010, 2014)
+candidatos &amp;lt;- data.frame()
+for (ano in vetor_anos){
+  candidatos &amp;lt;- bind_rows(candidatos, 
+                      get_candidates(year = ano, position = &amp;quot;President&amp;quot;))
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Simples, não? Se quiséssemos utilizar mais anos em nossa análise, bastaria mudar o vetor “percorrido” pelo loop que contém o número de anos.&lt;/p&gt;
+&lt;p&gt;Vamos supor agora que não queremos juntar todos os anos, apenas contar o número de linhas (que é o número de candidatos) em cada um dos anos e armazenar o resultado em um vetor. Veja como fazemos isso com um &lt;em&gt;for loop&lt;/em&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n_candidatos &amp;lt;- c()
+for (ano in vetor_anos){
+  n_candidatos &amp;lt;- c(n_candidatos, nrow(get_candidates(year = ano, position = &amp;quot;President&amp;quot;)))
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Igualmente simples. Há outras maneiras de produzir o mesmo resultado em R sem utilizar &lt;em&gt;for loops&lt;/em&gt;. Note que podemos pensar um &lt;em&gt;for loop&lt;/em&gt; como uma função que recebe como argumento um vetor e realiza a mesma tarefa para cada elemento do vetor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exemplo-2---combinando-loops-e-funções&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exemplo 2 - combinando loops e funções&lt;/h2&gt;
+&lt;p&gt;Uma das bases mais estudadas em política comparada e estudos empíricos sobre é a Polity IV, que contém varáveis sobre diversas características de um conjunto grande de países e em vários anos. Quem quiser conhecer mais sobre os dados pode acessar &lt;a href=&#34;http://www.systemicpeace.org/inscrdata.html&#34;&gt;aqui&lt;/a&gt; ou ler a documentação &lt;a href=&#34;http://www.systemicpeace.org/inscr/p4manualv2016.pdf&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A principal variável da base de dados é um indicador de grau de democracia que resulta da combinação de um conjunto variáveis componentes codificadas diretamente a partir da observação dos casos. Vamos ignorar seus significados e apenas observar que essas variáveis componentes recebem valores de 0 a 7, se o caso for uma democracia, ou os códigos -66, -77 e -88 em períodos autoritários ou de transição.&lt;/p&gt;
+&lt;p&gt;Comece abrindo os dados que estão no repositório do curso e criando uma cópia, ‘p4’, que será modificada.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p4_raw &amp;lt;- read.csv2(&amp;quot;https://raw.githubusercontent.com/leobarone/FLS6397_2018/master/data/p4v2016.csv&amp;quot;)
+p4 &amp;lt;- p4_raw&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Como as variáveis contêm alguns códigos numéricos cujas distâncias matemáticas não fazem nenhum sentido (-66, -77 e -88), precisamos transformá-los em NA para podermos calcular qualquer estatística descritiva com a variável. Vamos realizar a transformação nas variáveis ‘xconst’, ‘xrreg’, ‘xropen’, ‘xconst’ e aprender um novo operador, &lt;em&gt;%in%&lt;/em&gt;. Todas as variáveis se referem sobre características da competição pelo poder Executivo em um país em um ano:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p4$xrcomp[p4$xrcomp %in% c(-66, -77, -88)] &amp;lt;- NA
+p4$xrreg[p4$xrreg %in% c(-66, -77, -88)] &amp;lt;- NA
+p4$xropen[p4$xropen %in% c(-66, -77, -88)] &amp;lt;- NA
+p4$xconst[p4$xconst %in% c(-66, -77, -88)] &amp;lt;- NA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Como vamos repetir a mesma transformação de variáveis diversas vezes, convém escrever uma função para tal transformação. Observe com cuidado o código abaixo:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;limpa_var &amp;lt;- function(x) {
+  x[x %in% c(-66, -77, -88)] &amp;lt;- NA
+  return(x)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Vamos refazer o código acima utilizando a função que acabamos de criar (lembre-se criar um novo objeto ‘p4’, pois as variáveis foram transformadas no código anterior):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p4 &amp;lt;- p4_raw
+p4$xrcomp &amp;lt;- limpa_var(p4$xrcomp)
+p4$xrreg &amp;lt;- limpa_var(p4$xrreg)
+p4$xropen &amp;lt;- limpa_var(p4$xropen)
+p4$xconst &amp;lt;- limpa_var(p4$xconst)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Melhor. Temos linhas mais enxutas. Se estívessemos aplicando transformações mais complexas às variáveis, encurtaríamos bastante o código.&lt;/p&gt;
+&lt;p&gt;Ainda assim, temos muitas repetições de linha. O que muda de uma linha à outra é apenas o nome da variável. Como vimos no caso anterior, podemos realizar tarefas repetidas em loop. Vamos, dessa forma, aplicar a função que criamos em loop:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p4 &amp;lt;- p4_raw
+vetor_var &amp;lt;- c(&amp;#39;xrcomp&amp;#39;, &amp;#39;xrreg&amp;#39;, &amp;#39;xropen&amp;#39;, &amp;#39;xconst&amp;#39;)
+for (var in vetor_var){
+  p4[, var] &amp;lt;- limpa_var(p4[, var])
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Se estívessemos utilizando todas as variáveis do banco de dados codificadas da mesma maneira (são várias) teríamos uma economia bastante importante de código.&lt;/p&gt;
+&lt;p&gt;Obs: uma forma alternativa de selecionar variáveis de um data frame utilizando colchetes é aplicando colchetes duplo (em vez de separar linhas e colunas dentro do colchetes por vírgula). O estilo de código abaixo, encontrado com frequência no livro “R for Data Science”, é equivalente ao que acabamos de ver.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for (var in vetor_var){
+  p4[[var]] &amp;lt;- limpa_var(p4[[var]])
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercício&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercício&lt;/h2&gt;
+&lt;p&gt;Refere-se os dados de ‘Polity’ baixados anteriormente (&lt;em&gt;p4_raw&lt;/em&gt;).
+1. Use um &lt;em&gt;for loop&lt;/em&gt; para identificar o valor máximo na tabela das três variáveis: &lt;em&gt;parcomp&lt;/em&gt; (a competitividade da participação), &lt;em&gt;polcomp&lt;/em&gt; (a competitividade da política) e &lt;em&gt;polity2&lt;/em&gt; (o indicador geral da democracia).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 5.1</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab51/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab51/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;funções-e-programação-de-interações-no-r&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Funções e programação de interações no R&lt;/h1&gt;
+&lt;div id=&#34;exercícios&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercícios&lt;/h2&gt;
+&lt;div id=&#34;diretrizes-gerais&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;strong&gt;Diretrizes gerais:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Instale o pacote &lt;code&gt;cepespR&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;devtools::install_github(&amp;quot;Cepesp-Fgv/cepesp-r&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Using github PAT from envvar GITHUB_PAT&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Skipping install of &amp;#39;cepespR&amp;#39; from a github remote, the SHA1 (7253b4af) has not changed since last install.
+##   Use `force = TRUE` to force installation&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e o .csvb e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://cefetmgbr-my.sharepoint.com/:u:/g/personal/renataoliveira_cefetmg_br/ETeYkh2-WipAmE0p9htIqBcBJ-bArZ06Oce43hAV5507nA?e=DuQfI3&#34;&gt;Arquivo .Rmd&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Siga as diretrizes da atividade.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio do email &lt;a href=&#34;mailto:renataoliveira@gmail.com&#34; class=&#34;email&#34;&gt;renataoliveira@gmail.com&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;/hr&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercício-1.&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;Exercício 1.&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;Agradecimento: Leo Barone pelo maravilhoso exercício!&lt;/strong&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div id=&#34;funções-iteração-e-vetorialização-do-código&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Funções, iteração e vetorialização do código&lt;/h2&gt;
+&lt;p&gt;Neste breve tutorial vamos ver alguns exemplos de como criar funções e utilizar processos iterativos (loops), e sua forma vetorializada (famílias de funções &lt;em&gt;apply&lt;/em&gt; e &lt;em&gt;map&lt;/em&gt;) facilitam a organização do código, reduzem bastante o esforço de programação e tornam o programa mais eficiente.&lt;/p&gt;
+&lt;p&gt;Estes exemplos servirão de norte para que você leia, em sala, os capítulos &lt;a href=&#34;http://r4ds.had.co.nz/functions.html&#34;&gt;19 - Functions&lt;/a&gt;, &lt;a href=&#34;http://r4ds.had.co.nz/iteration.html&#34;&gt;20 - Iteration&lt;/a&gt;, e o trecho do capítulo &lt;a href=&#34;http://r4ds.had.co.nz/vectors.html#lists&#34;&gt;18 - Vectors&lt;/a&gt; que trata de listas.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exemplo-1---substituindo-repetição-de-código-por-loops&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exemplo 1 - substituindo repetição de código por loops&lt;/h2&gt;
+&lt;p&gt;Imagine que você precisa organizar dados dos candidatos à presidência de diversos anos (2006 a 2014) e vai utilizar a API do CEPESP Data. Utilizando a função &lt;em&gt;candidates&lt;/em&gt; do pacote &lt;em&gt;cepespR&lt;/em&gt; podemos obter os dados:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(cepespR)
+candidatos06 &amp;lt;- get_candidates(year = 2006, position = &amp;quot;President&amp;quot;)
+candidatos10 &amp;lt;- get_candidates(year = 2010, position = &amp;quot;President&amp;quot;)
+candidatos14 &amp;lt;- get_candidates(year = 2014, position = &amp;quot;President&amp;quot;)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;e, a seguir, podemos juntar todos em um único data_frame:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;candidatos &amp;lt;- rbind(candidatos06, candidatos10, candidatos14)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Simples, não? Imagine agora que você quer repetir mesma tarefa não 4, mas centenas de vezes. O código deixaria de ser simples e passaria a ter centenas de linhas.&lt;/p&gt;
+&lt;p&gt;Essa centena de linhas seria pura repetição de código. No nosso exemplo, a obtenção dos dados para candidatos à presidência em 2006 e em 2010 são idênticas, exceto por 2 números. Como podemos evitar a repetição de códigos?&lt;/p&gt;
+&lt;p&gt;Neste tutorial vamos rever dois tópicos que são fundamentais para tornar o seu código mais enxuto e eficiente: funções e iterações (loops e similares).&lt;/p&gt;
+&lt;p&gt;No exemplo acima, um simples &lt;em&gt;for loop&lt;/em&gt; resolveria nosso problema de repetição de código. Veja abaixo e tente entender sozinha(o) o que está acontencendo:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(dplyr)
+vetor_anos &amp;lt;- c(2006, 2010, 2014)
+candidatos &amp;lt;- data.frame()
+for (ano in vetor_anos){
+  candidatos &amp;lt;- bind_rows(candidatos, 
+                      get_candidates(year = ano, position = &amp;quot;President&amp;quot;))
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Simples, não? Se quiséssemos utilizar mais anos em nossa análise, bastaria mudar o vetor “percorrido” pelo loop que contém o número de anos.&lt;/p&gt;
+&lt;p&gt;Vamos supor agora que não queremos juntar todos os anos, apenas contar o número de linhas (que é o número de candidatos) em cada um dos anos e armazenar o resultado em um vetor. Veja como fazemos isso com um &lt;em&gt;for loop&lt;/em&gt;:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;n_candidatos &amp;lt;- c()
+for (ano in vetor_anos){
+  n_candidatos &amp;lt;- c(n_candidatos, nrow(get_candidates(year = ano, position = &amp;quot;President&amp;quot;)))
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Igualmente simples. Há outras maneiras de produzir o mesmo resultado em R sem utilizar &lt;em&gt;for loops&lt;/em&gt;. Note que podemos pensar um &lt;em&gt;for loop&lt;/em&gt; como uma função que recebe como argumento um vetor e realiza a mesma tarefa para cada elemento do vetor.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exemplo-2---combinando-loops-e-funções&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exemplo 2 - combinando loops e funções&lt;/h2&gt;
+&lt;p&gt;Uma das bases mais estudadas em política comparada e estudos empíricos sobre é a Polity IV, que contém varáveis sobre diversas características de um conjunto grande de países e em vários anos. Quem quiser conhecer mais sobre os dados pode acessar &lt;a href=&#34;http://www.systemicpeace.org/inscrdata.html&#34;&gt;aqui&lt;/a&gt; ou ler a documentação &lt;a href=&#34;http://www.systemicpeace.org/inscr/p4manualv2016.pdf&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;A principal variável da base de dados é um indicador de grau de democracia que resulta da combinação de um conjunto variáveis componentes codificadas diretamente a partir da observação dos casos. Vamos ignorar seus significados e apenas observar que essas variáveis componentes recebem valores de 0 a 7, se o caso for uma democracia, ou os códigos -66, -77 e -88 em períodos autoritários ou de transição.&lt;/p&gt;
+&lt;p&gt;Comece abrindo os dados que estão no repositório do curso e criando uma cópia, ‘p4’, que será modificada.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p4_raw &amp;lt;- read.csv2(&amp;quot;https://raw.githubusercontent.com/leobarone/FLS6397_2018/master/data/p4v2016.csv&amp;quot;)
+p4 &amp;lt;- p4_raw&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Como as variáveis contêm alguns códigos numéricos cujas distâncias matemáticas não fazem nenhum sentido (-66, -77 e -88), precisamos transformá-los em NA para podermos calcular qualquer estatística descritiva com a variável. Vamos realizar a transformação nas variáveis ‘xconst’, ‘xrreg’, ‘xropen’, ‘xconst’ e aprender um novo operador, &lt;em&gt;%in%&lt;/em&gt;. Todas as variáveis se referem sobre características da competição pelo poder Executivo em um país em um ano:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p4$xrcomp[p4$xrcomp %in% c(-66, -77, -88)] &amp;lt;- NA
+p4$xrreg[p4$xrreg %in% c(-66, -77, -88)] &amp;lt;- NA
+p4$xropen[p4$xropen %in% c(-66, -77, -88)] &amp;lt;- NA
+p4$xconst[p4$xconst %in% c(-66, -77, -88)] &amp;lt;- NA&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Como vamos repetir a mesma transformação de variáveis diversas vezes, convém escrever uma função para tal transformação. Observe com cuidado o código abaixo:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;limpa_var &amp;lt;- function(x) {
+  x[x %in% c(-66, -77, -88)] &amp;lt;- NA
+  return(x)
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Vamos refazer o código acima utilizando a função que acabamos de criar (lembre-se criar um novo objeto ‘p4’, pois as variáveis foram transformadas no código anterior):&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p4 &amp;lt;- p4_raw
+p4$xrcomp &amp;lt;- limpa_var(p4$xrcomp)
+p4$xrreg &amp;lt;- limpa_var(p4$xrreg)
+p4$xropen &amp;lt;- limpa_var(p4$xropen)
+p4$xconst &amp;lt;- limpa_var(p4$xconst)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Melhor. Temos linhas mais enxutas. Se estívessemos aplicando transformações mais complexas às variáveis, encurtaríamos bastante o código.&lt;/p&gt;
+&lt;p&gt;Ainda assim, temos muitas repetições de linha. O que muda de uma linha à outra é apenas o nome da variável. Como vimos no caso anterior, podemos realizar tarefas repetidas em loop. Vamos, dessa forma, aplicar a função que criamos em loop:&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;p4 &amp;lt;- p4_raw
+vetor_var &amp;lt;- c(&amp;#39;xrcomp&amp;#39;, &amp;#39;xrreg&amp;#39;, &amp;#39;xropen&amp;#39;, &amp;#39;xconst&amp;#39;)
+for (var in vetor_var){
+  p4[, var] &amp;lt;- limpa_var(p4[, var])
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Se estívessemos utilizando todas as variáveis do banco de dados codificadas da mesma maneira (são várias) teríamos uma economia bastante importante de código.&lt;/p&gt;
+&lt;p&gt;Obs: uma forma alternativa de selecionar variáveis de um data frame utilizando colchetes é aplicando colchetes duplo (em vez de separar linhas e colunas dentro do colchetes por vírgula). O estilo de código abaixo, encontrado com frequência no livro “R for Data Science”, é equivalente ao que acabamos de ver.&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;for (var in vetor_var){
+  p4[[var]] &amp;lt;- limpa_var(p4[[var]])
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div id=&#34;exercício&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercício&lt;/h2&gt;
+&lt;p&gt;Refere-se os dados de ‘Polity’ baixados anteriormente (&lt;em&gt;p4_raw&lt;/em&gt;).
+1. Use um &lt;em&gt;for loop&lt;/em&gt; para identificar o valor máximo na tabela das três variáveis: &lt;em&gt;parcomp&lt;/em&gt; (a competitividade da participação), &lt;em&gt;polcomp&lt;/em&gt; (a competitividade da política) e &lt;em&gt;polity2&lt;/em&gt; (o indicador geral da democracia).&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Lab 5.2</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab52/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/lab52/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+&lt;div id=&#34;TOC&#34;&gt;
+
+&lt;/div&gt;
+
+&lt;div id=&#34;scrape-em-tabelas&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Scrape em tabelas&lt;/h1&gt;
+&lt;div id=&#34;exercícios&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Exercícios&lt;/h2&gt;
+&lt;div id=&#34;diretrizes-gerais&#34; class=&#34;section level3&#34;&gt;
+&lt;h3&gt;&lt;strong&gt;Diretrizes gerais:&lt;/strong&gt;&lt;/h3&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Instale o pacote &lt;code&gt;tabulizer&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;devtools::install_github(c(&amp;quot;ropensci/tabulizerjars&amp;quot;, &amp;quot;ropensci/tabulizer&amp;quot;))&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Using github PAT from envvar GITHUB_PAT&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Skipping install of &amp;#39;tabulizerjars&amp;#39; from a github remote, the SHA1 (d1924e01) has not changed since last install.
+##   Use `force = TRUE` to force installation&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Downloading GitHub repo ropensci/tabulizer@HEAD&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## 
+##   
+  
+  
+   checking for file &amp;#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&amp;#39; ...
+  
+v  checking for file &amp;#39;C:\Users\user\AppData\Local\Temp\RtmpygmzgX\remotesf3f45826743b\ropensci-tabulizer-3049a79/DESCRIPTION&amp;#39; (565ms)
+## 
+  
+  
+  
+-  preparing &amp;#39;tabulizer&amp;#39;:
+##    checking DESCRIPTION meta-information ...
+  
+   checking DESCRIPTION meta-information ... 
+  
+v  checking DESCRIPTION meta-information
+## 
+  
+  
+  
+-  checking for LF line-endings in source and make files and shell scripts
+## 
+  
+  
+  
+-  checking for empty or unneeded directories
+## 
+  
+Removed empty directory 
+  
+   Removed empty directory &amp;#39;tabulizer/docs&amp;#39;
+## 
+  
+  
+  
+-  building &amp;#39;tabulizer_0.2.2.tar.gz&amp;#39;
+## 
+  
+   
+## &lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;## Installing package into &amp;#39;C:/Users/user/Documents/R/win-library/4.1&amp;#39;
+## (as &amp;#39;lib&amp;#39; is unspecified)&lt;/code&gt;&lt;/pre&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Baixe o arquivo .Rmd e o folder com os arquivos em .pdf e abra no RStudio.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/s/3eryvmh6fx7hszg/tabulizer.Rmd?dl=0&#34;&gt;Arquivo .Rmd&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/sh/06oe1s96w2d4qhp/AABretq0u92RGeuPmekbbWXva?dl=0&#34;&gt;Arquivos .pdf&lt;/a&gt;&lt;/p&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Siga as diretrizes da atividade.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Rode o arquivo .Rmd por meio do ícone &lt;code&gt;knitr&lt;/code&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Salve o .Rmd e &lt;strong&gt;submeta-o por meio do email &lt;a href=&#34;mailto:renataoliveira@gmail.com&#34; class=&#34;email&#34;&gt;renataoliveira@gmail.com&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;/hr&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;library(hrbrthemes)
+library(ggplot2)
+library(Cairo)
+library(extrafont)
+library(rJava)      # Needed for tabulizer
+library(tabulizer)  # Handy tool for PDF Scraping
+library(tidyverse)  # Core data manipulation and visualization libraries
+library(janitor)
+
+extrafont::loadfonts()&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Este chunk serve para fazer a leitura dos arquivos&lt;/p&gt;
+&lt;pre class=&#34;r&#34;&gt;&lt;code&gt;# PDF Scrape Tables
+
+#Store folder of pdf to be loaded
+folder &amp;lt;- &amp;quot;pdf/&amp;quot;
+
+# Number of files in folder
+num_files &amp;lt;- length(dir(folder, pattern=&amp;quot;*.pdf&amp;quot;))
+
+# Generate file list of shapefiles
+files &amp;lt;- as.data.frame(dir(folder, pattern=&amp;quot;*.pdf&amp;quot;))
+names(files) &amp;lt;- &amp;quot;data&amp;quot;
+
+## Generate static maps 
+
+tmp &amp;lt;- data.frame(bairro = NA , sg = NA, srag = NA, obitos = NA, data = NA)
+
+for (i in 1:num_files) {
+   file_name &amp;lt;- files[i,1]
+   data &amp;lt;- print(str_sub(files[i,1], -14, -7))
+   scrape &amp;lt;- tabulizer::extract_tables(file = paste0(&amp;quot;pdf/&amp;quot;, files[i,1]), output = &amp;quot;data.frame&amp;quot;, page = 2, guess = TRUE, method = &amp;quot;stream&amp;quot;)
+   scrape1 &amp;lt;- as.data.frame(scrape[[1]])
+   scrape1 &amp;lt;- scrape1 %&amp;gt;% 
+      separate(col = &amp;#39;Síndrome.Respiratória.Aguda.Grave&amp;#39;, into = c(&amp;quot;total de casos&amp;quot;, &amp;quot;óbitos&amp;quot;), sep = &amp;#39; &amp;#39;) %&amp;gt;% 
+      slice(-1)
+   scrape1 &amp;lt;- scrape1[,c(1,3,5,6)] 
+   names(scrape1) &amp;lt;- c(&amp;quot;bairro&amp;quot;, &amp;quot;sg&amp;quot;, &amp;quot;srag&amp;quot;, &amp;quot;obitos&amp;quot;)
+   if (length(scrape) != 1) {
+      scrape2 &amp;lt;- as.data.frame(scrape[[2]])
+      scrape2[5,] &amp;lt;- colnames(scrape2)
+      names(scrape2) &amp;lt;- c(&amp;quot;bairro&amp;quot;, &amp;quot;sg&amp;quot;, &amp;quot;srag&amp;quot;, &amp;quot;obitos&amp;quot;)
+      scrape2 &amp;lt;- scrape2 %&amp;gt;% 
+         filter(bairro != &amp;quot;TOTAL&amp;quot;) 
+      scrape2 &amp;lt;- scrape2 %&amp;gt;% 
+         mutate(bairro = str_replace_all(bairro, &amp;quot;\\.&amp;quot;, &amp;quot; &amp;quot;), sg = str_replace(sg, &amp;quot;X&amp;quot;, &amp;quot;&amp;quot;), srag = str_replace(srag, &amp;quot;X&amp;quot;, &amp;quot;&amp;quot;), obitos = str_replace(obitos, &amp;quot;X&amp;quot;, &amp;quot;&amp;quot;))
+      tmp_dia &amp;lt;- rbind(scrape1, scrape2)
+      tmp_dia[,5] &amp;lt;- data
+      names(tmp_dia) &amp;lt;- c(&amp;quot;bairro&amp;quot;, &amp;quot;sg&amp;quot;, &amp;quot;srag&amp;quot;, &amp;quot;obitos&amp;quot;, &amp;quot;data&amp;quot;)
+   } else {
+      tmp_dia &amp;lt;- scrape1
+      tmp_dia[,5] &amp;lt;- data
+      names(tmp_dia) &amp;lt;- c(&amp;quot;bairro&amp;quot;, &amp;quot;sg&amp;quot;, &amp;quot;srag&amp;quot;, &amp;quot;obitos&amp;quot;, &amp;quot;data&amp;quot;)
+   }   
+   
+   tmp &amp;lt;- tmp %&amp;gt;% 
+      bind_rows(tmp, tmp_dia) %&amp;gt;% 
+      filter(!is.na(sg))
+   
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Encontro Síncrono 1</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc1/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc1/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/assets/css/custom.css&#34; type=&#34;text/css&#34; /&gt;
+
+
+&lt;iframe src=&#34;https://intror2021.github.io/class01/&#34; width=&#34;672&#34; height=&#34;500px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://intror2021.github.io/class01/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Encontro Síncrono 2</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc2/</link>
+      <pubDate>Fri, 15 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc2/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/assets/css/custom.css&#34; type=&#34;text/css&#34; /&gt;
+
+
+&lt;iframe src=&#34;https://intror2021.github.io/class02/&#34; width=&#34;672&#34; height=&#34;500px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://intror2021.github.io/class02/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Encontro Síncrono 3</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc3/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc3/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/assets/css/custom.css&#34; type=&#34;text/css&#34; /&gt;
+
+
+&lt;iframe src=&#34;https://intror2021.github.io/class03/&#34; width=&#34;672&#34; height=&#34;500px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://intror2021.github.io/class03/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Encontro Síncrono 4</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc4/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc4/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/assets/css/custom.css&#34; type=&#34;text/css&#34; /&gt;
+
+
+&lt;iframe src=&#34;https://intror2021.github.io/class04/&#34; width=&#34;672&#34; height=&#34;500px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://intror2021.github.io/class04/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Encontro Síncrono 5</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc5/</link>
+      <pubDate>Mon, 25 Oct 2021 00:00:00 +0100</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/disciplinas/intror_master/sinc5/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/assets/css/custom.css&#34; type=&#34;text/css&#34; /&gt;
+
+
+&lt;iframe src=&#34;https://intror2021.github.io/class05/&#34; width=&#34;672&#34; height=&#34;500px&#34; data-external=&#34;1&#34;&gt;
+&lt;/iframe&gt;
+&lt;p&gt;&lt;a href=&#34;https://intror2021.github.io/class05/&#34;&gt;LINK&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
     
   </channel>
 </rss>
