@@ -1,0 +1,196 @@
+---
+date: 2021-10-15T00:00:00+01:00
+draft: false
+menu:
+  intro_r:
+    parent: 1 - Primeiros passos
+    weight: 50
+title: Hello R! Estrutura, conceitos e funções básicas
+type: docs
+editor_options: 
+  markdown: 
+    wrap: 70
+output: 
+  blogdown::html_page:
+    toc: true
+weight: 390
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+<div id="TOC">
+<ul>
+<li><a href="#tldr">TL;DR</a></li>
+<li><a href="#r-o-que-é-o-r">R? O que é o R?</a>
+<ul>
+<li><a href="#conhecendo-o-r">Conhecendo o R</a>
+<ul>
+<li><a href="#interface-e-funcionalidades">Interface e funcionalidades</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#definições-básicas">Definições básicas</a>
+<ul>
+<li><a href="#tipos-de-arquivos-no-r">Tipos de arquivos no R</a></li>
+<li><a href="#local-de-trabalho">Local de trabalho</a></li>
+<li><a href="#variáveis-funções-e-packages">Variáveis, funções e <em>packages</em></a></li>
+</ul></li>
+</ul>
+</div>
+
+<div id="tldr" class="section level1">
+<h1>TL;DR</h1>
+<p>Nessa seção apresentamos alguns conceitos importantes para que a utilização do <code>R</code> seja mais amigável! Algumas informações importantes que são detalhadas a seguir:</p>
+<ul>
+<li>O <code>RStudio</code> é uma interface para uso do <code>R</code></li>
+<li>O <code>R</code> é sensível a caracteres maiúsculos e minúsculos.</li>
+<li>Marcador de decimal para o R é <code>.</code>, mas pode ser configurado conforme arquivo.</li>
+<li>O <code>R</code> é estruturado em <code>package::função(objeto, parâmetros))</code></li>
+<li>Para utilizar pacotes, precisamos instalar (<code>install.packages("package")</code>), carregar (<code>library("package")</code>) e chamar as funções.<br />
+</li>
+<li>As funções <code>getwd()</code>, <code>dir()</code> e <code>setwd()</code> ajudam a organizar o trabalho.</li>
+</ul>
+</div>
+<div id="r-o-que-é-o-r" class="section level1">
+<h1>R? O que é o R?</h1>
+<div id="conhecendo-o-r" class="section level2 tabset tabset-fade tabset-pills">
+<h2>Conhecendo o R</h2>
+<div id="interface-e-funcionalidades" class="section level3">
+<h3>Interface e funcionalidades</h3>
+<p>Para uso do R no ambiente RStudio, é inicialmente necessário entender o seu funcionamento. O R é uma linguagem de programação, em plataforma open source, desenvolvida para análise de dados. SEJAM BEM VINDOS!</p>
+<div class="figure">
+<img src="https://retaoliveira.github.io/relements/figures/allison_horst/welcome_to_rstats_twitter.png" alt="" />
+<p class="caption">Bem vindo</p>
+</div>
+<p>Em um primeiro momento, o conjunto R + RStudio parece pouco amigável, mas com o tempo, é impossível não apaixonar-se pelas infinitas possibilidades que temos ao utilizar o R.</p>
+<div class="figure">
+<img src="https://retaoliveira.github.io/relements/figures/allison_horst/r_first_then.png" alt="" />
+<p class="caption">Ódio x amor</p>
+</div>
+<p>A comunidade do R é bastante ampla e colaborativa. Assim: BUSQUE AJUDA!!!!!</p>
+<div class="figure">
+<img src="https://retaoliveira.github.io/relements/figures/allison_horst/code_hero.jpg" alt="" />
+<p class="caption">Suporte</p>
+</div>
+</div>
+</div>
+</div>
+<div id="definições-básicas" class="section level1">
+<h1>Definições básicas</h1>
+<table>
+<colgroup>
+<col width="37%" />
+<col width="62%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Termos</th>
+<th>Definição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Script</code></td>
+<td>Os scripts são arquivos do R com comandos a serem executados. Para rodar um comando digitado no painel de edição dos Scripts ou do arquivo .Rmd do RStudio no Windows, basta fazer: <code>Ctrl+Enter</code>.</td>
+</tr>
+<tr class="even">
+<td><code>Packages</code> ou <code>pacotes</code></td>
+<td>São um conjunto de funções organizadas em um arquivo que pode ser obtido em diferentes repositórios. Para utilização dos pacotes, é necessário instalá-los e, posteriormente, carregá-los na sessão por meio do comando <code>library</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>funções</code></td>
+<td>São códigos que determina um algoritmo computacional e que têm diferentes objetivos. Pode haver mais de uma função para o mesmo objetivo. As funções são estruturadas por meio de um comando básico e parâmetros/argumentos que são incluídos entre parênteses após a função.</td>
+</tr>
+<tr class="even">
+<td><code>objeto</code></td>
+<td>Objetos no R são elementos aos quais são aplicadas as funções</td>
+</tr>
+<tr class="odd">
+<td><code>Console</code></td>
+<td>É o espaço no ambiente R onde você digita e roda os comandos do R. É a janela principal, onde é possível digitar os comandos, vizualizar os resultados e mensagens de alerta e mensagens de erros. Nesse ambiente, a seta (&gt;) indica que o R esta pronto para receber um comando; sinal de mais (+) indica que o comando da linha anterior ainda não esta completo, faltando algo para o comando ser executado. A ausência de um desses dois simbólos (&gt; ou +) indica que o R ainda não finalizou o processo do comando anterior. Os resultados de uma função são apresentados entre símbolos de cochetes ([]).</td>
+</tr>
+<tr class="even">
+<td><code>Terminal</code></td>
+<td>É o espaço onde você digita e roda comandos do sistema (Windows, por exemplo)</td>
+</tr>
+<tr class="odd">
+<td><code>RMarkdown</code></td>
+<td>Linguagem de texto do R</td>
+</tr>
+<tr class="even">
+<td><code>RStudio</code></td>
+<td>É uma IDE (Integrated Development Envirnonment) que permite uma interface gráfica amigável com os usuários.</td>
+</tr>
+<tr class="odd">
+<td><code>Help</code></td>
+<td>Janela onde são mostrados os textos de ajuda.</td>
+</tr>
+<tr class="even">
+<td><code>Plot</code></td>
+<td>Janela reservada para os resultados gráficos.</td>
+</tr>
+<tr class="odd">
+<td><code>History</code></td>
+<td>Lista o histórico dos comandos já executados.</td>
+</tr>
+<tr class="even">
+<td><code>Environment</code></td>
+<td>Painel exclusivo do RStudio que lista os objetos criados na área de trabalho (workspace).</td>
+</tr>
+<tr class="odd">
+<td><code>Files</code></td>
+<td>Painel exclusivo do RStudio, que lista os arquivos do computador. É semelhante ao gerenciador de arquivos padrão do sistema operacional.</td>
+</tr>
+</tbody>
+</table>
+<div id="tipos-de-arquivos-no-r" class="section level2">
+<h2>Tipos de arquivos no R</h2>
+<p>Os principais tipos de arquivos gerados por meio do <code>R</code> são:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Extensão</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>.R</td>
+<td>Usado para salvar <code>scripts</code>.</td>
+</tr>
+<tr class="even">
+<td>.RData</td>
+<td>Usado para salvar os <code>objetos</code> da área de trabalho (workspace).</td>
+</tr>
+<tr class="odd">
+<td>.Rhistory</td>
+<td>Usado para salvar o <code>histórico dos comandos</code> executados.</td>
+</tr>
+<tr class="even">
+<td>.Rmd</td>
+<td>Formato para salvar arquivos em <code>RMarkdown</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="local-de-trabalho" class="section level2">
+<h2>Local de trabalho</h2>
+<p>O diretório de trabalho padrão é aquele ao qual o R foi associado. Entretanto, pode ser alterado, sem qualquer mudanças nos objetos da área de trabalho.</p>
+<p><img src="https://retaoliveira.github.io/relements/figures/allison_horst/cracked_setwd.png" /></p>
+<pre class="r"><code>getwd() # Mostrar o diretório de trabalho atual
+dir() # Listar os arquivos do diretório
+setwd() # Mudar o diretório de trabalho</code></pre>
+<p>É possivel salvar a área de trabalho inteira e carregar em outro momento.</p>
+<pre class="r"><code>ls() # Listar os objetos da área de trabalho
+save.image(&quot;meu_workspace.RData&quot;) # Salvar área de trabalho
+load(&quot;meu_workspace.RData&quot;) # Carregar área de trabalho</code></pre>
+</div>
+<div id="variáveis-funções-e-packages" class="section level2">
+<h2>Variáveis, funções e <em>packages</em></h2>
+<p>Sua estrutura fundamenta-se em uma grande variedade de ferramentas quantitativas, organizadas por meio de <strong>objetos</strong>, <strong>funções</strong> e <strong>packages</strong>. A instalação <code>base</code> do R já contempla uma série de funções e <em>packages</em>. <em>Packages</em> adicionais podem ser instalados quando for necessário ou interessante. Para instalação de <em>packages</em>, utiliza-se a função <code>install.packages()</code>.</p>
+<p>A priori, instale os seguintes pacotes no seu computador:</p>
+<pre class="r"><code>install.packages(c(&quot;rmarkdown&quot;, &quot;knitr&quot;, &quot;dsbox&quot;, &quot;tidyverse&quot;, &quot;coronavirus&quot;, &quot;lubridate&quot;, &quot;glue&quot;, &quot;scales&quot;, &quot;ggrepel&quot;, &quot;DT&quot;, &quot;flexdashboard&quot;, &quot;blogdown&quot;, &quot;bookdown&quot;, &quot;pagedown&quot;, &quot;xaringan&quot;, &quot;xaringanthemer&quot;, &quot;janitor&quot;, &quot;jsonlite&quot;, &quot;kableExtra&quot;, &quot;leaflet&quot;, &quot;officedown&quot;, &quot;openxlsx&quot;, &quot;readr&quot;, &quot;readxl&quot;, &quot;devtools&quot;, &quot;remotes&quot;, &quot;swirl&quot;, &quot;stringr&quot;, &quot;tmap&quot;, &quot;tmapstool&quot;, &quot;rvest&quot;, &quot;viridis&quot;, &quot;installr&quot;, &quot;distill&quot;, &quot;rticles&quot;, &quot;data.table&quot;, &quot;ggplot2&quot;, &quot;hrbrthemes&quot;, &quot;plotly&quot;, &quot;learnr&quot;, &quot;prettydoc&quot;, &quot;corrplot&quot;, &quot;tufte&quot;, &quot;ggpubr&quot;, &quot;sf&quot;, &quot;htmlwidgets&quot;))</code></pre>
+<p>Ao longo do curso chamaremos as bibliotecas para que possamos implementar as funções.</p>
+<iframe width="1197" height="645" src="https://www.youtube.com/embed/dOasm9dKjKE?list=PLqDTVtdD-5aPagWJB6_0IaKN3IpIGhFU1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+</iframe>
+</div>
+</div>

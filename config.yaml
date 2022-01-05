@@ -1,0 +1,54 @@
+title: Profa. Renata Oliveira
+baseURL: https://app.netlify.com/sites/cranky-mestorf-a03ae7
+copyright: {year}
+googleAnalytics: ''
+disqusShortname: ''
+theme: academia-hugo
+enableGitInfo: no
+defaultContentLanguage: en
+hasCJKLanguage: no
+defaultContentLanguageInSubdir: no
+removePathAccents: yes
+paginate: 10
+enableEmoji: yes
+footnotereturnlinkcontents: <sup>^</sup>
+ignoreFiles:
+  - \.ipynb$
+  - .ipynb_checkpoints$
+  - \.Rmd$
+  - \.Rmarkdown$
+  - _files$
+  - _cache$
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+  section:
+    - HTML
+    - RSS
+blackfriday:
+  angledQuotes: no
+  extensions: backslashLineBreak
+  hrefTargetBlank: yes
+  latexDashes: yes
+imaging:
+  anchor: smart
+  quality: 90
+  resampleFilter: lanczos
+taxonomies:
+  author: authors
+  category: categories
+  publication_type: publication_types
+  tag: tags
+permalinks:
+  authors: /author/:slug/
+  categories: /category/:slug/
+  event: /talk/:slug/
+  publication_types: /publication-type/:slug/
+  tags: /tag/:slug/
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+      
