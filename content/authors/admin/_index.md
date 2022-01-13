@@ -15,6 +15,9 @@ education:
   - course: MEng in Transportation Engineering
     institution: Instituto Militar de Engenharia
     year: 2004
+  - course: PgDip. in Railway Engineering
+    institution: Vale
+    year: 2004
   - course: BSc in Civil Engineering
     institution: Universidade Federal de Minas Gerais
     year: 2002
