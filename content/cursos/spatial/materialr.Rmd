@@ -1,0 +1,32 @@
+---
+title: "Material adicional - R e RStudio"
+author: "Contribuições - Renata Lúcia Magalhães de Oliveira e Lucélia Viviane Vaz Raad"
+output:
+  html_document:
+    toc_depth: 3
+    include:
+      in_header: head.html
+      after_body: footer.html
+    theme: flatly
+    highlight: textmate
+    mathjax: null
+    lib_dir: libs
+    css: styles.css
+    logo: logo.jpg
+    toc_float:
+      collapsed: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Material adicional
+[Livro sobre Análise espacial no R](https://www.dropbox.com/s/mo65rwtzafrsa5w/analise%20espacial.pdf?dl=0)
+
+[Curso de R em português](http://material.curso-r.com/)   
+
+[R e Análise espacial](https://mgimond.github.io/Spatial/spatial-autocorrelation-in-r.html)
+
+[Análise espacial no R](https://rspatial.org/raster/analysis/index.html)
+
+[Referências de links de consulta para R e R para Jornalistas](https://www.curso-de-programacao-em-r-para-jornalistas.com/2019/10/27/saiba-mais-sobre-o-r/)

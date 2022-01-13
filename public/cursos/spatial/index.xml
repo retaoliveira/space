@@ -1206,5 +1206,266 @@ plot(spTransform(georgia.sub, osm()), add = TRUE, lwd = 2)&lt;/code&gt;&lt;/pre&
 </description>
     </item>
     
+    <item>
+      <title>Atividades em GIS e QGIS</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;competências-a-serem-desenvolvidas&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Competências a serem desenvolvidas&lt;/h1&gt;
+&lt;p&gt;Ao final desse mini-curso, os alunos deverão ser capazes de discutir os seguintes conceitos:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pensamento espacial&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Introdução à cartografia
+&lt;ul&gt;
+&lt;li&gt;forma e dimensões terrestres&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;representações: sistemas geodésicos, modelos e datum&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;sistemas de coordenadas geográficas e projetadas&lt;br /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Sistemas de Informações Geográficas (&lt;em&gt;Geographic Information Systems&lt;/em&gt;)&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Unidades espaciais e representação de fenômenos espaciais&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Distâncias&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;QGIS
+&lt;ul&gt;
+&lt;li&gt;Ambiente e funcionalidades básicas do QGIS&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Complementos: instalação e para que servem&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Mudança de datum e sistemas de coordenadas&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Tabela de atributos&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Estruturas de dados espaciais
+&lt;ul&gt;
+&lt;li&gt;classificação: vetoriais e matriciais&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;interoperabilidade&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;geocodificação&lt;br /&gt;
+&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Funções básicas em GIS
+&lt;ul&gt;
+&lt;li&gt;seleção por atributo e por localização&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;join por código e join espacial&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;mapas temáticos&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;geração de centroides e agregação de variaveis&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;conceito de redes&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;layout de impressão&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mão-na-massa---qgis---01072020&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;&lt;strong&gt;Mão na massa - QGIS&lt;/strong&gt; - 01/07/2020&lt;/h1&gt;
+&lt;div id=&#34;bases-de-dados&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Bases de dados&lt;/h2&gt;
+&lt;p&gt;Belo Horizonte
+- &lt;a href=&#34;https://drive.google.com/drive/folders/1bZmcOwZLvs9op7kQYAHshvCELk4M35o4?usp=sharing&#34;&gt;&lt;code&gt;shapefiles&lt;/code&gt; - BHMaps&lt;/a&gt;&lt;br /&gt;
+- &lt;a href=&#34;https://drive.google.com/drive/folders/1gRQ3pM__jGSPq-dk35hVlLS4S5hzlRWc?usp=sharing&#34;&gt;Setores censitários sem renda&lt;/a&gt;&lt;br /&gt;
+- &lt;a href=&#34;https://drive.google.com/drive/folders/1twMTRnrSY0ugLwC7xJq7LzuuPiXDYmRX?usp=sharing&#34;&gt;Setores censitários com renda&lt;/a&gt;
+- &lt;a href=&#34;https://drive.google.com/drive/folders/1gDOdMb3elvcolWgV_3jBOV_xfwo7A08e?usp=sharing&#34;&gt;Bairros&lt;/a&gt;&lt;br /&gt;
+- &lt;a href=&#34;https://drive.google.com/drive/folders/1ZVoVW7QG7uyxkHOAJLu1p9ViTm9TK5jW?usp=sharing&#34;&gt;Estabelecimentos comerciais&lt;/a&gt;&lt;br /&gt;
+- &lt;a href=&#34;https://drive.google.com/drive/folders/1i3Ax_Z6J93utrAkpRTMG13rF50u_WND6?usp=sharing&#34;&gt;Áreas de presevação permanente&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;dados-espaciais-e-sistemas-de-referência&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Dados espaciais e sistemas de referência&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Abrir o &lt;code&gt;shapefile&lt;/code&gt; e verificar qual o sistema de coordenadas ativo.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Transformar o sistema de coordenadas em &lt;code&gt;WGS84&lt;/code&gt; e salvar como um novo shapefile&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Transformar todos os &lt;code&gt;shapefiles&lt;/code&gt; para coordenadas projetadas &lt;code&gt;SIRGAS 2000 - UTM 23 S&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Mudar a cor dos dados vetoriais para apresentações que permitam a análise da sobreposição de camadas.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;tabela-de-atributos-e-manipulação-de-dados-espaciais&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Tabela de atributos e manipulação de dados espaciais&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Verificar o número de observações e o número de atributos na &lt;code&gt;tabela de atributos&lt;/code&gt;&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Selecionar setores censitários com população menor do que 400 habitantes.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Exportar apenas os dados selecionados como um novo shapefile.&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Abrir os dados referentes à renda em cada setor censitário e importar os dados para o shapefile original.&lt;/li&gt;
+&lt;li&gt;Abrir os dados de empresas no município de Belo Horizonte.&lt;/li&gt;
+&lt;li&gt;Selecionar os pontos que estão localizados em setores censitários com mais de 500 habitantes.&lt;/li&gt;
+&lt;li&gt;Contar o número de pontos em cada unidade espacial&lt;/li&gt;
+&lt;li&gt;Agregar dados de população dos setores censitários em bairros&lt;/li&gt;
+&lt;li&gt;Agregar dados de população de bairros para regionais&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Elaborar mapas temáticos de renda, população, áreas de preservação&lt;br /&gt;
+&lt;/li&gt;
+&lt;li&gt;Gerar centroides dos setores censitários&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;mapas-temáticos&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Mapas temáticos&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Elaborar mapas temáticos&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;geocodificação&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Geocodificação&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Geocodificar o parque onde será instalado o empreendimento em análise.&lt;/li&gt;
+&lt;li&gt;Colocar a informação no QGIS.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;div id=&#34;layout-de-impressão&#34; class=&#34;section level2&#34;&gt;
+&lt;h2&gt;Layout de impressão&lt;/h2&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Gerar layout de impressão contendo legenda, indicação de norte, escala.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Material adicional - GIS e QGIS</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/material/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/material/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;material-adicional&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Material adicional&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://mgimond.github.io/Spatial/index.html&#34;&gt;Livro sobre introdução a GIS e análise espacial&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://docs.qgis.org/3.10/en/docs/training_manual/assessment/index.html&#34;&gt;Site sobre uso de QGIS&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://www.qgistutorials.com/&#34;&gt;Tutoriais sobre QGIS e análise espacial&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;https://plugins.qgis.org/&#34;&gt;Plugins QGIS&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div id=&#34;videos-para-incrementar-a-aprendizagem&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Videos para incrementar a aprendizagem&lt;/h1&gt;
+&lt;ol style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Formas e dimensões terrestres&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/aW-qbx04gS4&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/ecZIluGHOW4&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;ol start=&#34;2&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Representações: sistemas geodésicos, modelos, datum, coordenadas geográficas e projetadas&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/YW8lwn8L6rA&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/xKGlMp__jog&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/AcBlPMGwLdU&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/NhUgYgH53l0&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;ol start=&#34;3&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Escalas e distâncias&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/Km9ZVmZsoDo&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;ol start=&#34;4&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Interface gráfica do QGIS&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/3ii17pnlpTs&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;ol start=&#34;5&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Complementos: instalação e para que servem&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mudança de datum e sistemas de coordenadas no QGIS&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Como criar um shapefile no QGIS&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/vbaU7Rm0o1A&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;ol start=&#34;8&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Classificação de dados geográficos: vetoriais e matriciais&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/crS7iLxq-ZM&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;ol start=&#34;9&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Tabela de atributos&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/P97ae67rad4&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/PJQKkRpvkTI&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;ol start=&#34;10&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Geocodificação&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Divisão, união e dissolução de camadas vetoriais&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/kYKcKAKzooM&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/UpDPEhGfREE&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/VrchasljjyQ&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;ol start=&#34;12&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;&lt;p&gt;Seleção por atributos e por localização&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Join por código e join espacial&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Mapas temáticos&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Geração de centroides&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Layout de impressão&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/DDh4xEy3UTU&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/D4_gwgAoVzM&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/D4_gwgAoVzM&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/E7YFlqpFgbY&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/y__Uf-6Mmik&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;ol start=&#34;17&#34; style=&#34;list-style-type: decimal&#34;&gt;
+&lt;li&gt;Fontes de dados&lt;/li&gt;
+&lt;/ol&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/OxIRfZ1hYt0&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/wFiYf3XT3Lg&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/uVe1HoACzbc&#34; frameborder=&#34;0&#34; allow=&#34;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&#34; allowfullscreen&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Material adicional - R e RStudio</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/materialr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/materialr/</guid>
+      <description>
+&lt;script src=&#34;https://app.netlify.com/sites/cranky-mestorf-a03ae7/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js&#34;&gt;&lt;/script&gt;
+
+
+&lt;div id=&#34;material-adicional&#34; class=&#34;section level1&#34;&gt;
+&lt;h1&gt;Material adicional&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.dropbox.com/s/mo65rwtzafrsa5w/analise%20espacial.pdf?dl=0&#34;&gt;Livro sobre Análise espacial no R&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://material.curso-r.com/&#34;&gt;Curso de R em português&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://mgimond.github.io/Spatial/spatial-autocorrelation-in-r.html&#34;&gt;R e Análise espacial&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://rspatial.org/raster/analysis/index.html&#34;&gt;Análise espacial no R&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.curso-de-programacao-em-r-para-jornalistas.com/2019/10/27/saiba-mais-sobre-o-r/&#34;&gt;Referências de links de consulta para R e R para Jornalistas&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

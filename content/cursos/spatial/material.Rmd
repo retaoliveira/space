@@ -1,0 +1,115 @@
+---
+title: "Material adicional - GIS e QGIS"
+author: "Contribuições - Renata Lúcia Magalhães de Oliveira e Lucélia Viviane Vaz Raad"
+output:
+  html_document:
+    toc_depth: 3
+    include:
+      in_header: head.html
+      after_body: footer.html
+    theme: flatly
+    highlight: textmate
+    mathjax: null
+    lib_dir: libs
+    css: styles.css
+    logo: logo.jpg
+    toc_float:
+      collapsed: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Material adicional   
+[Livro sobre introdução a GIS e análise espacial](https://mgimond.github.io/Spatial/index.html)   
+[Site sobre uso de QGIS](https://docs.qgis.org/3.10/en/docs/training_manual/assessment/index.html)   
+[Tutoriais sobre QGIS e análise espacial](https://www.qgistutorials.com/)   
+[Plugins QGIS](https://plugins.qgis.org/)   
+   
+
+# Videos para incrementar a aprendizagem
+
+1. Formas e dimensões terrestres    
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/aW-qbx04gS4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ecZIluGHOW4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+2. Representações: sistemas geodésicos, modelos, datum, coordenadas geográficas e projetadas   
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/YW8lwn8L6rA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xKGlMp__jog" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/AcBlPMGwLdU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/NhUgYgH53l0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+3. Escalas e distâncias   
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Km9ZVmZsoDo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+4. Interface gráfica do QGIS    
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3ii17pnlpTs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+5. Complementos: instalação e para que servem   
+
+
+6. Mudança de datum e sistemas de coordenadas no QGIS  
+
+7. Como criar um shapefile no QGIS     
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vbaU7Rm0o1A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+8. Classificação de dados geográficos: vetoriais e matriciais   
+    
+<iframe width="560" height="315" src="https://www.youtube.com/embed/crS7iLxq-ZM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+9. Tabela de atributos   
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/P97ae67rad4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PJQKkRpvkTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+10. Geocodificação     
+
+11. Divisão, união e dissolução de camadas vetoriais   
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/kYKcKAKzooM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UpDPEhGfREE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/VrchasljjyQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+12. Seleção por atributos e por localização
+
+
+13. Join por código e join espacial
+
+
+14. Mapas temáticos
+
+
+15. Geração de centroides
+
+
+16. Layout de impressão   
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/DDh4xEy3UTU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D4_gwgAoVzM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+<iframe width="560" height="315" src="https://www.youtube.com/embed/D4_gwgAoVzM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/E7YFlqpFgbY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/y__Uf-6Mmik" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+17. Fontes de dados
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/OxIRfZ1hYt0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/wFiYf3XT3Lg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/uVe1HoACzbc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

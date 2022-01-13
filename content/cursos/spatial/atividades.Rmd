@@ -1,0 +1,91 @@
+---
+title: "Atividades em GIS e QGIS"
+author: "Contribuições - Renata Lúcia Magalhães de Oliveira e Lucélia Viviane Vaz Raad"
+output:
+  html_document:
+    toc_depth: 3
+    include:
+      in_header: head.html
+      after_body: footer.html
+    theme: flatly
+    highlight: textmate
+    mathjax: null
+    lib_dir: libs
+    css: styles.css
+    logo: logo.jpg
+    toc_float:
+      collapsed: false
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+# Competências a serem desenvolvidas
+Ao final desse mini-curso, os alunos deverão ser capazes de discutir os seguintes conceitos:  
+
+- Pensamento espacial     
+- Introdução à cartografia   
+  - forma e dimensões terrestres   
+  - representações: sistemas geodésicos, modelos e datum    
+  - sistemas de coordenadas geográficas e projetadas   
+- Sistemas de Informações Geográficas (_Geographic Information Systems_)   
+- Unidades espaciais e representação de fenômenos espaciais   
+- Distâncias   
+- QGIS   
+  - Ambiente e funcionalidades básicas do QGIS   
+  - Complementos: instalação e para que servem  
+  - Mudança de datum e sistemas de coordenadas   
+  - Tabela de atributos   
+  - Estruturas de dados espaciais  
+    - classificação: vetoriais e matriciais   
+    - interoperabilidade   
+    - geocodificação   
+  - Funções básicas em GIS   
+      - seleção por atributo e por localização    
+      - join por código e join espacial   
+      - mapas temáticos   
+      - geração de centroides e agregação de variaveis  
+      - conceito de redes   
+      - layout de impressão   
+
+
+# **Mão na massa - QGIS** - 01/07/2020  
+
+## Bases de dados
+Belo Horizonte
+ - [`shapefiles` - BHMaps](https://drive.google.com/drive/folders/1bZmcOwZLvs9op7kQYAHshvCELk4M35o4?usp=sharing)   
+ - [Setores censitários sem renda](https://drive.google.com/drive/folders/1gRQ3pM__jGSPq-dk35hVlLS4S5hzlRWc?usp=sharing)   
+ - [Setores censitários com renda](https://drive.google.com/drive/folders/1twMTRnrSY0ugLwC7xJq7LzuuPiXDYmRX?usp=sharing)
+ - [Bairros](https://drive.google.com/drive/folders/1gDOdMb3elvcolWgV_3jBOV_xfwo7A08e?usp=sharing)  
+ - [Estabelecimentos comerciais](https://drive.google.com/drive/folders/1ZVoVW7QG7uyxkHOAJLu1p9ViTm9TK5jW?usp=sharing)   
+ - [Áreas de presevação permanente](https://drive.google.com/drive/folders/1i3Ax_Z6J93utrAkpRTMG13rF50u_WND6?usp=sharing)   
+ 
+
+## Dados espaciais e sistemas de referência   
+1. Abrir o `shapefile` e verificar qual o sistema de coordenadas ativo.    
+2. Transformar o sistema de coordenadas em `WGS84` e salvar como um novo shapefile   
+3. Transformar todos os `shapefiles` para coordenadas projetadas `SIRGAS 2000 - UTM 23 S`
+4. Mudar a cor dos dados vetoriais para apresentações que permitam a análise da sobreposição de camadas.   
+
+## Tabela de atributos e manipulação de dados espaciais   
+1. Verificar o número de observações e o número de atributos na `tabela de atributos`   
+2. Selecionar setores censitários com população menor do que 400 habitantes.    
+3. Exportar apenas os dados selecionados como um novo shapefile.   
+4. Abrir os dados referentes à renda em cada setor censitário e importar os dados para o shapefile original.
+5. Abrir os dados de empresas no município de Belo Horizonte. 
+6. Selecionar os pontos que estão localizados em setores censitários com mais de 500 habitantes. 
+7. Contar o número de pontos em cada unidade espacial
+8. Agregar dados de população dos setores censitários em bairros
+9. Agregar dados de população de bairros para regionais   
+8. Elaborar mapas temáticos de renda, população, áreas de preservação    
+10. Gerar centroides dos setores censitários
+
+## Mapas temáticos
+1. Elaborar mapas temáticos 
+
+## Geocodificação   
+1. Geocodificar o parque onde será instalado o empreendimento em análise.
+2. Colocar a informação no QGIS.    
+
+## Layout de impressão    
+1. Gerar layout de impressão contendo legenda, indicação de norte, escala.   

@@ -1,5 +1,5 @@
 ---
-title: "Freight trip generation to buildings under construction : a comparative analysis with linear regression and generalised linear regression"
+title: "Freight trip generation to buildings under construction: a comparative analysis with linear regression and generalised linear regression"
 date: 2020-01-01
 publishDate: 2021-09-09T12:53:16.706654Z
 authors: ["Leise Kelli De Oliveira", "Rafael Taglia Herédia", "Bruno Vieira Bertoncini", "Renata Lúcia Magalhães Oliveira"]

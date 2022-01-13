@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Covid-19 on Profa. Renata Oliveira</title>
+    <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/tag/covid-19/</link>
+    <description>Recent content in Covid-19 on Profa. Renata Oliveira</description>
+    <generator>Source Themes academia (https://sourcethemes.com/academic/)</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Dec 2021 00:00:00 +0000</lastBuildDate>
+    
+	    <atom:link href="https://app.netlify.com/sites/cranky-mestorf-a03ae7/tag/covid-19/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Impacts of Covid-19 on Basic Goods Consumption and Their Implication for Urban Logistics Management</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/publication/fidelix-2021/</link>
+      <pubDate>Wed, 01 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/publication/fidelix-2021/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Access to urban activities during the Covid-19 pandemic and impacts on urban mobility: The Brazilian context</title>
+      <link>https://app.netlify.com/sites/cranky-mestorf-a03ae7/publication/bracarense-2021/</link>
+      <pubDate>Sat, 01 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://app.netlify.com/sites/cranky-mestorf-a03ae7/publication/bracarense-2021/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

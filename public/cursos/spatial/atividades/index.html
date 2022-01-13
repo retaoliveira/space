@@ -1,0 +1,1082 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academia 4.3.1">
+  <meta name="generator" content="Hugo 0.91.2" />
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Renata Oliveira">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Competências a serem desenvolvidasAo final desse mini-curso, os alunos deverão ser capazes de discutir os seguintes conceitos:
+Pensamento espacial
+Introdução à cartografiaforma e dimensões terrestres
+representações: sistemas geodésicos, modelos e datum
+sistemas de coordenadas geográficas e projetadas
+Sistemas de Informações Geográficas (Geographic Information Systems)
+Unidades espaciais e representação de fenômenos espaciais
+Distâncias
+QGISAmbiente e funcionalidades básicas do QGIS">
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/">
+
+  
+
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#fc6f5c">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css" integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Roboto+Mono&display=swap">
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="/sites/cranky-mestorf-a03ae7/css/academia.min.76e69f7370e1e1222344c0109d841c44.css">
+
+  
+
+  
+  
+  
+  
+
+  
+
+  <link rel="manifest" href="/sites/cranky-mestorf-a03ae7/site.webmanifest">
+  <link rel="icon" type="image/png" href="/sites/cranky-mestorf-a03ae7/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/sites/cranky-mestorf-a03ae7/img/icon-192.png">
+
+  <link rel="canonical" href="https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/">
+
+  
+  
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary">
+  
+  <meta property="og:site_name" content="Profa. Renata Oliveira">
+  <meta property="og:url" content="https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/">
+  <meta property="og:title" content="Atividades em GIS e QGIS | Profa. Renata Oliveira">
+  <meta property="og:description" content="Competências a serem desenvolvidasAo final desse mini-curso, os alunos deverão ser capazes de discutir os seguintes conceitos:
+Pensamento espacial
+Introdução à cartografiaforma e dimensões terrestres
+representações: sistemas geodésicos, modelos e datum
+sistemas de coordenadas geográficas e projetadas
+Sistemas de Informações Geográficas (Geographic Information Systems)
+Unidades espaciais e representação de fenômenos espaciais
+Distâncias
+QGISAmbiente e funcionalidades básicas do QGIS"><meta property="og:image" content="https://app.netlify.com/sites/cranky-mestorf-a03ae7/img/icon-192.png">
+  <meta property="twitter:image" content="https://app.netlify.com/sites/cranky-mestorf-a03ae7/img/icon-192.png"><meta property="og:locale" content="en-us">
+  
+  
+  
+  
+
+  
+
+
+  
+
+
+
+
+
+  <title>Atividades em GIS e QGIS | Profa. Renata Oliveira</title>
+
+</head>
+
+
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" role="textbox" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/sites/cranky-mestorf-a03ae7/">Profa. Renata Oliveira</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"><span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#posts"><span>Blog</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#publications"><span>Publications</span></a>
+        </li>
+
+        
+        
+
+        
+        <li class="nav-item dropdown">
+          <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span>Courses</span><span class="caret"></span>
+          </a>
+          <ul class="dropdown-menu">
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/sites/cranky-mestorf-a03ae7/cursos/intro_r/"><span>Introdução ao R</span></a>
+            </li>
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/sites/cranky-mestorf-a03ae7/cursos/spatial/"><span>Sistemas de Suporte à Decisão Espacial</span></a>
+            </li>
+            
+            <li class="dropdown-item my-0 py-0 mx-0 px-0">
+              <a href="/sites/cranky-mestorf-a03ae7/cursos/log_all/"><span>Logística</span></a>
+            </li>
+            
+          </ul>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/files/cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/sites/cranky-mestorf-a03ae7/#contact"><span>Contact</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+        </li>
+        
+
+        
+
+        
+        <li class="nav-item">
+          <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+        </li>
+        
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <article class="article py-5" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    
+    
+    
+    <div class="article-container py-3">
+      <h1 itemprop="name">Atividades em GIS e QGIS</h1>
+
+      
+
+      
+      
+
+
+
+<meta content="" itemprop="datePublished">
+<meta content="" itemprop="dateModified">
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    <time>Jan 1, 0001</time>
+  </span>
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/&amp;text=Atividades%20em%20GIS%20e%20QGIS" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/&amp;t=Atividades%20em%20GIS%20e%20QGIS" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Atividades%20em%20GIS%20e%20QGIS&amp;body=https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/&amp;title=Atividades%20em%20GIS%20e%20QGIS" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Atividades%20em%20GIS%20e%20QGIS%20https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=https://app.netlify.com/sites/cranky-mestorf-a03ae7/cursos/spatial/atividades/&amp;title=Atividades%20em%20GIS%20e%20QGIS" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+      
+    </div>
+  </div>
+</div>
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+<script src="/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="competências-a-serem-desenvolvidas" class="section level1">
+<h1>Competências a serem desenvolvidas</h1>
+<p>Ao final desse mini-curso, os alunos deverão ser capazes de discutir os seguintes conceitos:</p>
+<ul>
+<li>Pensamento espacial<br />
+</li>
+<li>Introdução à cartografia
+<ul>
+<li>forma e dimensões terrestres<br />
+</li>
+<li>representações: sistemas geodésicos, modelos e datum<br />
+</li>
+<li>sistemas de coordenadas geográficas e projetadas<br />
+</li>
+</ul></li>
+<li>Sistemas de Informações Geográficas (<em>Geographic Information Systems</em>)<br />
+</li>
+<li>Unidades espaciais e representação de fenômenos espaciais<br />
+</li>
+<li>Distâncias<br />
+</li>
+<li>QGIS
+<ul>
+<li>Ambiente e funcionalidades básicas do QGIS<br />
+</li>
+<li>Complementos: instalação e para que servem<br />
+</li>
+<li>Mudança de datum e sistemas de coordenadas<br />
+</li>
+<li>Tabela de atributos<br />
+</li>
+<li>Estruturas de dados espaciais
+<ul>
+<li>classificação: vetoriais e matriciais<br />
+</li>
+<li>interoperabilidade<br />
+</li>
+<li>geocodificação<br />
+</li>
+</ul></li>
+<li>Funções básicas em GIS
+<ul>
+<li>seleção por atributo e por localização<br />
+</li>
+<li>join por código e join espacial<br />
+</li>
+<li>mapas temáticos<br />
+</li>
+<li>geração de centroides e agregação de variaveis<br />
+</li>
+<li>conceito de redes<br />
+</li>
+<li>layout de impressão</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="mão-na-massa---qgis---01072020" class="section level1">
+<h1><strong>Mão na massa - QGIS</strong> - 01/07/2020</h1>
+<div id="bases-de-dados" class="section level2">
+<h2>Bases de dados</h2>
+<p>Belo Horizonte
+- <a href="https://drive.google.com/drive/folders/1bZmcOwZLvs9op7kQYAHshvCELk4M35o4?usp=sharing"><code>shapefiles</code> - BHMaps</a><br />
+- <a href="https://drive.google.com/drive/folders/1gRQ3pM__jGSPq-dk35hVlLS4S5hzlRWc?usp=sharing">Setores censitários sem renda</a><br />
+- <a href="https://drive.google.com/drive/folders/1twMTRnrSY0ugLwC7xJq7LzuuPiXDYmRX?usp=sharing">Setores censitários com renda</a>
+- <a href="https://drive.google.com/drive/folders/1gDOdMb3elvcolWgV_3jBOV_xfwo7A08e?usp=sharing">Bairros</a><br />
+- <a href="https://drive.google.com/drive/folders/1ZVoVW7QG7uyxkHOAJLu1p9ViTm9TK5jW?usp=sharing">Estabelecimentos comerciais</a><br />
+- <a href="https://drive.google.com/drive/folders/1i3Ax_Z6J93utrAkpRTMG13rF50u_WND6?usp=sharing">Áreas de presevação permanente</a></p>
+</div>
+<div id="dados-espaciais-e-sistemas-de-referência" class="section level2">
+<h2>Dados espaciais e sistemas de referência</h2>
+<ol style="list-style-type: decimal">
+<li>Abrir o <code>shapefile</code> e verificar qual o sistema de coordenadas ativo.<br />
+</li>
+<li>Transformar o sistema de coordenadas em <code>WGS84</code> e salvar como um novo shapefile<br />
+</li>
+<li>Transformar todos os <code>shapefiles</code> para coordenadas projetadas <code>SIRGAS 2000 - UTM 23 S</code></li>
+<li>Mudar a cor dos dados vetoriais para apresentações que permitam a análise da sobreposição de camadas.</li>
+</ol>
+</div>
+<div id="tabela-de-atributos-e-manipulação-de-dados-espaciais" class="section level2">
+<h2>Tabela de atributos e manipulação de dados espaciais</h2>
+<ol style="list-style-type: decimal">
+<li>Verificar o número de observações e o número de atributos na <code>tabela de atributos</code><br />
+</li>
+<li>Selecionar setores censitários com população menor do que 400 habitantes.<br />
+</li>
+<li>Exportar apenas os dados selecionados como um novo shapefile.<br />
+</li>
+<li>Abrir os dados referentes à renda em cada setor censitário e importar os dados para o shapefile original.</li>
+<li>Abrir os dados de empresas no município de Belo Horizonte.</li>
+<li>Selecionar os pontos que estão localizados em setores censitários com mais de 500 habitantes.</li>
+<li>Contar o número de pontos em cada unidade espacial</li>
+<li>Agregar dados de população dos setores censitários em bairros</li>
+<li>Agregar dados de população de bairros para regionais<br />
+</li>
+<li>Elaborar mapas temáticos de renda, população, áreas de preservação<br />
+</li>
+<li>Gerar centroides dos setores censitários</li>
+</ol>
+</div>
+<div id="mapas-temáticos" class="section level2">
+<h2>Mapas temáticos</h2>
+<ol style="list-style-type: decimal">
+<li>Elaborar mapas temáticos</li>
+</ol>
+</div>
+<div id="geocodificação" class="section level2">
+<h2>Geocodificação</h2>
+<ol style="list-style-type: decimal">
+<li>Geocodificar o parque onde será instalado o empreendimento em análise.</li>
+<li>Colocar a informação no QGIS.</li>
+</ol>
+</div>
+<div id="layout-de-impressão" class="section level2">
+<h2>Layout de impressão</h2>
+<ol style="list-style-type: decimal">
+<li>Gerar layout de impressão contendo legenda, indicação de norte, escala.</li>
+</ol>
+</div>
+</div>
+
+    </div>
+
+    
+
+
+
+    
+      
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card" itemscope itemtype="http://schema.org/Person">
+    
+      
+      <img class="portrait mr-3" src="/sites/cranky-mestorf-a03ae7/author/avatar_hu61bba55111ab04077a4b331e478cb9e0_230315_250x250_fill_lanczos_center_3.png" itemprop="image" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title" itemprop="name"><a href="https://app.netlify.com/sites/cranky-mestorf-a03ae7">Renata Oliveira</a></h5>
+      <h6 class="card-subtitle">Professor at the Department of Applied Social Sciences</h6>
+      <p class="card-text" itemprop="description">My research interests include spatial analysis, city logistics and accessibility.</p>
+      <ul class="network-icon" aria-hidden="true">
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="/sites/cranky-mestorf-a03ae7/#contact" >
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://twitter.com/retaoliveira" target="_blank" rel="noopener">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://scholar.google.com.br/citations?user=V6EX45EAAAAJ&amp;hl=pt-BR" target="_blank" rel="noopener">
+              <i class="fas fa-graduation-cap"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://github.com/retaoliveira" target="_blank" rel="noopener">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+        
+          
+          
+          
+            
+          
+          
+          
+          
+          
+            
+          
+          <li>
+            <a itemprop="sameAs" href="https://www.linkedin.com/in/renata-oliveira-574471/" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+
+      
+      
+    
+
+    
+    <div class="article-widget">
+      
+<div class="post-nav">
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Next</div>
+    <a href="/sites/cranky-mestorf-a03ae7/cursos/spatial/map/" rel="next">Construindo mapas e representações</a>
+  </div>
+  
+  
+  
+  <div class="post-nav-item">
+    <div class="meta-nav">Previous</div>
+    <a href="/sites/cranky-mestorf-a03ae7/cursos/spatial/material/" rel="prev">Material adicional - GIS e QGIS</a>
+  </div>
+  
+</div>
+
+    </div>
+    
+
+    
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" integrity="sha256-aYTdUrn6Ow1DDgh5JTc3aDGnnju48y/1c8s1dgkYPQ8=" crossorigin="anonymous"></script>
+        
+      
+
+      
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/sites/cranky-mestorf-a03ae7/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "results found",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/sites/cranky-mestorf-a03ae7/js/academia.min.1864145399ae9e7997bb63a7a7dd152c.js"></script>
+
+    
+
+
+
+
+
+
+  
+  <div class="container">
+    <footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        
+        <p>
+          
+          Build with 
+          <a href="https://retaoliveira.space" target="_blank" rel="noopener"><i class="far fa-heart"></i>
+          ,
+          <a href="https://github.com/retaoliveira" target="_blank" rel="noopener"><i class="fas fa-code-branch"></i></a>
+          , the
+          <a href="https://cran.r-project.org/" target="_blank" rel="noopener"><i class="fab fa-r-project"></i> </a>
+          <a href="https://github.com/rstudio/blogdown" target="_blank" rel="noopener">blogdown</a>
+          package, and 
+          <a href="https://themes.gohugo.io/academia-hugo/" target="_blank" rel="noopener">Academia Hugo</a>
+          for
+          <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>
+        </p>
+      </div>
+      <div class="col-md-6">
+        <ul class="list-inline network-icon text-right">
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="https://twitter.com/retaoliveira" target="_blank" rel="noopener" title="DM Me"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          <li class="list-inline-item">
+            <a href="skype:retaoliveira"  title="Skype Me"><i class="fab fa-skype" aria-hidden="true"></i></a>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

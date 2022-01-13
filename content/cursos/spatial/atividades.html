@@ -1,0 +1,143 @@
+---
+title: "Atividades em GIS e QGIS"
+author: "Contribuições - Renata Lúcia Magalhães de Oliveira e Lucélia Viviane Vaz Raad"
+output:
+  html_document:
+    toc_depth: 3
+    include:
+      in_header: head.html
+      after_body: footer.html
+    theme: flatly
+    highlight: textmate
+    mathjax: null
+    lib_dir: libs
+    css: styles.css
+    logo: logo.jpg
+    toc_float:
+      collapsed: false
+---
+
+<script src="/sites/cranky-mestorf-a03ae7rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<div id="competências-a-serem-desenvolvidas" class="section level1">
+<h1>Competências a serem desenvolvidas</h1>
+<p>Ao final desse mini-curso, os alunos deverão ser capazes de discutir os seguintes conceitos:</p>
+<ul>
+<li>Pensamento espacial<br />
+</li>
+<li>Introdução à cartografia
+<ul>
+<li>forma e dimensões terrestres<br />
+</li>
+<li>representações: sistemas geodésicos, modelos e datum<br />
+</li>
+<li>sistemas de coordenadas geográficas e projetadas<br />
+</li>
+</ul></li>
+<li>Sistemas de Informações Geográficas (<em>Geographic Information Systems</em>)<br />
+</li>
+<li>Unidades espaciais e representação de fenômenos espaciais<br />
+</li>
+<li>Distâncias<br />
+</li>
+<li>QGIS
+<ul>
+<li>Ambiente e funcionalidades básicas do QGIS<br />
+</li>
+<li>Complementos: instalação e para que servem<br />
+</li>
+<li>Mudança de datum e sistemas de coordenadas<br />
+</li>
+<li>Tabela de atributos<br />
+</li>
+<li>Estruturas de dados espaciais
+<ul>
+<li>classificação: vetoriais e matriciais<br />
+</li>
+<li>interoperabilidade<br />
+</li>
+<li>geocodificação<br />
+</li>
+</ul></li>
+<li>Funções básicas em GIS
+<ul>
+<li>seleção por atributo e por localização<br />
+</li>
+<li>join por código e join espacial<br />
+</li>
+<li>mapas temáticos<br />
+</li>
+<li>geração de centroides e agregação de variaveis<br />
+</li>
+<li>conceito de redes<br />
+</li>
+<li>layout de impressão</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+<div id="mão-na-massa---qgis---01072020" class="section level1">
+<h1><strong>Mão na massa - QGIS</strong> - 01/07/2020</h1>
+<div id="bases-de-dados" class="section level2">
+<h2>Bases de dados</h2>
+<p>Belo Horizonte
+- <a href="https://drive.google.com/drive/folders/1bZmcOwZLvs9op7kQYAHshvCELk4M35o4?usp=sharing"><code>shapefiles</code> - BHMaps</a><br />
+- <a href="https://drive.google.com/drive/folders/1gRQ3pM__jGSPq-dk35hVlLS4S5hzlRWc?usp=sharing">Setores censitários sem renda</a><br />
+- <a href="https://drive.google.com/drive/folders/1twMTRnrSY0ugLwC7xJq7LzuuPiXDYmRX?usp=sharing">Setores censitários com renda</a>
+- <a href="https://drive.google.com/drive/folders/1gDOdMb3elvcolWgV_3jBOV_xfwo7A08e?usp=sharing">Bairros</a><br />
+- <a href="https://drive.google.com/drive/folders/1ZVoVW7QG7uyxkHOAJLu1p9ViTm9TK5jW?usp=sharing">Estabelecimentos comerciais</a><br />
+- <a href="https://drive.google.com/drive/folders/1i3Ax_Z6J93utrAkpRTMG13rF50u_WND6?usp=sharing">Áreas de presevação permanente</a></p>
+</div>
+<div id="dados-espaciais-e-sistemas-de-referência" class="section level2">
+<h2>Dados espaciais e sistemas de referência</h2>
+<ol style="list-style-type: decimal">
+<li>Abrir o <code>shapefile</code> e verificar qual o sistema de coordenadas ativo.<br />
+</li>
+<li>Transformar o sistema de coordenadas em <code>WGS84</code> e salvar como um novo shapefile<br />
+</li>
+<li>Transformar todos os <code>shapefiles</code> para coordenadas projetadas <code>SIRGAS 2000 - UTM 23 S</code></li>
+<li>Mudar a cor dos dados vetoriais para apresentações que permitam a análise da sobreposição de camadas.</li>
+</ol>
+</div>
+<div id="tabela-de-atributos-e-manipulação-de-dados-espaciais" class="section level2">
+<h2>Tabela de atributos e manipulação de dados espaciais</h2>
+<ol style="list-style-type: decimal">
+<li>Verificar o número de observações e o número de atributos na <code>tabela de atributos</code><br />
+</li>
+<li>Selecionar setores censitários com população menor do que 400 habitantes.<br />
+</li>
+<li>Exportar apenas os dados selecionados como um novo shapefile.<br />
+</li>
+<li>Abrir os dados referentes à renda em cada setor censitário e importar os dados para o shapefile original.</li>
+<li>Abrir os dados de empresas no município de Belo Horizonte.</li>
+<li>Selecionar os pontos que estão localizados em setores censitários com mais de 500 habitantes.</li>
+<li>Contar o número de pontos em cada unidade espacial</li>
+<li>Agregar dados de população dos setores censitários em bairros</li>
+<li>Agregar dados de população de bairros para regionais<br />
+</li>
+<li>Elaborar mapas temáticos de renda, população, áreas de preservação<br />
+</li>
+<li>Gerar centroides dos setores censitários</li>
+</ol>
+</div>
+<div id="mapas-temáticos" class="section level2">
+<h2>Mapas temáticos</h2>
+<ol style="list-style-type: decimal">
+<li>Elaborar mapas temáticos</li>
+</ol>
+</div>
+<div id="geocodificação" class="section level2">
+<h2>Geocodificação</h2>
+<ol style="list-style-type: decimal">
+<li>Geocodificar o parque onde será instalado o empreendimento em análise.</li>
+<li>Colocar a informação no QGIS.</li>
+</ol>
+</div>
+<div id="layout-de-impressão" class="section level2">
+<h2>Layout de impressão</h2>
+<ol style="list-style-type: decimal">
+<li>Gerar layout de impressão contendo legenda, indicação de norte, escala.</li>
+</ol>
+</div>
+</div>

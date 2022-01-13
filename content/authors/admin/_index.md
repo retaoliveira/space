@@ -20,9 +20,9 @@ education:
     year: 2002
 email: "renataoliveira@gmail.com"
 interests:
-- Acessibilidade urbana
-- Análise espacial
-- Logística Urbana
+- Urban accessibility
+- Spatial analysis and geocomputation
+- Urban logistics
 name: Renata Oliveira
 organizations:
 - name: Federal Center for Technological Education of Minas Gerais
