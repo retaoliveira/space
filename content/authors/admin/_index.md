@@ -6,6 +6,8 @@ bio: My research interests include spatial analysis, city logistics and accessib
 btn:
 - label: Download Resume
   url: files/cv.pdf
+- label: Download Descriptive Memorial
+  url: files/memorial.pdf
 display_education: true
 education:
   courses:

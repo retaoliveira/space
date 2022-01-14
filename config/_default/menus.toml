@@ -122,3 +122,8 @@
     name = "CV"
     url = "files/cv.pdf"
     weight = 80
+    
+[[main]]
+    name = "Descriptive Memorial"
+    url = "files/memorial.pdf"
+    weight = 90
